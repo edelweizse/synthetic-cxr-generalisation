@@ -1,0 +1,195 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[resume] /home/edelweizse/Projects/uni/AIE/final/artifacts/runs/E2_ACQ/efficientnet_b0/seed0 from step 950
+  step  1000 | train 0.0889 | val loss 0.0774 auroc 0.9953 | lr 2.64e-04 | 36s
+  step  1050 | train 0.0873 | val loss 0.0748 auroc 0.9941 | lr 7.93e-05 | 48s
+  step  1100 | train 0.0874 | val loss 0.0780 auroc 0.9936 | lr 7.93e-05 | 58s
+  step  1150 | train 0.0868 | val loss 0.0795 auroc 0.9935 | lr 7.93e-05 | 69s
+  step  1200 | train 0.0878 | val loss 0.0788 auroc 0.9941 | lr 7.93e-05 | 78s
+  early stop at step 1200 (best step 800)
+[E2_ACQ/efficientnet_b0/seed0] A_test:label AUROC 0.948 | B_external:label AUROC 0.913 | B_external:label_any AUROC 0.787
+[E2_ACQ/efficientnet_b0 seed1] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=acquisition
+  step    50 | train 0.8840 | val loss 0.2547 auroc 0.9888 * | lr 8.81e-04 | 14s
+  step   100 | train 0.3454 | val loss 0.4335 auroc 0.9724 | lr 8.81e-04 | 23s
+  step   150 | train 0.2518 | val loss 0.1202 auroc 0.9953 * | lr 8.81e-04 | 34s
+  step   200 | train 0.1765 | val loss 0.0979 auroc 0.9983 * | lr 8.81e-04 | 40s
+  step   250 | train 0.1538 | val loss 0.0569 auroc 0.9985 * | lr 8.81e-04 | 46s
+  step   300 | train 0.1254 | val loss 0.1224 auroc 0.9930 | lr 8.81e-04 | 55s
+  step   350 | train 0.1259 | val loss 0.1469 auroc 0.9931 | lr 8.81e-04 | 65s
+  step   400 | train 0.1191 | val loss 0.0609 auroc 0.9981 | lr 8.81e-04 | 72s
+  step   450 | train 0.1034 | val loss 0.0921 auroc 0.9985 | lr 8.81e-04 | 82s
+  step   500 | train 0.0940 | val loss 0.0760 auroc 0.9955 | lr 2.64e-04 | 90s
+  step   550 | train 0.0901 | val loss 0.0772 auroc 0.9963 | lr 2.64e-04 | 100s
+  step   600 | train 0.0919 | val loss 0.0881 auroc 0.9947 | lr 2.64e-04 | 111s
+  step   650 | train 0.0888 | val loss 0.0719 auroc 0.9970 | lr 2.64e-04 | 120s
+  early stop at step 650 (best step 250)
+[E2_ACQ/efficientnet_b0/seed1] A_test:label AUROC 0.965 | B_external:label AUROC 0.911 | B_external:label_any AUROC 0.787
+[E2_ERASE/efficientnet_b0 seed0] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=erase
+  step    50 | train 0.8574 | val loss 0.3139 auroc 0.9823 * | lr 8.81e-04 | 17s
+  step   100 | train 0.4097 | val loss 0.2485 auroc 0.9807 * | lr 8.81e-04 | 26s
+  step   150 | train 0.2884 | val loss 0.1140 auroc 0.9970 * | lr 8.81e-04 | 36s
+  step   200 | train 0.2274 | val loss 0.3193 auroc 0.9959 | lr 8.81e-04 | 46s
+  step   250 | train 0.2175 | val loss 0.1148 auroc 0.9957 | lr 8.81e-04 | 55s
+  step   300 | train 0.1900 | val loss 0.1221 auroc 0.9903 | lr 8.81e-04 | 60s
+  step   350 | train 0.1617 | val loss 0.0893 auroc 0.9955 * | lr 8.81e-04 | 65s
+  step   400 | train 0.1480 | val loss 0.0880 auroc 0.9959 * | lr 8.81e-04 | 76s
+  step   450 | train 0.1327 | val loss 0.0552 auroc 0.9987 * | lr 8.81e-04 | 85s
+  step   500 | train 0.1245 | val loss 0.1158 auroc 0.9946 | lr 8.81e-04 | 93s
+  step   550 | train 0.1136 | val loss 0.0699 auroc 0.9959 | lr 8.81e-04 | 100s
+  step   600 | train 0.1018 | val loss 0.1035 auroc 0.9970 | lr 8.81e-04 | 112s
+  step   650 | train 0.1009 | val loss 0.0836 auroc 0.9926 | lr 8.81e-04 | 123s
+  step   700 | train 0.0955 | val loss 0.0873 auroc 0.9975 | lr 2.64e-04 | 133s
+  step   750 | train 0.0891 | val loss 0.0770 auroc 0.9978 | lr 2.64e-04 | 142s
+  step   800 | train 0.0882 | val loss 0.0729 auroc 0.9958 | lr 2.64e-04 | 152s
+  step   850 | train 0.0888 | val loss 0.0802 auroc 0.9973 | lr 2.64e-04 | 163s
+  early stop at step 850 (best step 450)
+[E2_ERASE/efficientnet_b0/seed0] A_test:label AUROC 0.951 | B_external:label AUROC 0.921 | B_external:label_any AUROC 0.789
+[E2_ERASE/efficientnet_b0 seed1] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=erase
+  step    50 | train 0.9074 | val loss 2.6227 auroc 0.9717 * | lr 8.81e-04 | 15s
+  step   100 | train 0.4265 | val loss 0.1830 auroc 0.9846 * | lr 8.81e-04 | 25s
+  step   150 | train 0.2464 | val loss 0.0993 auroc 0.9960 * | lr 8.81e-04 | 37s
+  step   200 | train 0.2057 | val loss 0.2081 auroc 0.9936 | lr 8.81e-04 | 47s
+  step   250 | train 0.1768 | val loss 0.0650 auroc 0.9982 * | lr 8.81e-04 | 56s
+  step   300 | train 0.1586 | val loss 0.0803 auroc 0.9964 | lr 8.81e-04 | 66s
+  step   350 | train 0.1409 | val loss 0.0922 auroc 0.9949 | lr 8.81e-04 | 75s
+  step   400 | train 0.1482 | val loss 0.1178 auroc 0.9940 | lr 8.81e-04 | 84s
+  step   450 | train 0.1048 | val loss 0.1084 auroc 0.9930 | lr 8.81e-04 | 93s
+  step   500 | train 0.0996 | val loss 0.0895 auroc 0.9977 | lr 2.64e-04 | 98s
+  step   550 | train 0.0987 | val loss 0.0911 auroc 0.9977 | lr 2.64e-04 | 103s
+  step   600 | train 0.0959 | val loss 0.0868 auroc 0.9963 | lr 2.64e-04 | 111s
+  step   650 | train 0.0938 | val loss 0.0934 auroc 0.9973 | lr 2.64e-04 | 120s
+  early stop at step 650 (best step 250)
+[E2_ERASE/efficientnet_b0/seed1] A_test:label AUROC 0.973 | B_external:label AUROC 0.919 | B_external:label_any AUROC 0.791
+[E2_MIX/efficientnet_b0 seed0] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 1.1472 | val loss 0.1781 auroc 0.9782 * | lr 8.81e-04 | 10s
+  step   100 | train 0.5950 | val loss 0.2583 auroc 0.9910 | lr 8.81e-04 | 18s
+  step   150 | train 0.4480 | val loss 0.4910 auroc 0.9941 | lr 8.81e-04 | 25s
+  step   200 | train 0.3576 | val loss 0.0891 auroc 0.9955 * | lr 8.81e-04 | 35s
+  step   250 | train 0.3665 | val loss 0.1332 auroc 0.9961 | lr 8.81e-04 | 45s
+  step   300 | train 0.3295 | val loss 0.0699 auroc 0.9983 * | lr 8.81e-04 | 54s
+  step   350 | train 0.3315 | val loss 0.7480 auroc 0.9973 | lr 8.81e-04 | 65s
+  step   400 | train 0.3009 | val loss 0.8787 auroc 0.9970 | lr 8.81e-04 | 74s
+  step   450 | train 0.3196 | val loss 0.1929 auroc 0.9994 | lr 8.81e-04 | 84s
+  step   500 | train 0.3025 | val loss 0.4006 auroc 0.9968 | lr 8.81e-04 | 95s
+  step   550 | train 0.2573 | val loss 0.0738 auroc 0.9991 | lr 2.64e-04 | 102s
+  step   600 | train 0.2610 | val loss 0.0833 auroc 0.9987 | lr 2.64e-04 | 110s
+  step   650 | train 0.2480 | val loss 0.0926 auroc 0.9983 | lr 2.64e-04 | 118s
+  step   700 | train 0.2751 | val loss 0.0708 auroc 0.9988 | lr 2.64e-04 | 126s
+  early stop at step 700 (best step 300)
+[E2_MIX/efficientnet_b0/seed0] A_test:label AUROC 0.971 | B_external:label AUROC 0.893 | B_external:label_any AUROC 0.755
+[E2_MIX/efficientnet_b0 seed1] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 1.1766 | val loss 0.7236 auroc 0.9837 * | lr 8.81e-04 | 13s
+  step   100 | train 0.5439 | val loss 0.2110 auroc 0.9880 * | lr 8.81e-04 | 23s
+  step   150 | train 0.4362 | val loss 0.1120 auroc 0.9946 * | lr 8.81e-04 | 32s
+  step   200 | train 0.3066 | val loss 0.0600 auroc 0.9985 * | lr 8.81e-04 | 42s
+  step   250 | train 0.3498 | val loss 0.3235 auroc 0.9987 | lr 8.81e-04 | 52s
+  step   300 | train 0.2923 | val loss 0.0864 auroc 0.9976 | lr 8.81e-04 | 62s
+  step   350 | train 0.2922 | val loss 0.0944 auroc 0.9988 | lr 8.81e-04 | 72s
+  step   400 | train 0.2919 | val loss 0.1297 auroc 0.9985 | lr 8.81e-04 | 81s
+  step   450 | train 0.2629 | val loss 0.0825 auroc 0.9983 | lr 2.64e-04 | 86s
+  step   500 | train 0.2928 | val loss 0.0828 auroc 0.9984 | lr 2.64e-04 | 95s
+  step   550 | train 0.2599 | val loss 0.0797 auroc 0.9987 | lr 2.64e-04 | 105s
+  step   600 | train 0.2875 | val loss 0.0791 auroc 0.9981 | lr 2.64e-04 | 111s
+  early stop at step 600 (best step 200)
+[E2_MIX/efficientnet_b0/seed1] A_test:label AUROC 0.957 | B_external:label AUROC 0.887 | B_external:label_any AUROC 0.754
+[LP/efficientnet_b0 seed0] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.3991 | val loss 0.2026 auroc 0.9749 * | lr 5.00e-03 | 4s
+  step   100 | train 0.2150 | val loss 0.1794 auroc 0.9837 * | lr 4.99e-03 | 8s
+  step   150 | train 0.1878 | val loss 0.1599 auroc 0.9869 * | lr 4.94e-03 | 12s
+  step   200 | train 0.1759 | val loss 0.1511 auroc 0.9884 * | lr 4.87e-03 | 14s
+  step   250 | train 0.1652 | val loss 0.1382 auroc 0.9895 * | lr 4.77e-03 | 19s
+  step   300 | train 0.1630 | val loss 0.1309 auroc 0.9904 * | lr 4.65e-03 | 22s
+  step   350 | train 0.1583 | val loss 0.1337 auroc 0.9903 | lr 4.50e-03 | 28s
+  step   400 | train 0.1540 | val loss 0.1384 auroc 0.9899 | lr 4.33e-03 | 31s
+  step   450 | train 0.1531 | val loss 0.1896 auroc 0.9910 | lr 4.13e-03 | 33s
+  step   500 | train 0.1513 | val loss 0.1486 auroc 0.9907 | lr 3.92e-03 | 38s
+  step   550 | train 0.1491 | val loss 0.1314 auroc 0.9913 | lr 3.69e-03 | 42s
+  step   600 | train 0.1411 | val loss 0.1259 auroc 0.9915 * | lr 3.45e-03 | 43s
+  step   650 | train 0.1430 | val loss 0.1237 auroc 0.9908 * | lr 3.19e-03 | 48s
+  step   700 | train 0.1459 | val loss 0.1339 auroc 0.9907 | lr 2.93e-03 | 51s
+  step   750 | train 0.1400 | val loss 0.1321 auroc 0.9908 | lr 2.66e-03 | 53s
+  step   800 | train 0.1375 | val loss 0.1358 auroc 0.9906 | lr 2.40e-03 | 57s
+  step   850 | train 0.1373 | val loss 0.1348 auroc 0.9907 | lr 2.13e-03 | 60s
+  step   900 | train 0.1384 | val loss 0.1195 auroc 0.9914 * | lr 1.87e-03 | 62s
+  step   950 | train 0.1356 | val loss 0.1312 auroc 0.9910 | lr 1.61e-03 | 67s
+  step  1000 | train 0.1358 | val loss 0.1243 auroc 0.9910 | lr 1.37e-03 | 70s
+  step  1050 | train 0.1367 | val loss 0.1211 auroc 0.9914 | lr 1.14e-03 | 72s
+  step  1100 | train 0.1381 | val loss 0.1215 auroc 0.9912 | lr 9.27e-04 | 76s
+  step  1150 | train 0.1332 | val loss 0.1220 auroc 0.9912 | lr 7.32e-04 | 79s
+  step  1200 | train 0.1355 | val loss 0.1233 auroc 0.9912 | lr 5.58e-04 | 81s
+  step  1250 | train 0.1366 | val loss 0.1221 auroc 0.9913 | lr 4.07e-04 | 86s
+  step  1300 | train 0.1333 | val loss 0.1233 auroc 0.9914 | lr 2.81e-04 | 90s
+  early stop at step 1300 (best step 900)
+[LP/efficientnet_b0/seed0] A_test:label AUROC 0.958 | B_external:label AUROC 0.777 | B_external:label_any AUROC 0.680
+[LP/efficientnet_b0 seed1] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.3975 | val loss 0.2143 auroc 0.9750 * | lr 5.00e-03 | 5s
+  step   100 | train 0.2194 | val loss 0.1812 auroc 0.9842 * | lr 4.99e-03 | 10s
+  step   150 | train 0.1887 | val loss 0.1547 auroc 0.9880 * | lr 4.94e-03 | 14s
+  step   200 | train 0.1678 | val loss 0.1665 auroc 0.9887 | lr 4.87e-03 | 18s
+  step   250 | train 0.1703 | val loss 0.1489 auroc 0.9877 * | lr 4.77e-03 | 21s
+  step   300 | train 0.1632 | val loss 0.1550 auroc 0.9899 | lr 4.65e-03 | 24s
+  step   350 | train 0.1611 | val loss 0.1574 auroc 0.9901 | lr 4.50e-03 | 30s
+  step   400 | train 0.1581 | val loss 0.1330 auroc 0.9903 * | lr 4.33e-03 | 33s
+  step   450 | train 0.1494 | val loss 0.1380 auroc 0.9890 | lr 4.13e-03 | 38s
+  step   500 | train 0.1495 | val loss 0.1291 auroc 0.9900 * | lr 3.92e-03 | 41s
+  step   550 | train 0.1429 | val loss 0.1375 auroc 0.9899 | lr 3.69e-03 | 44s
+  step   600 | train 0.1460 | val loss 0.1261 auroc 0.9905 * | lr 3.45e-03 | 49s
+  step   650 | train 0.1439 | val loss 0.1249 auroc 0.9905 * | lr 3.19e-03 | 52s
+  step   700 | train 0.1416 | val loss 0.1254 auroc 0.9909 | lr 2.93e-03 | 55s
+  step   750 | train 0.1408 | val loss 0.1253 auroc 0.9909 | lr 2.66e-03 | 59s
+  step   800 | train 0.1393 | val loss 0.1242 auroc 0.9915 * | lr 2.40e-03 | 62s
+  step   850 | train 0.1381 | val loss 0.1216 auroc 0.9920 * | lr 2.13e-03 | 66s
+  step   900 | train 0.1394 | val loss 0.1339 auroc 0.9916 | lr 1.87e-03 | 69s
+  step   950 | train 0.1399 | val loss 0.1208 auroc 0.9912 * | lr 1.61e-03 | 72s
+  step  1000 | train 0.1349 | val loss 0.1226 auroc 0.9916 | lr 1.37e-03 | 75s
+  step  1050 | train 0.1372 | val loss 0.1196 auroc 0.9920 * | lr 1.14e-03 | 79s
+  step  1100 | train 0.1356 | val loss 0.1187 auroc 0.9918 * | lr 9.27e-04 | 83s
+  step  1150 | train 0.1313 | val loss 0.1213 auroc 0.9919 | lr 7.32e-04 | 86s
+  step  1200 | train 0.1372 | val loss 0.1229 auroc 0.9920 | lr 5.58e-04 | 89s
+  step  1250 | train 0.1330 | val loss 0.1212 auroc 0.9919 | lr 4.07e-04 | 93s
+  step  1300 | train 0.1342 | val loss 0.1253 auroc 0.9918 | lr 2.81e-04 | 96s
+  step  1350 | train 0.1316 | val loss 0.1234 auroc 0.9919 | lr 1.81e-04 | 100s
+  step  1400 | train 0.1301 | val loss 0.1225 auroc 0.9918 | lr 1.09e-04 | 102s
+  step  1450 | train 0.1365 | val loss 0.1234 auroc 0.9918 | lr 6.51e-05 | 104s
+  step  1500 | train 0.1339 | val loss 0.1229 auroc 0.9919 | lr 5.00e-05 | 105s
+  early stop at step 1500 (best step 1100)
+[LP/efficientnet_b0/seed1] A_test:label AUROC 0.957 | B_external:label AUROC 0.783 | B_external:label_any AUROC 0.683
+[E2_ROBUST/efficientnet_b0 seed0] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=robust
+  step    50 | train 1.0739 | val loss 3.7934 auroc 0.6829 * | lr 8.81e-04 | 12s
+  step   100 | train 0.5076 | val loss 0.2049 auroc 0.9866 * | lr 8.81e-04 | 22s
+  step   150 | train 0.2876 | val loss 0.1242 auroc 0.9956 * | lr 8.81e-04 | 32s
+  step   200 | train 0.2442 | val loss 0.1366 auroc 0.9961 | lr 8.81e-04 | 43s
+  step   250 | train 0.2184 | val loss 0.1723 auroc 0.9929 | lr 8.81e-04 | 52s
+  step   300 | train 0.2008 | val loss 0.0857 auroc 0.9967 * | lr 8.81e-04 | 61s
+  step   350 | train 0.1674 | val loss 0.1873 auroc 0.9962 | lr 8.81e-04 | 71s
+  step   400 | train 0.1538 | val loss 0.1066 auroc 0.9935 | lr 8.81e-04 | 81s
+  step   450 | train 0.1481 | val loss 0.1231 auroc 0.9951 | lr 8.81e-04 | 90s
+  step   500 | train 0.1298 | val loss 0.1073 auroc 0.9977 | lr 8.81e-04 | 99s
+  step   550 | train 0.1087 | val loss 0.1179 auroc 0.9963 | lr 2.64e-04 | 109s
+  step   600 | train 0.1049 | val loss 0.0880 auroc 0.9971 | lr 2.64e-04 | 117s
+  step   650 | train 0.0982 | val loss 0.0860 auroc 0.9961 | lr 2.64e-04 | 127s
+  step   700 | train 0.1030 | val loss 0.1048 auroc 0.9954 | lr 2.64e-04 | 136s
+  early stop at step 700 (best step 300)
+[E2_ROBUST/efficientnet_b0/seed0] A_test:label AUROC 0.954 | B_external:label AUROC 0.907 | B_external:label_any AUROC 0.784
+[E2_ROBUST/efficientnet_b0 seed1] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=robust
+  step    50 | train 1.1253 | val loss 1.1813 auroc 0.9924 * | lr 8.81e-04 | 11s
+  step   100 | train 0.4729 | val loss 0.1202 auroc 0.9953 * | lr 8.81e-04 | 16s
+  step   150 | train 0.3370 | val loss 0.1706 auroc 0.9950 | lr 8.81e-04 | 24s
+  step   200 | train 0.2187 | val loss 0.1472 auroc 0.9949 | lr 8.81e-04 | 32s
+  step   250 | train 0.1977 | val loss 0.1111 auroc 0.9966 * | lr 8.81e-04 | 40s
+  step   300 | train 0.1555 | val loss 0.1692 auroc 0.9953 | lr 8.81e-04 | 48s
+  step   350 | train 0.1424 | val loss 0.1103 auroc 0.9931 * | lr 8.81e-04 | 56s
+  step   400 | train 0.1322 | val loss 0.2151 auroc 0.9880 | lr 8.81e-04 | 66s
+  step   450 | train 0.1127 | val loss 0.0891 auroc 0.9979 * | lr 8.81e-04 | 76s
+  step   500 | train 0.1225 | val loss 0.1041 auroc 0.9964 | lr 8.81e-04 | 84s
+  step   550 | train 0.1067 | val loss 0.2777 auroc 0.9970 | lr 8.81e-04 | 92s
+  step   600 | train 0.1033 | val loss 0.0522 auroc 0.9986 * | lr 8.81e-04 | 102s
+  step   650 | train 0.1070 | val loss 0.0775 auroc 0.9953 | lr 8.81e-04 | 110s
+  step   700 | train 0.1091 | val loss 0.0876 auroc 0.9954 | lr 8.81e-04 | 119s
+  step   750 | train 0.1007 | val loss 0.0956 auroc 0.9916 | lr 8.81e-04 | 130s
+  step   800 | train 0.1052 | val loss 0.0942 auroc 0.9960 | lr 8.81e-04 | 141s
+  step   850 | train 0.0946 | val loss 0.0891 auroc 0.9964 | lr 2.64e-04 | 149s
+  step   900 | train 0.0934 | val loss 0.0887 auroc 0.9973 | lr 2.64e-04 | 154s
+  step   950 | train 0.0907 | val loss 0.0812 auroc 0.9963 | lr 2.64e-04 | 163s
+  step  1000 | train 0.0910 | val loss 0.1277 auroc 0.9948 | lr 2.64e-04 | 173s
+  early stop at step 1000 (best step 600)
+[E2_ROBUST/efficientnet_b0/seed1] A_test:label AUROC 0.963 | B_external:label AUROC 0.895 | B_external:label_any AUROC 0.765

@@ -1,0 +1,16 @@
+{
+  "selected": [
+    "efficientnet_b0",
+    "vit_small"
+  ],
+  "rule": "best CNN + best transformer by mean E1 A-validation BCE",
+  "e1_val_loss_by_arch": {
+    "efficientnet_b0": 0.04395,
+    "densenet121": 0.04416,
+    "resnet50": 0.05454,
+    "convnext_tiny": 0.05947,
+    "resnet18": 0.06314,
+    "vit_small": 0.07922,
+    "swin_tiny": 0.08103
+  }
+}

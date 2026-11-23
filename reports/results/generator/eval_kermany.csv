@@ -1,0 +1,3 @@
+set,n,kid_x1000,kid_sd,precision,recall,p_teacher_normal,p_teacher_pneumonia,auroc_teacher,nn_sim_median,nn_sim_p99,nn_sim_max,n_above_real_max,distinct_nn_share
+real test (kermany),624,8.9208,2.1021,0.899,0.7705,0.3221,0.9852,0.9678,0.903,0.9425,0.9536,0,0.7837
+sd_lora,5000,123.5721,7.3293,0.144,0.14,0.0568,0.3708,0.8843,0.837,0.8896,0.9044,0,0.1316

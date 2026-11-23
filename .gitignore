@@ -1,0 +1,22 @@
+# data & generated artifacts (reproducible from code + public datasets)
+data/
+artifacts/cache/
+artifacts/runs/
+artifacts/*.log
+artifacts/optuna/
+mlruns/
+mlflow.db
+*.pt
+*.pth
+# python / jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+# OS / editor
+.DS_Store
+._*
+.idea/
+.vscode/
+app/.upload/
+external/

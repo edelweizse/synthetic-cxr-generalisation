@@ -1,0 +1,18 @@
+arch,variant,params_m,size_mb,imgs_per_s,peak_mem_mb,rsna_balanced,latency_ms,rsna_single_mean,cost_x
+efficientnet_b0,gpu fp32,4.0088,15.5763,779.8181,1615.5303,0.9268,,,
+efficientnet_b0,gpu bf16,4.0088,15.5763,1514.9407,880.54,0.9263,,,
+efficientnet_b0,cpu fp32,4.0088,15.5715,,,0.9268,11.4,,
+resnet18,gpu fp32,11.177,42.7149,2202.4073,974.0015,0.9184,,,
+resnet18,gpu bf16,11.177,42.7149,4095.3594,631.5195,0.919,,,
+resnet18,cpu fp32,11.177,42.7132,,,0.9184,13.3814,,
+densenet121,gpu fp32,6.9549,27.1214,670.1148,1383.9541,0.9153,,,
+densenet121,gpu bf16,6.9549,27.1214,1373.2262,771.0347,0.9152,,,
+densenet121,cpu fp32,6.9549,27.1116,,,0.9153,29.5682,,
+vit_small,gpu fp32,21.666,82.7075,733.5103,658.2759,0.9299,,,
+vit_small,gpu bf16,21.666,82.7075,1843.9477,552.1763,0.93,,,
+vit_small,cpu fp32,21.666,82.7055,,,0.9299,43.0075,,
+vit_small,"cpu int8 (dynamic, Linear)",21.666,21.9884,,,0.9259,29.8101,,
+efficientnet_b0,3-seed ensemble (vs mean single),,,,,0.935,,0.9055,3.0
+resnet18,3-seed ensemble (vs mean single),,,,,0.9271,,0.9082,3.0
+densenet121,3-seed ensemble (vs mean single),,,,,0.9332,,0.9185,3.0
+vit_small,3-seed ensemble (vs mean single),,,,,0.9411,,0.9344,3.0

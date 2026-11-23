@@ -1,0 +1,49 @@
+{
+  "name": "E2_efficientnet_b0",
+  "experiment": "E2",
+  "experiment_doc": "real A + conventional augmentation",
+  "arch": "efficientnet_b0",
+  "seed": 1,
+  "threshold": 0.4982910454273224,
+  "image_size": 224,
+  "resize_mode": "squash",
+  "n_train": 1000,
+  "best_val_loss": 0.050161782652139664,
+  "best_val_auroc": 0.9963285546266569,
+  "metrics": {
+    "A_test:label": {
+      "auroc": 0.8948334429103659,
+      "sensitivity": 0.9974358974358974,
+      "specificity": 0.6239316239316239,
+      "f1": 0.8973471741637832,
+      "n": 624,
+      "prevalence": 0.625
+    },
+    "B_external:label": {
+      "auroc": 0.9038753666570166,
+      "sensitivity": 0.9286518435125246,
+      "specificity": 0.7074565883554648,
+      "f1": 0.7965477699318003,
+      "n": 16896,
+      "prevalence": 0.4205729166666667
+    },
+    "B_external:label_any": {
+      "auroc": 0.7610713513103288,
+      "sensitivity": 0.9286518435125246,
+      "specificity": 0.43471520949596953,
+      "f1": 0.4986398670092187,
+      "n": 29684,
+      "prevalence": 0.23938822261150788
+    }
+  },
+  "env": {
+    "host": "desktop",
+    "python": "3.12.13",
+    "torch": "2.8.0+cu128",
+    "timm": "1.0.30",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "git_commit": "3401f01",
+    "gpu": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}

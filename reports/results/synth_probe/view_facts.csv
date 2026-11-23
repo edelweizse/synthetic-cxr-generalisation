@@ -1,0 +1,15 @@
+item,n,n_opacity,n_normal,prevalence,value
+AP films,5164.0,3898.0,1266.0,0.7548412083656081,
+PA films,6698.0,1117.0,5581.0,0.16676619886533295,
+"view alone (AP = 1) as opacity score, pooled AUROC",,,,,0.7961848498611075
+"low sharpness as opacity score, pooled",,,,,0.6819792848706692
+"low sharpness as opacity score, within AP",,,,,0.5652876632161185
+"low sharpness as opacity score, within PA",,,,,0.5517373580300344
+low sharpness as AP-vs-PA score,,,,,0.7542854740735583
+"low contrast as opacity score, pooled",,,,,0.718613809513478
+"low contrast as opacity score, within AP",,,,,0.6002852558568943
+"low contrast as opacity score, within PA",,,,,0.495330990152835
+low contrast as AP-vs-PA score,,,,,0.8310116301176879
+"E1 bootstrap SD of AUROC, AP",,,,,0.00765590037018585
+"E1 bootstrap SD of AUROC, PA",,,,,0.006790540474581865
+"E1 bootstrap SD of AUROC, pooled",,,,,0.0031297574956412203

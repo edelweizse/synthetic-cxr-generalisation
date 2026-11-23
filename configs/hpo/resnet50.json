@@ -1,0 +1,19 @@
+{
+  "arch": "resnet50",
+  "params": {
+    "lr": 0.0008405843482413933,
+    "weight_decay": 0.004706094466659138,
+    "batch_size": 32,
+    "schedule": "plateau",
+    "warmup_steps": 50,
+    "head_lr_mult": 10.0,
+    "label_smoothing": 0.004724769365486517,
+    "drop_rate": 0.07887185638370457,
+    "drop_path_rate": 0.18384515817845282
+  },
+  "best_val_loss": 0.04642442613840103,
+  "best_val_auroc": 0.9985006940250273,
+  "trial": 17,
+  "n_complete": 20,
+  "n_pruned": 5
+}

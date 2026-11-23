@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPU Queue Status</title>
+<style>
+:root {
+  --bg: #f6f6f3; --card: #ffffff; --ink: #1d1d1b; --muted: #6b6b66; --line: #e4e3dd;
+  --accent: #2f6fdb; --good: #1f8a5b; --bad: #c2453d; --warn: #b7791f; --track: #ecebe6;
+  --done: #1f8a5b; --run: #2f6fdb; --part: #b7791f; --pend: #d6d5cf;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141413; --card: #1e1e1c; --ink: #ecebe6; --muted: #9a9a93; --line: #2e2e2b;
+    --accent: #6b9cf0; --good: #4cc08a; --bad: #e57368; --warn: #e0a84a; --track: #2a2a27;
+    --done: #4cc08a; --run: #6b9cf0; --part: #e0a84a; --pend: #3a3a36;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 15px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 48px; }
+header { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between; margin-bottom: 18px; }
+h1 { font-size: 22px; margin: 0; letter-spacing: -0.01em; }
+h2 { font-size: 17px; margin: 0; }
+h3 { font-size: 14px; margin: 0; font-weight: 600; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; font-size: 13px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; }
+.now { border-left: 4px solid var(--run); }
+.now .name { font: 600 16px ui-monospace, SFMono-Regular, Menlo, monospace; }
+.bar { height: 8px; background: var(--track); border-radius: 99px; overflow: hidden; margin: 8px 0 4px; }
+.bar > i { display: block; height: 100%; background: var(--accent); border-radius: 99px; transition: width .4s; }
+.stats { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 6px; }
+.stat b { display: block; font-size: 18px; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 12px; color: var(--muted); }
+.qhead { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.badge { font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 999px; text-transform: uppercase; letter-spacing: .04em; }
+.badge.running { background: color-mix(in srgb, var(--run) 18%, transparent); color: var(--run); }
+.badge.waiting { background: color-mix(in srgb, var(--warn) 18%, transparent); color: var(--warn); }
+.badge.finished { background: color-mix(in srgb, var(--good) 18%, transparent); color: var(--good); }
+.badge.stopped { background: color-mix(in srgb, var(--bad) 16%, transparent); color: var(--bad); }
+.arm { border-top: 1px solid var(--line); padding: 12px 0 10px; display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; }
+.arm:first-of-type { margin-top: 10px; }
+.arm .why { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+.arm.active h3::before { content: "▶ "; color: var(--run); }
+.dots { display: flex; flex-wrap: wrap; gap: 3px; align-items: center; justify-content: flex-end; max-width: 300px; }
+.dot { width: 10px; height: 10px; border-radius: 3px; background: var(--pend); }
+.dot.done { background: var(--done); } .dot.partial { background: var(--part); }
+.dot.running { background: var(--run); animation: pulse 1.2s ease-in-out infinite; }
+.dots .sep { width: 6px; }
+@keyframes pulse { 50% { opacity: .35; } }
+.res { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.res .r { font-size: 12.5px; border: 1px solid var(--line); border-radius: 8px; padding: 2px 8px; font-variant-numeric: tabular-nums; }
+.pos { color: var(--good); font-weight: 600; } .neg { color: var(--bad); font-weight: 600; } .flat { color: var(--muted); font-weight: 600; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+.legend .dot { display: inline-block; vertical-align: -1px; margin-right: 5px; }
+ol.later { margin: 8px 0 0; padding-left: 20px; } ol.later li { margin: 6px 0; }
+details summary { cursor: pointer; font-size: 13px; color: var(--muted); }
+pre { background: var(--track); border-radius: 8px; padding: 10px 12px; font-size: 12px; overflow-x: auto; white-space: pre; margin: 8px 0 0; }
+.err { color: var(--bad); }
+@media (max-width: 640px) { .arm { grid-template-columns: 1fr; } .dots { justify-content: flex-start; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>GPU queue</h1>
+      <div class="muted small" id="updated">loading…</div>
+    </div>
+    <div class="chips" id="gpu"></div>
+  </header>
+  <div id="now"></div>
+  <div id="queues"></div>
+  <div class="card">
+    <h2>After the queues</h2>
+    <ol class="later" id="later"></ol>
+  </div>
+  <p class="muted small">Δ = change in view-balanced RSNA-test AUROC vs the arm's reference, for the ensemble of the finished seeds
+    (same point estimate as the report; differences under ~0.03 are within seed noise). Hover a result for the raw AUROC.
+    Read-only page; refreshes every 10 s.</p>
+</main>
+<script>
+const ARCH = {efficientnet_b0: "EffNet-B0", resnet18: "ResNet-18", densenet121: "DenseNet-121", vit_small: "ViT-S"};
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+const dur = s => s == null ? "–" : s < 90 ? `${Math.round(s)} s` : s < 5400 ? `${Math.round(s / 60)} min` : `${(s / 3600).toFixed(1)} h`;
+const clock = t => new Date(t * 1000).toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"});
+const sign = d => (d >= 0 ? "+" : "−") + Math.abs(d).toFixed(3);
+
+function deltaSpan(d) {
+  const s = el("span", d == null ? "flat" : d > 0.01 ? "pos" : d < -0.01 ? "neg" : "flat", d == null ? "n/a" : sign(d));
+  return s;
+}
+
+function render(st) {
+  document.getElementById("updated").textContent = `updated ${clock(st.now)} · ~${dur(st.per_run_s)} per run`;
+  const g = document.getElementById("gpu"); g.replaceChildren();
+  if (st.gpu) {
+    g.append(el("span", "chip", st.gpu.name.replace("NVIDIA GeForce ", "")),
+             el("span", "chip", `${st.gpu.util}% busy`),
+             el("span", "chip", `${(st.gpu.mem_used / 1024).toFixed(1)} / ${(st.gpu.mem_total / 1024).toFixed(0)} GB`),
+             el("span", "chip", `${st.gpu.temp} °C`));
+  }
+  g.append(el("span", "chip", st.sessions.length ? `tmux: ${st.sessions.join(", ")}` : "no tmux jobs"));
+
+  // NOW card
+  const now = document.getElementById("now"); now.replaceChildren();
+  const active = st.queues.find(q => q.current);
+  if (active) {
+    const c = active.current, arm = active.arms.find(a => a.cells.some(x => x.exp === c.exp && x.arch === c.arch && x.seed === c.seed));
+    const card = el("div", "card now");
+    card.append(el("div", "muted small", "Training now"),
+                el("div", "name", `${c.exp} · ${ARCH[c.arch] || c.arch} · seed ${c.seed}`));
+    if (arm) card.append(el("div", null, arm.title), el("div", "muted small", arm.why));
+    if (c.live) {
+      const bar = el("div", "bar"), fill = el("i"); fill.style.width = `${100 * c.live.step / c.live.max_steps}%`; bar.append(fill);
+      card.append(bar, el("div", "muted small", `step ${c.live.step} of max ${c.live.max_steps} (early stopping usually ends it sooner)`));
+    } else {
+      card.append(el("div", "muted small", `starting: loading images / building the model (last file write ${dur(c.age_s)} ago)`));
+    }
+    const stats = el("div", "stats");
+    const stat = (v, l) => { const s = el("div", "stat"); s.append(el("b", null, v), el("span", null, l)); return s; };
+    if (c.live) stats.append(stat(c.live.val_auroc.toFixed(4), "val AUROC (Kermany/CheXpert val, not RSNA)"),
+                             stat(c.live.val_loss.toFixed(4), "val loss"));
+    stats.append(stat(`${active.done} / ${active.total}`, "runs done in this queue"),
+                 stat(dur(active.eta_s), "left in this queue"));
+    const last = st.queues[st.queues.length - 1];
+    if (last.eta_s != null && last !== active) stats.append(stat(clock(st.now + last.eta_s), "all queues done ≈"));
+    card.append(stats);
+    now.append(card);
+  } else if (st.queues.find(q => q.stage)) {
+    const q = st.queues.find(q => q.stage), sg = q.stage, card = el("div", "card now");
+    card.append(el("div", "muted small", `Now · ${q.title}`), el("div", "name", sg.title), el("div", "muted small", sg.why));
+    if (sg.detail) {
+      if (sg.detail.frac != null) {
+        const bar = el("div", "bar"), fill = el("i"); fill.style.width = `${Math.min(100, 100 * sg.detail.frac)}%`; bar.append(fill); card.append(bar);
+      }
+      card.append(el("div", "muted small", sg.detail.text));
+    }
+    const stats = el("div", "stats");
+    const stat = (v, l) => { const s = el("div", "stat"); s.append(el("b", null, v), el("span", null, l)); return s; };
+    stats.append(stat(dur(q.eta_s), "left in this queue (rough)"));
+    card.append(stats);
+    now.append(card);
+  } else {
+    const card = el("div", "card"); card.append(el("h2", null, "Nothing training right now"),
+      el("div", "muted small", st.queues.some(q => q.state === "running") ? "Between runs (caching images or evaluating)." : "No queue is running."));
+    now.append(card);
+  }
+
+  // queues
+  const qs = document.getElementById("queues"); qs.replaceChildren();
+  for (const q of st.queues) {
+    const card = el("div", "card"), head = el("div", "qhead"), left = el("div");
+    left.append(el("h2", null, q.title));
+    const right = el("div", "chips");
+    const badge = el("span", `badge ${q.state}`, q.state === "waiting" ? `waiting for ${q.after}` : q.state);
+    right.append(badge, el("span", "chip", `${q.done}/${q.total} runs`));
+    if (q.eta_s != null) right.append(el("span", "chip", `done ≈ ${clock(st.now + q.eta_s)}`));
+    head.append(left, right);
+    const bar = el("div", "bar"), fill = el("i"); fill.style.width = `${100 * q.done / q.total}%`; bar.append(fill);
+    card.append(head, el("div", "muted small", q.why), bar);
+    for (const sg of q.stages || []) {
+      const row = el("div", "arm" + (sg.state === "running" ? " active" : ""));
+      const t = el("div"); t.append(el("h3", null, sg.title), el("span", "muted small", sg.detail ? ` ${sg.detail.text}` : ""));
+      const dots = el("div", "dots"); dots.append(el("span", "dot " + sg.state));
+      row.append(t, dots, el("div", "why", sg.why));
+      card.append(row);
+    }
+    for (const a of q.arms) {
+      const isActive = q.current && a.cells.some(x => x.exp === q.current.exp && x.arch === q.current.arch && x.seed === q.current.seed);
+      const row = el("div", "arm" + (isActive ? " active" : ""));
+      const t = el("div"); t.append(el("h3", null, a.title));
+      t.append(el("span", "muted small", ` ${a.key} · ${a.done}/${a.total}`));
+      const dots = el("div", "dots");
+      let prev = null;
+      for (const c of a.cells) {
+        if (prev && prev !== c.arch + c.exp) dots.append(el("span", "sep"));
+        prev = c.arch + c.exp;
+        const running = q.current && c.exp === q.current.exp && c.arch === q.current.arch && c.seed === q.current.seed;
+        const d = el("span", "dot " + (running ? "running" : c.state));
+        d.title = `${c.exp} ${ARCH[c.arch] || c.arch} seed ${c.seed}: ${running ? "training" : c.state}`;
+        dots.append(d);
+      }
+      row.append(t, dots, el("div", "why", a.why));
+      if (a.results.length) {
+        const res = el("div", "res");
+        for (const r of a.results) {
+          const chip = el("span", "r");
+          const size = r.exp.startsWith("E3_") ? "+250 " : r.exp.startsWith("E4_") ? "+500 " : "";
+          chip.append(`${ARCH[r.arch] || r.arch} ${size}`);
+          if (a.ref) { chip.append(deltaSpan(r.delta)); } else { chip.append(el("b", null, r.bal.toFixed(3))); }
+          chip.append(el("span", "muted", ` (${r.n} seed${r.n > 1 ? "s" : ""})`));
+          chip.title = `view-balanced RSNA-test ${r.bal.toFixed(3)}` + (r.c_test != null ? ` · CheXpert test ${r.c_test.toFixed(3)}` : "") +
+                       (a.ref ? ` · vs ${a.ref}` : "");
+          res.append(chip);
+        }
+        row.append(res);
+      }
+      card.append(row);
+    }
+    if (q.tail_note) card.append(el("div", "muted small", "↳ " + q.tail_note));
+    const det = el("details"); det.append(el("summary", null, "last log lines"), el("pre", null, q.log.join("\n") || "(empty)"));
+    card.append(det);
+    qs.append(card);
+  }
+  const legend = el("div", "legend");
+  for (const [cls, label] of [["done", "finished"], ["running", "training"], ["partial", "started, paused"], ["", "not started"]]) {
+    const s = el("span"); s.append(el("span", "dot " + cls), label); legend.append(s);
+  }
+  qs.firstChild && qs.firstChild.insertBefore(legend, qs.firstChild.children[2]);
+
+  const later = document.getElementById("later"); later.replaceChildren();
+  for (const l of st.later) { const li = el("li"); li.append(el("b", null, l.title), el("div", "muted small", l.why)); later.append(li); }
+}
+
+async function tick() {
+  try {
+    const st = await (await fetch("/api/status", {cache: "no-store"})).json();
+    if (st.error) throw new Error(st.error);
+    render(st);
+  } catch (e) {
+    document.getElementById("updated").replaceChildren(el("span", "err", `cannot load status: ${e.message}`));
+  }
+}
+tick(); setInterval(tick, 10000);
+</script>
+</body>
+</html>

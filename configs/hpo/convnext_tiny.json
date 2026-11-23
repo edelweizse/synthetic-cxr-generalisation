@@ -1,0 +1,19 @@
+{
+  "arch": "convnext_tiny",
+  "params": {
+    "lr": 0.00024629353126236767,
+    "weight_decay": 0.00015644728679955087,
+    "batch_size": 64,
+    "schedule": "cosine",
+    "warmup_steps": 200,
+    "head_lr_mult": 10.0,
+    "label_smoothing": 0.033490147559272425,
+    "drop_rate": 0.3130855849156866,
+    "drop_path_rate": 0.18654211533332027
+  },
+  "best_val_loss": 0.05550703406333923,
+  "best_val_auroc": 0.9949087171662587,
+  "trial": 22,
+  "n_complete": 15,
+  "n_pruned": 10
+}

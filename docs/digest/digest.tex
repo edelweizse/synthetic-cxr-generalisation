@@ -1,0 +1,364 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Noto Serif}[Scale=0.95]
+\setsansfont{Noto Sans}
+\setmonofont{Noto Sans Mono}[Scale=0.85]
+\usepackage{microtype}
+\usepackage{underscore}
+\usepackage{graphicx}
+\graphicspath{{./}{../../reports/figures/}}
+\usepackage{booktabs,tabularx,array}
+\usepackage[table]{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{good}{HTML}{2E7D32}
+\definecolor{bad}{HTML}{C62828}
+\definecolor{soft}{HTML}{F3F6FA}
+\titleformat{\section}{\sffamily\Large\bfseries\color{accent}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\sffamily\large\bfseries}{\thesubsection}{0.5em}{}
+\titleformat{\paragraph}[runin]{\sffamily\bfseries}{}{}{}[.]
+\titlespacing*{\section}{0pt}{1.4em}{0.6em}
+\titlespacing*{\subsection}{0pt}{1.1em}{0.4em}
+\setlist{itemsep=2pt,topsep=3pt,leftmargin=1.3em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\renewcommand{\arraystretch}{1.18}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\sffamily\small Synthetic CXR augmentation: progress digest}
+\fancyhead[R]{\sffamily\small 9--14 October 2026}
+\fancyfoot[C]{\sffamily\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+\newtcolorbox{keybox}[1][]{colback=soft,colframe=accent,boxrule=0.6pt,arc=2pt,left=8pt,right=8pt,top=6pt,bottom=6pt,
+  fonttitle=\sffamily\bfseries,title=#1}
+\newtcolorbox{fixbox}{colback=red!3,colframe=bad!70,boxrule=0.5pt,arc=2pt,left=8pt,right=8pt,top=5pt,bottom=5pt}
+\newcommand{\fig}[3][\linewidth]{\begin{figure}[H]\centering\includegraphics[width=#1]{#2}\caption{#3}\end{figure}}
+\newcommand{\down}[1]{\textcolor{bad}{#1}}
+\newcommand{\up}[1]{\textcolor{good}{#1}}
+
+\begin{document}
+
+\begin{center}
+{\sffamily\LARGE\bfseries\color{accent} Evaluating synthetic chest X-ray augmentation\\[2pt] for cross-dataset pneumonia classification}\\[6pt]
+{\sffamily\large Progress digest: everything that happened, in order, with the numbers that matter}\\[3pt]
+{\small Prediction component · state of 14 October 2026 · source of truth: \texttt{docs/FINDINGS_SYNTHETIC.md}, \texttt{docs/EXPERIMENTS.md}}
+\end{center}
+
+\begin{keybox}[The short version]
+\textbf{Question.} Does generative augmentation (synthetic X-rays from the teammate's Stable Diffusion + LoRA generator) improve a
+pneumonia classifier trained on Kermany (children, one hospital) when it is tested on RSNA (adults, another hospital), compared with
+no augmentation, conventional augmentation, and the same number of extra \emph{real} images?
+
+\textbf{Answer: no.} In every setting tested, adding synthetic images made the external result \emph{worse}:
+\begin{itemize}
+\item all 7 architectures, \down{14 of 14} comparisons below zero (\down{$-$0.009 to $-$0.067} AUROC pooled, \down{$-$0.02 to $-$0.15} view-balanced);
+\item the same number of \emph{real} images does not hurt (and helps under the fairer metric); simple augmentation gains \up{+0.02 to +0.09};
+\item no fix tried (more synthetic images, equalised preprocessing, quality-aware selection, robust losses, augmentation on top)
+turns the penalty positive. The best fix makes it small, never a gain.
+\end{itemize}
+\textbf{Why.} Kermany has an image-quality shortcut (pneumonia films are blurrier and flatter than normal films). The generator
+copies that cue and amplifies the contrast part. Every synthetic image is one more lesson in ``blurry = pneumonia'', which is
+nearly useless on RSNA and costs most on blurry bedside (AP) films of sick patients.
+
+\textbf{Also found on the way:} (1) RSNA's view (AP vs PA) is strongly confounded with the label; view alone scores 0.796
+AUROC, so the usual pooled AUROC flatters every model. (2) A quality-consistency loss (\emph{qcons}) is a useful loss-level
+augmentation (+0.031 pooled, +0.066 view-balanced), but it does not make synthetic data help.
+
+\textbf{Needs you:} decide whether the report uses view-balanced AUROC as the headline metric (recommended); write report §4.5;
+get three answers from the teammate (§9).
+\end{keybox}
+
+\subsection*{What happened when}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l Y@{}}
+\toprule
+\textbf{9--10 Oct} & Data pipeline; Kermany leakage (170 patients) and an acquisition shortcut (file size alone gives 0.998 AUROC);
+HPO for 7 architectures; baselines E1 and conventional augmentation E2 (+0.02 to +0.05 for all 7); real-data controls and scaling;
+anti-overfitting variants; notebooks 01--06; demo; report §1--§5 drafted. Synthetic images still missing. \\
+\textbf{12 Oct} & Teammate's synthetic images arrive. E3 / E4 hurt. Diagnosis: they carry Kermany's image-quality shortcut (§5).
+Equalised preprocessing tried; RSNA split into dev / test; synthetic images on top of augmentation (still hurt); dose series
+(more synthetic images do not help). \\
+\textbf{13 Oct} & Equalisation ``rescue'' withdrawn after re-tuning; shortcut measured in untouched RSNA films; penalty confirmed on
+all 7 architectures; quality-aware selection; four robust losses (qcons works, nothing rescues synthetic data); AP/PA view
+confound found and quantified; experiment inventory. \\
+\textbf{14 Oct} & Gap-filling queue running (missing architecture combinations, §9); notebook 04 refreshed; this digest. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\fig{fig_scoreboard.png}{The whole study in one picture (EfficientNet-B0, RSNA-test). Bars: view-balanced AUROC (mean of the AP and
+PA AUROC); ticks: the usual pooled AUROC. Green and blue (real data, augmentation) lie at or right of the dotted baseline; red
+(synthetic) lies left of it. Orange are synthetic images plus a fix: the fixes help, but each orange bar is still below the same
+recipe without synthetic images (e.g.\ E2_ERASE + qcons + synthetic 0.837 vs E2_ERASE 0.872).}
+
+\newpage
+\section{Setup in one page}
+
+\paragraph{Data} \textbf{Kermany} (Guangzhou, children 1--5 y, 5,856 images) is the only training source: a balanced subset of
+1,000 real images (500 per class, one per patient) is the default training set. \textbf{RSNA} (NIH, adults, 1024² DICOM) is the
+external test: \emph{Lung Opacity} vs \emph{Normal}. RSNA is split by patient into \textbf{RSNA-dev} (30\%, only used once, to
+choose the augmentation recipe for the follow-up experiments) and \textbf{RSNA-test} (70\%, every reported number).
+
+\paragraph{Models and protocol} Seven ImageNet-pretrained backbones (ResNet-18/50, DenseNet-121, EfficientNet-B0, ConvNeXt-T,
+ViT-S/16, Swin-T). Optuna (25 trials each) tuned on Kermany validation BCE, then frozen. 1,500-step budget, early stopping on
+validation BCE, 3 seeds per configuration (368+ runs in total on the RTX 3060 Ti). Effects are reported as the AUROC change of
+the 3-seed ensemble with a paired, patient-clustered bootstrap 95\% CI. Differences under about 0.02 are treated as inconclusive
+because seed-to-seed variation is that large.
+
+\paragraph{Names used throughout}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l Y@{}}
+\toprule
+E1 & baseline: 1,000 real images, no augmentation \\
+R25 / R50 & +250 / +500 \emph{real} images (the matched control for E3 / E4) \\
+N250 … N2000, FULL & real-data scaling: 250 to 2,000 real images; all 4,093 \\
+E2 & conventional augmentation (rotation, shift, scale, brightness, contrast, gamma) \\
+E2_ERASE & E2 + random erasing (best recipe on RSNA-dev for 6 of 7 architectures) \\
+E2_ACQ / E2_MIX / E2_ROBUST / LP & acquisition jitter / mixup / everything / frozen backbone (linear probe) \\
+E3 / E4 & +250 / +500 \emph{synthetic} images (tag \texttt{sd_lora}); SYN1000, SYN2000, SYN_ONLY for the dose series \\
+ERASE_SYN / ERASE_REAL & E2_ERASE augmentation + synthetic / + real images \\
+HARM / HARMT & histogram-equalised preprocessing for train and test; HARMT with re-tuned hyper-parameters \\
+QM / QC & synthetic images chosen to be quality-matched / quality-counter (§6.4) \\
+L\emph{QCONS}, L\emph{QDRO}, L\emph{FOCAL}, L\emph{GCE} & training-loss variants (§6.5) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\paragraph{Three words to keep apart} \emph{Augmentation} = random changes to the same real images during training, no new
+images. \emph{Synthetic data} = new images from the generator, added as extra training examples. \emph{Preprocessing} = one fixed
+transform of every image, training and test.
+
+\paragraph{Metric} Pooled AUROC on RSNA was the pre-registered endpoint. §7 shows it is inflated by the view; the
+\textbf{view-balanced AUROC} (mean of the AUROC within AP films and within PA films) is the fairer number and is shown next to it
+where it matters.
+
+\section{Days 1--2: data, and a shortcut in Kermany (9--10 Oct)}
+
+Building patient-level splits turned up two problems in Kermany. \textbf{Leakage:} 170 pneumonia patient IDs appear in both the
+official train and test folders; their 457 training images were removed. \textbf{An acquisition shortcut:} normal images are
+much larger (median width 1,654 vs 1,120 px) and saved at much higher JPEG quality. A logistic regression on width, height, aspect
+ratio and file size, \emph{without a single pixel}, reaches 0.998 AUROC on Kermany validation; width alone 0.95 on Kermany test.
+
+\fig{a_acquisition_by_class.png}{Kermany acquisition properties by class. Pneumonia images are narrower and taller, so the label is
+predictable from the file alone.}
+
+Consequences that shaped everything after: images are resized with their full field of view (no letterbox padding that would
+encode the size); validation AUROC is useless for model selection (every model reaches about 0.99 after 50 steps), so validation
+BCE is used; and the Kermany test set and RSNA measure different things. This shortcut turns out to be the root of the synthetic-data
+story: §5 shows its \emph{image-quality} traces survive resizing.
+
+\section{Baselines, augmentation and more real data (10 Oct)}
+
+\paragraph{E1 across 7 architectures} Classic CNNs are the strongest and most stable at 1,000 images (RSNA 0.86--0.88 pooled);
+ConvNeXt and the transformers are weaker (0.82--0.84) and unstable. Every model loses 0.03--0.08 from Kermany test to RSNA and
+over-calls pneumonia on RSNA (sensitivity 0.84--0.91, specificity 0.56--0.74).
+
+\paragraph{E2 conventional augmentation helps all 7} +0.022 to +0.052 AUROC on RSNA, every CI above zero, with larger gains within
+each view than pooled. In-domain validation would have \emph{rejected} it (worse validation BCE for 5 of 7): source validation is
+a poor guide to external performance.
+
+\fig{e2_vs_e1_delta.png}{E2 vs E1 per architecture and test set. Augmentation improves RSNA for every architecture.}
+
+\paragraph{More real data} For EfficientNet-B0, augmentation on 1,000 images beats 4$\times$ more real data (E2 +0.056 vs FULL
++0.019) and real data on top of augmentation adds nothing. ViT-S is data-hungry (+0.03 per doubling). This set the bar for the
+synthetic images: R25 / R50 (+250 / +500 real) gave about 0 for EfficientNet-B0 and about +0.025 for ViT-S.
+
+\fig{real_data_scaling.png}{Real-data scaling curve. Kermany test keeps moving; RSNA flattens for the CNN.}
+
+\paragraph{Anti-overfitting variants (notebook 06)} Random erasing (E2_ERASE) is the best variant on RSNA-dev for 6 of 7
+architectures (Swin-T prefers acquisition jitter); mixup gives the best calibration; a frozen backbone is 0.07--0.15 worse except
+for Swin-T. RSNA-dev and RSNA-test agree within 0.01, so this choice is not over-fitted.
+
+\section{The synthetic images arrive, and they hurt (12 Oct)}
+
+The teammate delivered 4,000 normal + 1,000 pneumonia images (Stable Diffusion 1.5 + LoRA, 512², one fixed prompt per class).
+They look plausible to the eye.
+
+\fig{synth_montage.png}{Synthetic (top two rows) and real Kermany (bottom two rows) images. A real-vs-synthetic probe on generic
+features still separates them perfectly (AUROC 1.000), but there are no near-copies of training images.}
+
+E3 and E4 add 250 / 500 synthetic images to the 1,000 real ones, with nothing else changed.
+
+\fig[0.72\linewidth]{synth_e3e4_views.png}{EfficientNet-B0, RSNA-test AUROC: pooled, PA films, AP films. Grey = baseline, green = + real,
+red = + synthetic; hatched = with E2_ERASE augmentation. Synthetic images lower every panel; the drop is worst on AP films, and with
+augmentation it is even larger (AP 0.86 $\rightarrow$ 0.64).}
+
+\fig[0.9\linewidth]{fig_synth_archs.png}{The penalty on all seven architectures (Δ vs E1, RSNA-test). Pooled: $-$0.009 to
+$-$0.067, all 14 CIs below zero. View-balanced: roughly twice as large. DenseNet-121 is the most resistant, ResNet-18 and
+EfficientNet-B0 the most affected.}
+
+\begin{center}\small
+\begin{tabularx}{0.92\linewidth}{@{}Y r r r@{}}
+\toprule
+EfficientNet-B0, RSNA-test, Δ vs E1 & pooled & view-balanced & AP films \\
+\midrule
++250 real (R25) / +500 real (R50) & +0.009 / $-$0.000 & \up{+0.027 / +0.017} & +0.056 / +0.045 \\
++250 synthetic (E3) & \down{$-$0.044} & \down{$-$0.075} & \down{$-$0.100} \\
++500 synthetic (E4) & \down{$-$0.065} & \down{$-$0.103} & \down{$-$0.110} \\
+synthetic vs the same number of real (R25$\rightarrow$E3 / R50$\rightarrow$E4) & \down{$-$0.053 / $-$0.065} & \down{$-$0.102 / $-$0.120} & \\
+E2_ERASE + 250 / + 500 synthetic (vs E2_ERASE) & \down{$-$0.055 / $-$0.060} & \down{$-$0.145 / $-$0.134} & \down{$-$0.25 / $-$0.20} \\
+E2_ERASE + 250 / + 500 real (vs E2_ERASE) & $-$0.004 / +0.010 & & \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Why: the synthetic images teach Kermany's quality shortcut}
+
+\paragraph{The labels are partly real} Classifiers trained only on real images recognise the synthetic classes (AUROC 0.75--0.91),
+but the more robust the classifier, the less pneumonia it sees in synthetic pneumonia (mean p 0.28--0.54 vs 0.96--0.98 for real
+pneumonia). Synthetic ``pneumonia'' is mostly borderline.
+
+\paragraph{The quality cue is copied and amplified} In Kermany, low sharpness alone predicts pneumonia at 0.87 AUROC, low contrast
+at 0.75. In the synthetic set: 0.86 and \textbf{0.89}. In RSNA, the same cues are nearly useless (0.50--0.63).
+
+\fig{synth_quality_stats.png}{Sharpness (top) and contrast (bottom) by class. Kermany and synthetic classes separate on image
+quality alone; RSNA classes do not.}
+
+\paragraph{Causal test} Blurring or flattening the \emph{same healthy} images raises every model's pneumonia score. Baseline and
++real models react as strongly as synthetic ones to blur, so ``blurry = pneumonia'' is learned from the real Kermany data;
+the synthetic images add a \emph{contrast} reliance (response to $\times$0.7 contrast doubles, +0.21 $\rightarrow$ +0.41).
+Augmentation only protects against mild blur ($\sigma$ = 1).
+
+\fig{synth_degrade.png}{Rise in mean pneumonia probability of healthy images after degradation, per training recipe.}
+
+\paragraph{Visible in untouched RSNA films} Regressing each model's score on the film's own sharpness and its label gives
+``how much opacity one SD of blur is worth''. Baseline 0.36--0.39; +500 synthetic \textbf{0.90}: blur moves an E4 model almost as
+much as an opacity does. Augmentation halves the ratio, mainly by learning more pathology. The synthetic penalty concentrates on
+the blurriest third of AP films, where E3 is at chance (0.54), and these are exactly the bedside films of the sickest patients.
+
+\fig{synth_quality_ratio.png}{Weight of image quality relative to the weight of the opacity label, on real RSNA-test films
+(dotted line = baseline). Synthetic training roughly doubles the sharpness weight and, on PA films, triples the contrast weight.}
+
+\section{Trying to rescue the synthetic images (12--13 Oct)}
+
+\subsection{Equalised preprocessing (and the first correction)}
+Histogram equalisation of every image removes most of the synthetic contrast cue. The first round looked like a rescue
+(penalty $-$0.010 / +0.002). After re-tuning hyper-parameters for the new preprocessing (HARMT), the baseline itself improved and the
+penalty came back: \down{$-$0.030 / $-$0.038}. With augmentation, equalisation makes it worse ($-$0.065 / $-$0.109).
+
+\subsection{More synthetic images}
+From 250 to 2,000 synthetic images the penalty stays at $-$0.04 to $-$0.065 with no trend: a fixed bias, not a dilution effect.
+A model trained on 2,000 synthetic images \emph{only} reaches 0.88 on Kermany test but \textbf{0.50 on RSNA PA films} (chance).
+
+\fig{synth_dose_response.png}{Dose-response: RSNA-test AUROC vs number of synthetic images added (EfficientNet-B0).}
+
+\subsection{Augmentation on top}
+On the strong E2_ERASE baseline the penalty is as large or larger for EfficientNet-B0, ViT-S and DenseNet-121, while the same number
+of real images changes nothing. Erasing removes local cues, which leaves the global quality cue as an even easier shortcut.
+
+\subsection{Choosing which synthetic images to add}
+Subsets with the quality cue removed (quality-matched, QM) or reversed (quality-counter, QC) cut the pooled penalty to $-$0.012 /
+$-$0.014 and remove the extra contrast reliance. Under the view-balanced metric about half the penalty remains ($-$0.04). It never
+helps.
+
+\subsection{Robust training losses}
+Four losses, each with and without the synthetic images: focal (down-weight easy examples), GCE (robust to label noise), group DRO
+over label $\times$ sharpness, and \textbf{qcons}: BCE + a penalty on how much the score changes under random blur and contrast
+reduction.
+
+\fig{synth_losses.png}{Left: the loss on real data. Middle: the loss with +250 synthetic. Right: the synthetic penalty under each
+loss. Only qcons helps clearly; no loss makes the right panel positive.}
+
+\begin{itemize}
+\item \textbf{qcons} is a real finding: +0.031 pooled, +0.116 on AP films, +0.066 view-balanced, and it cuts the sharpness weight
+to the level of augmentation. It works on ViT-S (+0.040), EfficientNet-B0, Swin-T (AP +0.079) and DenseNet-121 (+0.005), but stays
+below conventional augmentation, and on top of augmentation it adds nothing (Δ 0.000). It is a loss-level substitute for augmentation.
+\item With synthetic data, qcons shrinks the penalty (EfficientNet-B0 $-$0.044 $\rightarrow$ $-$0.025; Swin-T $-$0.042
+$\rightarrow$ $-$0.009, AP 0.532 $\rightarrow$ 0.713); with augmentation + qcons it is $-$0.016. \textbf{It never turns positive.}
+\item focal / DRO: small gains (+0.007 / +0.009); GCE under-fits and with synthetic data one seed stays at chance.
+\end{itemize}
+
+\section{A second confound: AP vs PA view in RSNA (13 Oct)}
+
+A side-chat hypothesis, checked on every run: in RSNA, \textbf{75\% of AP films (bedside, sicker patients) show opacity, against
+17\% of PA films}. AP films are also blurrier and flatter. So the pooled AUROC partly rewards \emph{recognising the view}, and the
+Kermany quality shortcut happens to point the same way.
+
+\fig{fig_view_confound.png}{Left: label prevalence by view. Middle: pooled vs view-balanced AUROC for all 121 run $\times$
+architecture configurations; pooled is 0.05--0.19 higher, and a ``view detector'' alone would score 0.796 pooled. Right: for every
+baseline, an AP opacity is ranked above a PA normal 94--98\% of the time, but a PA opacity above an AP normal only 27--37\%.}
+
+\begin{itemize}
+\item The baseline models are to a large extent view detectors: among normal films alone they rank AP above PA with AUROC 0.84--0.92.
+\item \textbf{No conclusion flips, most get sharper.} Ranking of all configurations: Spearman 0.985 between the two metrics. Of 48
+key comparisons one changes sign, and it strengthens the story: +500 real images \emph{help} (+0.017 balanced).
+\item RSNA-dev selection is unaffected (Spearman 0.978).
+\item \textbf{Recommendation:} report view-balanced AUROC as the headline external metric, AP / PA separately, pooled as secondary.
+\end{itemize}
+
+\section{Claims that were corrected along the way}
+
+\begin{fixbox}
+\small
+\begin{tabularx}{\linewidth}{@{}p{0.36\linewidth} Y@{}}
+\textbf{Earlier claim} & \textbf{Correction} \\
+\midrule
+``Equalised preprocessing removes the synthetic penalty'' & came from an un-tuned, weak equalised baseline; after re-tuning (HARMT) two thirds of the penalty is back ($-$0.030 / $-$0.038) \\
+E4 penalty $-$0.069 & 2 seeds; with the third seed $-$0.065 \\
+``More synthetic hurts more'' & only E4 with one weak seed; the dose series shows a plateau, no trend \\
+``Quality-aware selection removes most of the penalty'' & true pooled; only about half under the view-balanced metric \\
+``Augmentation shields against synthetic images'' & the opposite: the penalty with augmentation is the largest of all ($-$0.145 balanced) \\
+Kermany test as evidence for / against synthetic data & +500 real images move it as much ($-$0.060); dropped as uninformative \\
+\end{tabularx}
+\end{fixbox}
+
+\section{Where things stand (14 Oct)}
+
+\subsection{Done}
+\begin{itemize}
+\item 371 complete runs on the box; every one has all 3 seeds evaluated. Inventory: \texttt{docs/EXPERIMENTS.md}.
+\item Findings log §0--§13: \texttt{docs/FINDINGS_SYNTHETIC.md}. Report §1--§4.4, §4.6--§4.7, §5 drafted: \texttt{docs/report.md}.
+\item Notebooks 01--07 executed without errors; notebook 04 re-run today with the synthetic results (it still showed them as
+``pending''). Streamlit demo with exported E1 / E2 / E2_ERASE / E3 models.
+\end{itemize}
+
+\subsection{Running now: filling gaps in the design}
+Nothing had failed, but some combinations were only run for some architectures. Most importantly, the matched real controls
+R25 / R50 existed only for EfficientNet-B0 and ViT-S, so for the other five the claim ``synthetic is worse than the same number of
+real images'' had no direct test. \texttt{scripts/queue_gaps.sh} (78 runs, about 7 hours, resumable) adds:
+\begin{enumerate}
+\item R25 / R50 on ResNet-18/50, DenseNet-121, ConvNeXt-T, Swin-T;
+\item qcons on E1 for ResNet-18/50 and ConvNeXt-T, and E3 + qcons for five architectures;
+\item E2_ERASE + 250 synthetic / + 250 real on ResNet-18/50, ConvNeXt-T, Swin-T.
+\end{enumerate}
+When it finishes: the comparison scripts (already extended to all seven architectures) are re-run, notebook 07 gets a new
+seven-architecture synthetic-vs-real figure, and the findings and inventory are updated.
+
+\subsection{Open: needs a decision or an answer}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l Y@{}}
+\toprule
+\textbf{You} & \textbf{View-balanced AUROC as the headline metric} in the report (recommended; no conclusion changes, effects get clearer). \\
+\textbf{Teammate} & (1) Was the generator trained on all Kermany images or only on the classifier's 1,000 (``strict'' vs ``transfer'')? (2) How many LoRA steps? (3) Were images filtered? \\
+\textbf{Report} & §4.5 synthetic results (placeholder); §3 note that RSNA-dev chose the ERASE recipe; research-question wording; §5 objectives 3--5; §6 limitations; §7 scripts; §4.7 for all 7 architectures; a robust-loss section. \\
+\textbf{Deliverables} & slides; roles / contribution table. \\
+\textbf{Optional} & re-tune hyper-parameters for qcons / GCE; view-balanced columns in notebooks 04 / 06. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\section{Where to find things}
+\begin{center}\small
+\begin{tabularx}{\linewidth}{@{}l Y@{}}
+\toprule
+\texttt{docs/FINDINGS_SYNTHETIC.md} & every synthetic-data finding with tables and CIs (§0--§13) \\
+\texttt{docs/EXPERIMENTS.md} & inventory: ran / planned / abandoned \\
+\texttt{docs/report.md} & the technical report draft \\
+\texttt{HANDOFF.md} (end) & latest session state, how to resume the GPU queue \\
+\texttt{notebooks/07_synthetic.ipynb} & visual walkthrough of everything in §4--§7 of this digest \\
+\texttt{reports/results/synth_probe/*.csv} & result tables behind every number \\
+\texttt{docs/digest/} & this digest (\texttt{xelatex digest.tex}; \texttt{make_figures.py} regenerates its three summary figures) \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\end{document}

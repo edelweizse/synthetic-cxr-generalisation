@@ -1,0 +1,16 @@
+# Generator environment (.venv-gen): Stable Diffusion 1.5 + LoRA training and sampling.
+# Exact versions used for all generator results (GPU box: Python 3.12, CUDA 12.8, RTX 3060 Ti 8 GB).
+# Install: uv pip install --python .venv-gen -r requirements-gen.txt --index-url https://download.pytorch.org/whl/cu128 --extra-index-url https://pypi.org/simple
+torch==2.8.0
+torchvision==0.23.0
+diffusers==0.41.0
+transformers==5.20.0
+peft==0.21.2
+accelerate==1.15.0
+safetensors==0.8.0
+huggingface-hub==1.33.0
+numpy==2.5.4
+pandas==3.0.6
+pillow==12.3.0
+scipy==1.18.1
+tqdm==4.70.1

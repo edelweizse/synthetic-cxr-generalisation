@@ -1,0 +1,49 @@
+{
+  "name": "E2_ERASE_efficientnet_b0",
+  "experiment": "E2_ERASE",
+  "experiment_doc": "E2 + random erasing and border masking",
+  "arch": "efficientnet_b0",
+  "seed": 0,
+  "threshold": 0.929440438747406,
+  "image_size": 224,
+  "resize_mode": "squash",
+  "n_train": 1000,
+  "best_val_loss": 0.05517479032278061,
+  "best_val_auroc": 0.9986914184600061,
+  "metrics": {
+    "A_test:label": {
+      "auroc": 0.9505204909051063,
+      "sensitivity": 0.9871794871794872,
+      "specificity": 0.7606837606837606,
+      "f1": 0.9265944645006017,
+      "n": 624,
+      "prevalence": 0.625
+    },
+    "B_external:label": {
+      "auroc": 0.9212177224673391,
+      "sensitivity": 0.8374613003095975,
+      "specificity": 0.865679264555669,
+      "f1": 0.8281380462009463,
+      "n": 16896,
+      "prevalence": 0.4205729166666667
+    },
+    "B_external:label_any": {
+      "auroc": 0.7887649487406039,
+      "sensitivity": 0.8374613003095975,
+      "specificity": 0.61072725662149,
+      "f1": 0.5448136958710977,
+      "n": 29684,
+      "prevalence": 0.23938822261150788
+    }
+  },
+  "env": {
+    "host": "desktop",
+    "python": "3.12.13",
+    "torch": "2.8.0+cu128",
+    "timm": "1.0.30",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "git_commit": "6e08c8e",
+    "gpu": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}

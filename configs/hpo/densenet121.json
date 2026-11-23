@@ -1,0 +1,18 @@
+{
+  "arch": "densenet121",
+  "params": {
+    "lr": 0.0005996758946013501,
+    "weight_decay": 0.02308169809532194,
+    "batch_size": 16,
+    "schedule": "plateau",
+    "warmup_steps": 150,
+    "head_lr_mult": 10.0,
+    "label_smoothing": 0.011076323819186303,
+    "drop_rate": 0.08568028622444912
+  },
+  "best_val_loss": 0.03776175156235695,
+  "best_val_auroc": 0.9990622715280206,
+  "trial": 11,
+  "n_complete": 19,
+  "n_pruned": 6
+}

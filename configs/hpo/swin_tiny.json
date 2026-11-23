@@ -1,0 +1,19 @@
+{
+  "arch": "swin_tiny",
+  "params": {
+    "lr": 0.00010187001424851543,
+    "weight_decay": 0.0015849407736408625,
+    "batch_size": 32,
+    "schedule": "plateau",
+    "warmup_steps": 50,
+    "head_lr_mult": 10.0,
+    "label_smoothing": 0.04001710084574834,
+    "drop_rate": 0.4481075875324293,
+    "drop_path_rate": 0.07747507109713253
+  },
+  "best_val_loss": 0.0688670352101326,
+  "best_val_auroc": 0.9981775220657575,
+  "trial": 21,
+  "n_complete": 21,
+  "n_pruned": 4
+}

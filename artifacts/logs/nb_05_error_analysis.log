@@ -1,0 +1,3 @@
+[NbConvertApp] Converting notebook 05_error_analysis.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 5579171 bytes to 05_error_analysis.ipynb

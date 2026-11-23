@@ -1,0 +1,20 @@
+{
+  "arch": "efficientnet_b0",
+  "resize_mode": "harmonize224",
+  "params": {
+    "lr": 0.00041577327134896,
+    "weight_decay": 0.00018939379279588956,
+    "batch_size": 64,
+    "schedule": "plateau",
+    "warmup_steps": 0,
+    "head_lr_mult": 1.0,
+    "label_smoothing": 0.03900669837781633,
+    "drop_rate": 0.061464675013023114,
+    "drop_path_rate": 0.16761176664525818
+  },
+  "best_val_loss": 0.05308710038661957,
+  "best_val_auroc": 0.9986119499454317,
+  "trial": 23,
+  "n_complete": 13,
+  "n_pruned": 12
+}

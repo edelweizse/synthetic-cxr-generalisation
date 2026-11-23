@@ -1,0 +1,9 @@
+set,per_class,auroc_low_hf_energy,auroc_low_std,mislabelled
+mimic_noise70,125,0.822,0.762,0.348
+mimic_noise70,250,0.714,0.701,0.35
+mimic_both70,125,0.754,0.865,0.348
+mimic_both70,250,0.677,0.8,0.35
+synthetic random,125,0.878,0.895,
+R25/R50 real,125,0.882,0.779,0.0
+synthetic random,250,0.876,0.897,
+R25/R50 real,250,0.852,0.759,0.0

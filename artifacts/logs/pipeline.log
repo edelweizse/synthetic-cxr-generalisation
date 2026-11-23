@@ -1,0 +1,1495 @@
+=== Sat Oct 10 02:15:05 +05 2026 HPO resnet18
+[I 2026-10-10 02:15:10,733] A new study created in RDB with name: hpo_resnet18
+[hpo resnet18] 0 finished trials, running 25 more
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[I 2026-10-10 02:15:55,479] Trial 0 finished with value: 0.11015458405017853 and parameters: {'lr': 0.00012520653814999459, 'weight_decay': 0.022954167740317895, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07917250380826646, 'drop_rate': 0.26444745987645224, 'drop_path_rate': 0.1704133683281797}. Best is trial 0 with value: 0.11015458405017853.
+  trial   0 COMPLETE val_loss=0.1102 best=0.1102 (45s)
+[I 2026-10-10 02:16:54,818] Trial 1 finished with value: 0.09744901210069656 and parameters: {'lr': 0.0007098936257405903, 'weight_decay': 0.00017159007295374412, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07805291762864555, 'drop_rate': 0.05913721293446661, 'drop_path_rate': 0.19197630639825713}. Best is trial 1 with value: 0.09744901210069656.
+  trial   1 COMPLETE val_loss=0.0974 best=0.0974 (104s)
+[I 2026-10-10 02:17:40,766] Trial 2 finished with value: 0.2481849640607834 and parameters: {'lr': 1.9351140885595265e-05, 'weight_decay': 0.13133498570503438, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.06120957227224214, 'drop_rate': 0.30846699843737846, 'drop_path_rate': 0.2831244235543872}. Best is trial 1 with value: 0.09744901210069656.
+  trial   2 COMPLETE val_loss=0.2482 best=0.0974 (150s)
+[I 2026-10-10 02:18:23,133] Trial 3 finished with value: 0.08107919991016388 and parameters: {'lr': 0.00023101522250182374, 'weight_decay': 0.0015372565899752293, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.03637107709426226, 'drop_rate': 0.2850983852089398, 'drop_path_rate': 0.1315804540386961}. Best is trial 3 with value: 0.08107919991016388.
+  trial   3 COMPLETE val_loss=0.0811 best=0.0811 (193s)
+[I 2026-10-10 02:19:41,321] Trial 4 finished with value: 0.07955756038427353 and parameters: {'lr': 0.0009478675948634674, 'weight_decay': 0.00021719657932817298, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.06563295894652735, 'drop_rate': 0.0690914756743069, 'drop_path_rate': 0.058974708504016045}. Best is trial 4 with value: 0.07955756038427353.
+  trial   4 COMPLETE val_loss=0.0796 best=0.0796 (271s)
+[I 2026-10-10 02:20:28,908] Trial 5 finished with value: 0.0981186255812645 and parameters: {'lr': 5.463240777949552e-05, 'weight_decay': 0.05130069844644666, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.003918779225432068, 'drop_rate': 0.1414034812882048, 'drop_path_rate': 0.03605896836395067}. Best is trial 4 with value: 0.07955756038427353.
+  trial   5 COMPLETE val_loss=0.0981 best=0.0796 (318s)
+[I 2026-10-10 02:20:43,195] Trial 6 pruned. 
+  trial   6 PRUNED   val_loss=0.3134 best=0.0796 (333s)
+[I 2026-10-10 02:20:56,976] Trial 7 pruned. 
+  trial   7 PRUNED   val_loss=0.1413 best=0.0796 (346s)
+[I 2026-10-10 02:21:21,104] Trial 8 pruned. 
+  trial   8 PRUNED   val_loss=0.2117 best=0.0796 (371s)
+[I 2026-10-10 02:21:42,435] Trial 9 pruned. 
+  trial   9 PRUNED   val_loss=0.1956 best=0.0796 (392s)
+[I 2026-10-10 02:22:05,117] Trial 10 pruned. 
+  trial  10 PRUNED   val_loss=0.4582 best=0.0796 (415s)
+[I 2026-10-10 02:22:35,727] Trial 11 pruned. 
+  trial  11 PRUNED   val_loss=0.1106 best=0.0796 (445s)
+[I 2026-10-10 02:23:28,130] Trial 12 pruned. 
+  trial  12 PRUNED   val_loss=0.1008 best=0.0796 (498s)
+[I 2026-10-10 02:23:50,209] Trial 13 pruned. 
+  trial  13 PRUNED   val_loss=0.1164 best=0.0796 (520s)
+[I 2026-10-10 02:25:09,141] Trial 14 finished with value: 0.07148348540067673 and parameters: {'lr': 0.0008788037708258494, 'weight_decay': 0.0006375459579275253, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.053247709413553744, 'drop_rate': 0.11835380105907303, 'drop_path_rate': 0.07656917171904887}. Best is trial 14 with value: 0.07148348540067673.
+  trial  14 COMPLETE val_loss=0.0715 best=0.0715 (599s)
+[I 2026-10-10 02:26:25,080] Trial 15 pruned. 
+  trial  15 PRUNED   val_loss=0.0847 best=0.0715 (675s)
+[I 2026-10-10 02:27:30,517] Trial 16 finished with value: 0.07735888659954071 and parameters: {'lr': 0.0009217147963763621, 'weight_decay': 0.0011098698214736464, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.0660852414358051, 'drop_rate': 0.32694301396888636, 'drop_path_rate': 0.03858905153919831}. Best is trial 14 with value: 0.07148348540067673.
+  trial  16 COMPLETE val_loss=0.0774 best=0.0715 (740s)
+[I 2026-10-10 02:28:29,410] Trial 17 pruned. 
+  trial  17 PRUNED   val_loss=0.0979 best=0.0715 (799s)
+[I 2026-10-10 02:29:32,570] Trial 18 finished with value: 0.08311198651790619 and parameters: {'lr': 0.0009644262776077973, 'weight_decay': 0.001128583812750395, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.06385140184716692, 'drop_rate': 0.4316234699773961, 'drop_path_rate': 0.09265857711817208}. Best is trial 14 with value: 0.07148348540067673.
+  trial  18 COMPLETE val_loss=0.0831 best=0.0715 (862s)
+[I 2026-10-10 02:30:06,162] Trial 19 pruned. 
+  trial  19 PRUNED   val_loss=0.0986 best=0.0715 (896s)
+[I 2026-10-10 02:31:26,003] Trial 20 finished with value: 0.06744369864463806 and parameters: {'lr': 0.0006706760094045669, 'weight_decay': 0.00013280484504473724, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.03753280827313987, 'drop_rate': 0.4366383793720985, 'drop_path_rate': 0.09851259075937208}. Best is trial 20 with value: 0.06744369864463806.
+  trial  20 COMPLETE val_loss=0.0674 best=0.0674 (975s)
+[I 2026-10-10 02:31:48,573] Trial 21 pruned. 
+  trial  21 PRUNED   val_loss=0.1036 best=0.0674 (998s)
+[I 2026-10-10 02:33:07,761] Trial 22 finished with value: 0.07265450060367584 and parameters: {'lr': 0.0007203002098832673, 'weight_decay': 0.00021513234336662857, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 1.0, 'label_smoothing': 0.04953904845461916, 'drop_rate': 0.3675457885556781, 'drop_path_rate': 0.05582905174775628}. Best is trial 20 with value: 0.06744369864463806.
+  trial  22 COMPLETE val_loss=0.0727 best=0.0674 (1077s)
+[I 2026-10-10 02:34:11,719] Trial 23 finished with value: 0.07431342452764511 and parameters: {'lr': 0.0005740503057408956, 'weight_decay': 0.0003108195621010418, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.034919679646112006, 'drop_rate': 0.0059952305782500215, 'drop_path_rate': 0.05289379359610102}. Best is trial 20 with value: 0.06744369864463806.
+  trial  23 COMPLETE val_loss=0.0743 best=0.0674 (1141s)
+[I 2026-10-10 02:35:47,725] Trial 24 finished with value: 0.06460094451904297 and parameters: {'lr': 0.000650110772499256, 'weight_decay': 0.00010903033790796552, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 1.0, 'label_smoothing': 0.03233807064800781, 'drop_rate': 0.3744255533091954, 'drop_path_rate': 0.04696092408778168}. Best is trial 24 with value: 0.06460094451904297.
+  trial  24 COMPLETE val_loss=0.0646 best=0.0646 (1237s)
+{
+  "arch": "resnet18",
+  "params": {
+    "lr": 0.000650110772499256,
+    "weight_decay": 0.00010903033790796552,
+    "batch_size": 64,
+    "schedule": "plateau",
+    "warmup_steps": 100,
+    "head_lr_mult": 1.0,
+    "label_smoothing": 0.03233807064800781,
+    "drop_rate": 0.3744255533091954,
+    "drop_path_rate": 0.04696092408778168
+  },
+  "best_val_loss": 0.06460094451904297,
+  "best_val_auroc": 0.9962914693198556,
+  "trial": 24,
+  "n_complete": 13,
+  "n_pruned": 12
+}
+=== Sat Oct 10 02:35:48 +05 2026 E1/E2 resnet18
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[E1/resnet18 seed0] resnet18 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=none
+  step    50 | train 0.5864 | val loss 0.4497 auroc 0.9834 * | lr 3.25e-04 | 6s
+  step   100 | train 0.1922 | val loss 0.1380 auroc 0.9940 * | lr 6.50e-04 | 9s
+  step   150 | train 0.1137 | val loss 0.4875 auroc 0.9963 | lr 6.50e-04 | 14s
+  step   200 | train 0.1079 | val loss 0.1175 auroc 0.9969 * | lr 6.50e-04 | 18s
+  step   250 | train 0.1025 | val loss 0.2277 auroc 0.9936 | lr 6.50e-04 | 23s
+  step   300 | train 0.0966 | val loss 0.0875 auroc 0.9934 * | lr 6.50e-04 | 26s
+  step   350 | train 0.0929 | val loss 0.1009 auroc 0.9927 | lr 6.50e-04 | 31s
+  step   400 | train 0.0914 | val loss 0.0814 auroc 0.9970 * | lr 6.50e-04 | 34s
+  step   450 | train 0.0903 | val loss 0.0873 auroc 0.9963 | lr 6.50e-04 | 38s
+  step   500 | train 0.0892 | val loss 0.0787 auroc 0.9950 * | lr 6.50e-04 | 42s
+  step   550 | train 0.0867 | val loss 0.0791 auroc 0.9973 | lr 6.50e-04 | 47s
+  step   600 | train 0.0856 | val loss 0.0768 auroc 0.9973 * | lr 6.50e-04 | 50s
+  step   650 | train 0.0873 | val loss 0.0945 auroc 0.9946 | lr 6.50e-04 | 55s
+  step   700 | train 0.0899 | val loss 0.1091 auroc 0.9948 | lr 6.50e-04 | 60s
+  step   750 | train 0.0874 | val loss 0.0735 auroc 0.9963 * | lr 6.50e-04 | 64s
+  step   800 | train 0.0883 | val loss 0.0781 auroc 0.9967 | lr 6.50e-04 | 68s
+  step   850 | train 0.0868 | val loss 0.0951 auroc 0.9922 | lr 6.50e-04 | 72s
+  step   900 | train 0.0903 | val loss 0.0705 auroc 0.9977 * | lr 6.50e-04 | 76s
+  step   950 | train 0.0906 | val loss 0.1108 auroc 0.9950 | lr 6.50e-04 | 80s
+  step  1000 | train 0.0887 | val loss 0.0896 auroc 0.9924 | lr 6.50e-04 | 84s
+  step  1050 | train 0.0880 | val loss 0.1085 auroc 0.9969 | lr 6.50e-04 | 88s
+  step  1100 | train 0.0882 | val loss 0.1007 auroc 0.9972 | lr 6.50e-04 | 92s
+  step  1150 | train 0.0860 | val loss 0.0725 auroc 0.9967 | lr 1.95e-04 | 95s
+  step  1200 | train 0.0847 | val loss 0.0734 auroc 0.9971 | lr 1.95e-04 | 99s
+  step  1250 | train 0.0846 | val loss 0.0646 auroc 0.9963 * | lr 1.95e-04 | 103s
+  step  1300 | train 0.0849 | val loss 0.0678 auroc 0.9971 | lr 1.95e-04 | 107s
+  step  1350 | train 0.0844 | val loss 0.0659 auroc 0.9975 | lr 1.95e-04 | 111s
+  step  1400 | train 0.0849 | val loss 0.0655 auroc 0.9960 | lr 1.95e-04 | 116s
+  step  1450 | train 0.0847 | val loss 0.0678 auroc 0.9965 | lr 1.95e-04 | 119s
+  step  1500 | train 0.0843 | val loss 0.0651 auroc 0.9968 | lr 5.85e-05 | 123s
+[E1/resnet18/seed0] A_test:label AUROC 0.943 | B_external:label AUROC 0.839 | B_external:label_any AUROC 0.721
+[E1/resnet18 seed1] resnet18 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=none
+  step    50 | train 0.5534 | val loss 0.3566 auroc 0.9742 * | lr 3.25e-04 | 4s
+  step   100 | train 0.1829 | val loss 0.1258 auroc 0.9958 * | lr 6.50e-04 | 7s
+  step   150 | train 0.1140 | val loss 0.1804 auroc 0.9940 | lr 6.50e-04 | 11s
+  step   200 | train 0.1032 | val loss 0.1296 auroc 0.9972 | lr 6.50e-04 | 15s
+  step   250 | train 0.0945 | val loss 0.0829 auroc 0.9974 * | lr 6.50e-04 | 19s
+  step   300 | train 0.0996 | val loss 0.1290 auroc 0.9939 | lr 6.50e-04 | 23s
+  step   350 | train 0.0944 | val loss 0.1269 auroc 0.9965 | lr 6.50e-04 | 27s
+  step   400 | train 0.0918 | val loss 0.0802 auroc 0.9954 * | lr 6.50e-04 | 30s
+  step   450 | train 0.0878 | val loss 0.0798 auroc 0.9968 * | lr 6.50e-04 | 35s
+  step   500 | train 0.0904 | val loss 0.0897 auroc 0.9958 | lr 6.50e-04 | 41s
+  step   550 | train 0.0886 | val loss 0.1093 auroc 0.9970 | lr 6.50e-04 | 45s
+  step   600 | train 0.0911 | val loss 0.0740 auroc 0.9977 * | lr 6.50e-04 | 49s
+  step   650 | train 0.0870 | val loss 0.0928 auroc 0.9981 | lr 6.50e-04 | 53s
+  step   700 | train 0.0872 | val loss 0.1283 auroc 0.9985 | lr 6.50e-04 | 57s
+  step   750 | train 0.0870 | val loss 0.0683 auroc 0.9978 * | lr 6.50e-04 | 61s
+  step   800 | train 0.0895 | val loss 0.0981 auroc 0.9967 | lr 6.50e-04 | 65s
+  step   850 | train 0.0876 | val loss 0.0918 auroc 0.9958 | lr 6.50e-04 | 69s
+  step   900 | train 0.0876 | val loss 0.0813 auroc 0.9923 | lr 6.50e-04 | 72s
+  step   950 | train 0.0907 | val loss 0.1263 auroc 0.9980 | lr 6.50e-04 | 76s
+  step  1000 | train 0.0865 | val loss 0.0707 auroc 0.9979 | lr 1.95e-04 | 80s
+  step  1050 | train 0.0859 | val loss 0.0741 auroc 0.9975 | lr 1.95e-04 | 85s
+  step  1100 | train 0.0861 | val loss 0.0675 auroc 0.9980 * | lr 1.95e-04 | 89s
+  step  1150 | train 0.0852 | val loss 0.0775 auroc 0.9977 | lr 1.95e-04 | 93s
+  step  1200 | train 0.0850 | val loss 0.0766 auroc 0.9980 | lr 1.95e-04 | 96s
+  step  1250 | train 0.0846 | val loss 0.0702 auroc 0.9978 | lr 1.95e-04 | 100s
+  step  1300 | train 0.0853 | val loss 0.0711 auroc 0.9980 | lr 1.95e-04 | 104s
+  step  1350 | train 0.0851 | val loss 0.0732 auroc 0.9978 | lr 5.85e-05 | 107s
+  step  1400 | train 0.0846 | val loss 0.0711 auroc 0.9978 | lr 5.85e-05 | 111s
+  step  1450 | train 0.0844 | val loss 0.0715 auroc 0.9978 | lr 5.85e-05 | 115s
+  step  1500 | train 0.0846 | val loss 0.0707 auroc 0.9979 | lr 5.85e-05 | 119s
+  early stop at step 1500 (best step 1100)
+[E1/resnet18/seed1] A_test:label AUROC 0.941 | B_external:label AUROC 0.899 | B_external:label_any AUROC 0.774
+[E1/resnet18 seed2] resnet18 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=none
+  step    50 | train 0.5713 | val loss 0.4100 auroc 0.9853 * | lr 3.25e-04 | 4s
+  step   100 | train 0.1747 | val loss 0.1301 auroc 0.9935 * | lr 6.50e-04 | 7s
+  step   150 | train 0.1096 | val loss 0.1096 auroc 0.9905 * | lr 6.50e-04 | 13s
+  step   200 | train 0.1034 | val loss 0.1273 auroc 0.9898 | lr 6.50e-04 | 18s
+  step   250 | train 0.1010 | val loss 0.0808 auroc 0.9978 * | lr 6.50e-04 | 22s
+  step   300 | train 0.0949 | val loss 0.0788 auroc 0.9973 * | lr 6.50e-04 | 26s
+  step   350 | train 0.0961 | val loss 0.0731 auroc 0.9979 * | lr 6.50e-04 | 30s
+  step   400 | train 0.0905 | val loss 0.0905 auroc 0.9954 | lr 6.50e-04 | 35s
+  step   450 | train 0.0890 | val loss 0.0735 auroc 0.9962 | lr 6.50e-04 | 39s
+  step   500 | train 0.0893 | val loss 0.0710 auroc 0.9978 * | lr 6.50e-04 | 43s
+  step   550 | train 0.0905 | val loss 0.1074 auroc 0.9965 | lr 6.50e-04 | 47s
+  step   600 | train 0.0893 | val loss 0.0811 auroc 0.9978 | lr 6.50e-04 | 51s
+  step   650 | train 0.0867 | val loss 0.0749 auroc 0.9973 | lr 6.50e-04 | 56s
+  step   700 | train 0.0862 | val loss 0.0699 auroc 0.9967 * | lr 6.50e-04 | 61s
+  step   750 | train 0.0871 | val loss 0.0670 auroc 0.9972 * | lr 6.50e-04 | 65s
+  step   800 | train 0.0882 | val loss 0.0716 auroc 0.9975 | lr 6.50e-04 | 69s
+  step   850 | train 0.0858 | val loss 0.0719 auroc 0.9962 | lr 6.50e-04 | 73s
+  step   900 | train 0.0886 | val loss 0.0978 auroc 0.9955 | lr 6.50e-04 | 77s
+  step   950 | train 0.0888 | val loss 0.0695 auroc 0.9977 | lr 6.50e-04 | 81s
+  step  1000 | train 0.0868 | val loss 0.0674 auroc 0.9960 | lr 1.95e-04 | 85s
+  step  1050 | train 0.0853 | val loss 0.0636 auroc 0.9983 * | lr 1.95e-04 | 89s
+  step  1100 | train 0.0853 | val loss 0.0650 auroc 0.9981 | lr 1.95e-04 | 93s
+  step  1150 | train 0.0855 | val loss 0.0620 auroc 0.9984 * | lr 1.95e-04 | 97s
+  step  1200 | train 0.0856 | val loss 0.0628 auroc 0.9985 | lr 1.95e-04 | 101s
+  step  1250 | train 0.0859 | val loss 0.0580 auroc 0.9990 * | lr 1.95e-04 | 106s
+  step  1300 | train 0.0841 | val loss 0.0573 auroc 0.9989 * | lr 1.95e-04 | 111s
+  step  1350 | train 0.0848 | val loss 0.0621 auroc 0.9989 | lr 1.95e-04 | 115s
+  step  1400 | train 0.0847 | val loss 0.0582 auroc 0.9988 | lr 1.95e-04 | 119s
+  step  1450 | train 0.0851 | val loss 0.0652 auroc 0.9982 | lr 1.95e-04 | 123s
+  step  1500 | train 0.0845 | val loss 0.0668 auroc 0.9980 | lr 1.95e-04 | 126s
+[E1/resnet18/seed2] A_test:label AUROC 0.950 | B_external:label AUROC 0.889 | B_external:label_any AUROC 0.756
+[E2/resnet18 seed0] resnet18 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.6140 | val loss 0.5024 auroc 0.9758 * | lr 3.25e-04 | 4s
+  step   100 | train 0.2509 | val loss 0.1648 auroc 0.9924 * | lr 6.50e-04 | 7s
+  step   150 | train 0.1582 | val loss 0.3315 auroc 0.9960 | lr 6.50e-04 | 12s
+  step   200 | train 0.1435 | val loss 0.0750 auroc 0.9963 * | lr 6.50e-04 | 16s
+  step   250 | train 0.1233 | val loss 0.1062 auroc 0.9935 | lr 6.50e-04 | 20s
+  step   300 | train 0.1137 | val loss 0.0746 auroc 0.9969 * | lr 6.50e-04 | 24s
+  step   350 | train 0.1027 | val loss 0.0812 auroc 0.9948 | lr 6.50e-04 | 29s
+  step   400 | train 0.1049 | val loss 0.0856 auroc 0.9967 | lr 6.50e-04 | 34s
+  step   450 | train 0.1021 | val loss 0.0816 auroc 0.9975 | lr 6.50e-04 | 38s
+  step   500 | train 0.0974 | val loss 0.0659 auroc 0.9977 * | lr 6.50e-04 | 43s
+  step   550 | train 0.0947 | val loss 0.0763 auroc 0.9971 | lr 6.50e-04 | 47s
+  step   600 | train 0.0961 | val loss 0.1077 auroc 0.9936 | lr 6.50e-04 | 51s
+  step   650 | train 0.0974 | val loss 0.0813 auroc 0.9971 | lr 6.50e-04 | 55s
+  step   700 | train 0.0966 | val loss 0.1031 auroc 0.9963 | lr 6.50e-04 | 59s
+  step   750 | train 0.0905 | val loss 0.0786 auroc 0.9970 | lr 1.95e-04 | 63s
+  step   800 | train 0.0891 | val loss 0.0717 auroc 0.9976 | lr 1.95e-04 | 67s
+  step   850 | train 0.0886 | val loss 0.0838 auroc 0.9975 | lr 1.95e-04 | 71s
+  step   900 | train 0.0917 | val loss 0.0803 auroc 0.9968 | lr 1.95e-04 | 77s
+  early stop at step 900 (best step 500)
+[E2/resnet18/seed0] A_test:label AUROC 0.943 | B_external:label AUROC 0.906 | B_external:label_any AUROC 0.766
+[E2/resnet18 seed1] resnet18 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.5767 | val loss 0.3830 auroc 0.9696 * | lr 3.25e-04 | 4s
+  step   100 | train 0.2244 | val loss 0.1479 auroc 0.9960 * | lr 6.50e-04 | 7s
+  step   150 | train 0.1524 | val loss 0.2630 auroc 0.9891 | lr 6.50e-04 | 11s
+  step   200 | train 0.1224 | val loss 0.0885 auroc 0.9955 * | lr 6.50e-04 | 15s
+  step   250 | train 0.1114 | val loss 0.1358 auroc 0.9964 | lr 6.50e-04 | 20s
+  step   300 | train 0.1082 | val loss 0.1818 auroc 0.9899 | lr 6.50e-04 | 24s
+  step   350 | train 0.1051 | val loss 0.0918 auroc 0.9945 | lr 6.50e-04 | 29s
+  step   400 | train 0.1069 | val loss 0.0750 auroc 0.9976 * | lr 6.50e-04 | 33s
+  step   450 | train 0.0985 | val loss 0.0685 auroc 0.9976 * | lr 6.50e-04 | 37s
+  step   500 | train 0.0995 | val loss 0.1207 auroc 0.9946 | lr 6.50e-04 | 41s
+  step   550 | train 0.0949 | val loss 0.0844 auroc 0.9959 | lr 6.50e-04 | 45s
+  step   600 | train 0.0953 | val loss 0.0701 auroc 0.9977 | lr 6.50e-04 | 49s
+  step   650 | train 0.0915 | val loss 0.0830 auroc 0.9986 | lr 6.50e-04 | 53s
+  step   700 | train 0.0893 | val loss 0.0839 auroc 0.9974 | lr 1.95e-04 | 57s
+  step   750 | train 0.0891 | val loss 0.0842 auroc 0.9974 | lr 1.95e-04 | 60s
+  step   800 | train 0.0890 | val loss 0.0721 auroc 0.9969 | lr 1.95e-04 | 64s
+  step   850 | train 0.0881 | val loss 0.0859 auroc 0.9971 | lr 1.95e-04 | 68s
+  early stop at step 850 (best step 450)
+[E2/resnet18/seed1] A_test:label AUROC 0.951 | B_external:label AUROC 0.897 | B_external:label_any AUROC 0.761
+[E2/resnet18 seed2] resnet18 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.5951 | val loss 0.5173 auroc 0.9816 * | lr 3.25e-04 | 4s
+  step   100 | train 0.2148 | val loss 0.0988 auroc 0.9958 * | lr 6.50e-04 | 7s
+  step   150 | train 0.1302 | val loss 0.1226 auroc 0.9950 | lr 6.50e-04 | 12s
+  step   200 | train 0.1179 | val loss 0.0959 auroc 0.9965 * | lr 6.50e-04 | 15s
+  step   250 | train 0.1141 | val loss 0.0860 auroc 0.9919 * | lr 6.50e-04 | 20s
+  step   300 | train 0.1098 | val loss 0.1018 auroc 0.9902 | lr 6.50e-04 | 26s
+  step   350 | train 0.1130 | val loss 0.1105 auroc 0.9915 | lr 6.50e-04 | 30s
+  step   400 | train 0.0990 | val loss 0.0858 auroc 0.9960 * | lr 6.50e-04 | 34s
+  step   450 | train 0.0949 | val loss 0.0749 auroc 0.9964 * | lr 6.50e-04 | 38s
+  step   500 | train 0.0941 | val loss 0.0707 auroc 0.9970 * | lr 6.50e-04 | 43s
+  step   550 | train 0.1007 | val loss 0.1818 auroc 0.9925 | lr 6.50e-04 | 47s
+  step   600 | train 0.0992 | val loss 0.1488 auroc 0.9958 | lr 6.50e-04 | 51s
+  step   650 | train 0.0949 | val loss 0.1112 auroc 0.9962 | lr 6.50e-04 | 55s
+  step   700 | train 0.0967 | val loss 0.0913 auroc 0.9907 | lr 6.50e-04 | 59s
+  step   750 | train 0.0911 | val loss 0.0967 auroc 0.9961 | lr 1.95e-04 | 63s
+  step   800 | train 0.0885 | val loss 0.0775 auroc 0.9968 | lr 1.95e-04 | 67s
+  step   850 | train 0.0875 | val loss 0.0815 auroc 0.9952 | lr 1.95e-04 | 71s
+  step   900 | train 0.0894 | val loss 0.0865 auroc 0.9950 | lr 1.95e-04 | 75s
+  early stop at step 900 (best step 500)
+[E2/resnet18/seed2] A_test:label AUROC 0.925 | B_external:label AUROC 0.915 | B_external:label_any AUROC 0.778
+=== Sat Oct 10 02:49:50 +05 2026 HPO efficientnet_b0
+[I 2026-10-10 02:49:53,163] A new study created in RDB with name: hpo_efficientnet_b0
+[hpo efficientnet_b0] 0 finished trials, running 25 more
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[I 2026-10-10 02:51:30,023] Trial 0 finished with value: 0.09317582845687866 and parameters: {'lr': 0.00012520653814999459, 'weight_decay': 0.022954167740317895, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07917250380826646, 'drop_rate': 0.26444745987645224, 'drop_path_rate': 0.1704133683281797}. Best is trial 0 with value: 0.09317582845687866.
+  trial   0 COMPLETE val_loss=0.0932 best=0.0932 (97s)
+[I 2026-10-10 02:53:12,226] Trial 1 finished with value: 0.07254794985055923 and parameters: {'lr': 0.0007098936257405903, 'weight_decay': 0.00017159007295374412, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07805291762864555, 'drop_rate': 0.05913721293446661, 'drop_path_rate': 0.19197630639825713}. Best is trial 1 with value: 0.07254794985055923.
+  trial   1 COMPLETE val_loss=0.0725 best=0.0725 (199s)
+[I 2026-10-10 02:54:31,100] Trial 2 finished with value: 0.20607078075408936 and parameters: {'lr': 1.9351140885595265e-05, 'weight_decay': 0.13133498570503438, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.06120957227224214, 'drop_rate': 0.30846699843737846, 'drop_path_rate': 0.2831244235543872}. Best is trial 1 with value: 0.07254794985055923.
+  trial   2 COMPLETE val_loss=0.2061 best=0.0725 (278s)
+[I 2026-10-10 02:56:02,141] Trial 3 finished with value: 0.0595727302134037 and parameters: {'lr': 0.00023101522250182374, 'weight_decay': 0.0015372565899752293, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.03637107709426226, 'drop_rate': 0.2850983852089398, 'drop_path_rate': 0.1315804540386961}. Best is trial 3 with value: 0.0595727302134037.
+  trial   3 COMPLETE val_loss=0.0596 best=0.0596 (369s)
+[I 2026-10-10 02:57:06,783] Trial 4 finished with value: 0.05691389739513397 and parameters: {'lr': 0.0009478675948634674, 'weight_decay': 0.00021719657932817298, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.06563295894652735, 'drop_rate': 0.0690914756743069, 'drop_path_rate': 0.058974708504016045}. Best is trial 4 with value: 0.05691389739513397.
+  trial   4 COMPLETE val_loss=0.0569 best=0.0569 (434s)
+[I 2026-10-10 02:58:29,830] Trial 5 finished with value: 0.1370772123336792 and parameters: {'lr': 5.463240777949552e-05, 'weight_decay': 0.05130069844644666, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.003918779225432068, 'drop_rate': 0.1414034812882048, 'drop_path_rate': 0.03605896836395067}. Best is trial 4 with value: 0.05691389739513397.
+  trial   5 COMPLETE val_loss=0.1371 best=0.0569 (517s)
+[I 2026-10-10 02:58:51,083] Trial 6 pruned. 
+  trial   6 PRUNED   val_loss=0.1744 best=0.0569 (538s)
+[I 2026-10-10 02:59:10,355] Trial 7 pruned. 
+  trial   7 PRUNED   val_loss=0.1741 best=0.0569 (557s)
+[I 2026-10-10 02:59:41,393] Trial 8 pruned. 
+  trial   8 PRUNED   val_loss=0.2673 best=0.0569 (588s)
+[I 2026-10-10 03:00:12,766] Trial 9 pruned. 
+  trial   9 PRUNED   val_loss=0.2553 best=0.0569 (620s)
+[I 2026-10-10 03:00:43,772] Trial 10 pruned. 
+  trial  10 PRUNED   val_loss=0.3399 best=0.0569 (651s)
+[I 2026-10-10 03:01:57,633] Trial 11 finished with value: 0.07372628152370453 and parameters: {'lr': 0.0003360523779497717, 'weight_decay': 0.00015981324083956077, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.08727353266332702, 'drop_rate': 0.1579362016933927, 'drop_path_rate': 0.07757519549725608}. Best is trial 4 with value: 0.05691389739513397.
+  trial  11 COMPLETE val_loss=0.0737 best=0.0569 (725s)
+[I 2026-10-10 03:02:28,814] Trial 12 pruned. 
+  trial  12 PRUNED   val_loss=0.2323 best=0.0569 (756s)
+[I 2026-10-10 03:02:53,011] Trial 13 pruned. 
+  trial  13 PRUNED   val_loss=0.0922 best=0.0569 (780s)
+[I 2026-10-10 03:04:02,206] Trial 14 finished with value: 0.04671823978424072 and parameters: {'lr': 0.0008788037708258494, 'weight_decay': 0.0006375459579275253, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.053247709413553744, 'drop_rate': 0.11835380105907303, 'drop_path_rate': 0.07656917171904887}. Best is trial 14 with value: 0.04671823978424072.
+  trial  14 COMPLETE val_loss=0.0467 best=0.0467 (849s)
+[I 2026-10-10 03:05:34,375] Trial 15 finished with value: 0.06410476565361023 and parameters: {'lr': 0.000392895098513366, 'weight_decay': 0.00290573624404283, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.0518186869435278, 'drop_rate': 0.0999091941827629, 'drop_path_rate': 0.09814625570619817}. Best is trial 14 with value: 0.04671823978424072.
+  trial  15 COMPLETE val_loss=0.0641 best=0.0467 (941s)
+[I 2026-10-10 03:06:39,125] Trial 16 finished with value: 0.05962333083152771 and parameters: {'lr': 0.0009217147963763621, 'weight_decay': 0.0011098698214736464, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.0660852414358051, 'drop_rate': 0.32694301396888636, 'drop_path_rate': 0.03858905153919831}. Best is trial 14 with value: 0.04671823978424072.
+  trial  16 COMPLETE val_loss=0.0596 best=0.0467 (1006s)
+[I 2026-10-10 03:07:43,538] Trial 17 finished with value: 0.05308441072702408 and parameters: {'lr': 0.0009079607431905955, 'weight_decay': 0.00025184396677853344, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.034578432450297694, 'drop_rate': 0.07597848851263644, 'drop_path_rate': 0.030874919577490147}. Best is trial 14 with value: 0.04671823978424072.
+  trial  17 COMPLETE val_loss=0.0531 best=0.0467 (1071s)
+[I 2026-10-10 03:08:53,063] Trial 18 finished with value: 0.06032801792025566 and parameters: {'lr': 0.0003377729589096456, 'weight_decay': 0.002177180983567323, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 1.0, 'label_smoothing': 0.02878067775817074, 'drop_rate': 0.04780748268798029, 'drop_path_rate': 0.019940908666240334}. Best is trial 14 with value: 0.04671823978424072.
+  trial  18 COMPLETE val_loss=0.0603 best=0.0467 (1140s)
+[I 2026-10-10 03:10:02,404] Trial 19 finished with value: 0.07090185582637787 and parameters: {'lr': 0.00030430566955798007, 'weight_decay': 0.00048167121357748825, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.03881606537429863, 'drop_rate': 0.10073693645093829, 'drop_path_rate': 0.0804488358955777}. Best is trial 14 with value: 0.04671823978424072.
+  trial  19 COMPLETE val_loss=0.0709 best=0.0467 (1209s)
+[I 2026-10-10 03:11:02,487] Trial 20 finished with value: 0.06997442245483398 and parameters: {'lr': 0.0006556349135060201, 'weight_decay': 0.00029659658716133674, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.07322794304240707, 'drop_rate': 0.24633147008147244, 'drop_path_rate': 0.09776766568511028}. Best is trial 14 with value: 0.04671823978424072.
+  trial  20 COMPLETE val_loss=0.0700 best=0.0467 (1269s)
+[I 2026-10-10 03:12:25,909] Trial 21 finished with value: 0.03415222838521004 and parameters: {'lr': 0.0008812874189036883, 'weight_decay': 0.0003883041248149963, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.032444015042663116, 'drop_rate': 0.12801641941801034, 'drop_path_rate': 0.15593212909353676}. Best is trial 21 with value: 0.03415222838521004.
+  trial  21 COMPLETE val_loss=0.0342 best=0.0342 (1353s)
+[I 2026-10-10 03:13:39,832] Trial 22 finished with value: 0.05424119159579277 and parameters: {'lr': 0.0008312184494240376, 'weight_decay': 0.00016514240425698532, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.034961474906824046, 'drop_rate': 0.16908062546383587, 'drop_path_rate': 0.04407858478413966}. Best is trial 21 with value: 0.03415222838521004.
+  trial  22 COMPLETE val_loss=0.0542 best=0.0342 (1427s)
+[I 2026-10-10 03:14:58,216] Trial 23 finished with value: 0.04624393209815025 and parameters: {'lr': 0.0005389871106950501, 'weight_decay': 0.00020991769786787346, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.028749385747291935, 'drop_rate': 0.06425590372669193, 'drop_path_rate': 0.18806912136644555}. Best is trial 21 with value: 0.03415222838521004.
+  trial  23 COMPLETE val_loss=0.0462 best=0.0342 (1505s)
+[I 2026-10-10 03:15:34,047] Trial 24 pruned. 
+  trial  24 PRUNED   val_loss=0.1302 best=0.0342 (1541s)
+{
+  "arch": "efficientnet_b0",
+  "params": {
+    "lr": 0.0008812874189036883,
+    "weight_decay": 0.0003883041248149963,
+    "batch_size": 64,
+    "schedule": "plateau",
+    "warmup_steps": 0,
+    "head_lr_mult": 1.0,
+    "label_smoothing": 0.032444015042663116,
+    "drop_rate": 0.12801641941801034,
+    "drop_path_rate": 0.15593212909353676
+  },
+  "best_val_loss": 0.03415222838521004,
+  "best_val_auroc": 0.9995231889125528,
+  "trial": 21,
+  "n_complete": 17,
+  "n_pruned": 8
+}
+=== Sat Oct 10 03:15:35 +05 2026 E1/E2 efficientnet_b0
+[E1/efficientnet_b0 seed0] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=none
+  step    50 | train 0.7061 | val loss 0.6161 auroc 0.9587 * | lr 8.81e-04 | 32s
+  step   100 | train 0.2471 | val loss 0.0863 auroc 0.9976 * | lr 8.81e-04 | 36s
+  step   150 | train 0.1513 | val loss 0.0842 auroc 0.9941 * | lr 8.81e-04 | 41s
+  step   200 | train 0.1251 | val loss 0.0646 auroc 0.9988 * | lr 8.81e-04 | 47s
+  step   250 | train 0.1012 | val loss 0.0999 auroc 0.9979 | lr 8.81e-04 | 52s
+  step   300 | train 0.1025 | val loss 0.0671 auroc 0.9992 | lr 8.81e-04 | 56s
+  step   350 | train 0.0907 | val loss 0.0625 auroc 0.9993 * | lr 8.81e-04 | 61s
+  step   400 | train 0.0877 | val loss 0.0823 auroc 0.9991 | lr 8.81e-04 | 66s
+  step   450 | train 0.0898 | val loss 0.0342 auroc 0.9995 * | lr 8.81e-04 | 71s
+  step   500 | train 0.0880 | val loss 0.0576 auroc 0.9986 | lr 8.81e-04 | 76s
+  step   550 | train 0.0888 | val loss 0.0639 auroc 0.9989 | lr 8.81e-04 | 81s
+  step   600 | train 0.0871 | val loss 0.0587 auroc 0.9987 | lr 8.81e-04 | 86s
+  step   650 | train 0.0850 | val loss 0.0697 auroc 0.9987 | lr 8.81e-04 | 90s
+  step   700 | train 0.0848 | val loss 0.0608 auroc 0.9987 | lr 2.64e-04 | 95s
+  step   750 | train 0.0848 | val loss 0.0617 auroc 0.9989 | lr 2.64e-04 | 100s
+  step   800 | train 0.0845 | val loss 0.0593 auroc 0.9988 | lr 2.64e-04 | 105s
+  step   850 | train 0.0844 | val loss 0.0608 auroc 0.9988 | lr 2.64e-04 | 110s
+  early stop at step 850 (best step 450)
+[E1/efficientnet_b0/seed0] A_test:label AUROC 0.935 | B_external:label AUROC 0.855 | B_external:label_any AUROC 0.735
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[E1/efficientnet_b0 seed1] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=none
+  step    50 | train 0.5886 | val loss 0.2194 auroc 0.9803 * | lr 8.81e-04 | 5s
+  step   100 | train 0.2272 | val loss 0.1115 auroc 0.9920 * | lr 8.81e-04 | 10s
+  step   150 | train 0.1687 | val loss 0.2131 auroc 0.9870 | lr 8.81e-04 | 15s
+  step   200 | train 0.1110 | val loss 0.0374 auroc 0.9992 * | lr 8.81e-04 | 20s
+  step   250 | train 0.1095 | val loss 0.0474 auroc 0.9989 | lr 8.81e-04 | 25s
+  step   300 | train 0.1071 | val loss 0.2260 auroc 0.9971 | lr 8.81e-04 | 30s
+  step   350 | train 0.1006 | val loss 0.0495 auroc 0.9988 | lr 8.81e-04 | 35s
+  step   400 | train 0.1038 | val loss 0.3467 auroc 0.9955 | lr 8.81e-04 | 39s
+  step   450 | train 0.0906 | val loss 0.0535 auroc 0.9992 | lr 2.64e-04 | 44s
+  step   500 | train 0.0881 | val loss 0.0460 auroc 0.9993 | lr 2.64e-04 | 49s
+  step   550 | train 0.0873 | val loss 0.0540 auroc 0.9994 | lr 2.64e-04 | 54s
+  step   600 | train 0.0871 | val loss 0.0609 auroc 0.9994 | lr 2.64e-04 | 59s
+  early stop at step 600 (best step 200)
+[E1/efficientnet_b0/seed1] A_test:label AUROC 0.935 | B_external:label AUROC 0.859 | B_external:label_any AUROC 0.738
+[E1/efficientnet_b0 seed2] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=none
+  step    50 | train 0.6597 | val loss 0.2243 auroc 0.9909 * | lr 8.81e-04 | 5s
+  step   100 | train 0.3284 | val loss 0.2922 auroc 0.9711 | lr 8.81e-04 | 10s
+  step   150 | train 0.1575 | val loss 0.0932 auroc 0.9930 * | lr 8.81e-04 | 15s
+  step   200 | train 0.1169 | val loss 0.0892 auroc 0.9941 * | lr 8.81e-04 | 20s
+  step   250 | train 0.1163 | val loss 0.1061 auroc 0.9961 | lr 8.81e-04 | 25s
+  step   300 | train 0.1060 | val loss 0.0603 auroc 0.9986 * | lr 8.81e-04 | 29s
+  step   350 | train 0.0989 | val loss 0.1253 auroc 0.9919 | lr 8.81e-04 | 34s
+  step   400 | train 0.0881 | val loss 0.0666 auroc 0.9941 | lr 8.81e-04 | 39s
+  step   450 | train 0.0865 | val loss 0.0625 auroc 0.9978 | lr 8.81e-04 | 44s
+  step   500 | train 0.0857 | val loss 0.0663 auroc 0.9981 | lr 8.81e-04 | 49s
+  step   550 | train 0.0860 | val loss 0.0629 auroc 0.9968 | lr 2.64e-04 | 53s
+  step   600 | train 0.0852 | val loss 0.0666 auroc 0.9983 | lr 2.64e-04 | 58s
+  step   650 | train 0.0848 | val loss 0.0633 auroc 0.9986 | lr 2.64e-04 | 63s
+  step   700 | train 0.0851 | val loss 0.0615 auroc 0.9987 | lr 2.64e-04 | 68s
+  early stop at step 700 (best step 300)
+[E1/efficientnet_b0/seed2] A_test:label AUROC 0.943 | B_external:label AUROC 0.864 | B_external:label_any AUROC 0.735
+[E2/efficientnet_b0 seed0] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.7466 | val loss 0.7964 auroc 0.9922 * | lr 8.81e-04 | 6s
+  step   100 | train 0.3408 | val loss 0.1608 auroc 0.9914 * | lr 8.81e-04 | 11s
+  step   150 | train 0.1895 | val loss 0.0809 auroc 0.9957 * | lr 8.81e-04 | 16s
+  step   200 | train 0.1570 | val loss 0.0959 auroc 0.9954 | lr 8.81e-04 | 22s
+  step   250 | train 0.1536 | val loss 0.2770 auroc 0.9909 | lr 8.81e-04 | 27s
+  step   300 | train 0.1316 | val loss 0.0689 auroc 0.9978 * | lr 8.81e-04 | 32s
+  step   350 | train 0.1121 | val loss 0.0782 auroc 0.9961 | lr 8.81e-04 | 37s
+  step   400 | train 0.1081 | val loss 0.1094 auroc 0.9924 | lr 8.81e-04 | 42s
+  step   450 | train 0.1178 | val loss 0.0762 auroc 0.9969 | lr 8.81e-04 | 47s
+  step   500 | train 0.0998 | val loss 0.0869 auroc 0.9919 | lr 8.81e-04 | 52s
+  step   550 | train 0.0940 | val loss 0.0720 auroc 0.9973 | lr 2.64e-04 | 57s
+  step   600 | train 0.0918 | val loss 0.0621 auroc 0.9968 * | lr 2.64e-04 | 62s
+  step   650 | train 0.0898 | val loss 0.0664 auroc 0.9964 | lr 2.64e-04 | 67s
+  step   700 | train 0.0905 | val loss 0.0541 auroc 0.9980 * | lr 2.64e-04 | 72s
+  step   750 | train 0.0888 | val loss 0.0580 auroc 0.9977 | lr 2.64e-04 | 78s
+  step   800 | train 0.0889 | val loss 0.0705 auroc 0.9960 | lr 2.64e-04 | 83s
+  step   850 | train 0.0889 | val loss 0.1327 auroc 0.9963 | lr 2.64e-04 | 88s
+  step   900 | train 0.0888 | val loss 0.0669 auroc 0.9970 | lr 2.64e-04 | 93s
+  step   950 | train 0.0874 | val loss 0.0592 auroc 0.9973 | lr 7.93e-05 | 98s
+  step  1000 | train 0.0879 | val loss 0.0572 auroc 0.9976 | lr 7.93e-05 | 103s
+  step  1050 | train 0.0874 | val loss 0.0571 auroc 0.9970 | lr 7.93e-05 | 108s
+  step  1100 | train 0.0877 | val loss 0.0570 auroc 0.9975 | lr 7.93e-05 | 113s
+  early stop at step 1100 (best step 700)
+[E2/efficientnet_b0/seed0] A_test:label AUROC 0.951 | B_external:label AUROC 0.922 | B_external:label_any AUROC 0.788
+[E2/efficientnet_b0 seed1] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.6785 | val loss 0.2043 auroc 0.9887 * | lr 8.81e-04 | 5s
+  step   100 | train 0.3329 | val loss 0.2897 auroc 0.9921 | lr 8.81e-04 | 10s
+  step   150 | train 0.1977 | val loss 0.1820 auroc 0.9943 * | lr 8.81e-04 | 15s
+  step   200 | train 0.1543 | val loss 0.1020 auroc 0.9935 * | lr 8.81e-04 | 20s
+  step   250 | train 0.1273 | val loss 0.1231 auroc 0.9914 | lr 8.81e-04 | 25s
+  step   300 | train 0.1185 | val loss 0.0745 auroc 0.9926 * | lr 8.81e-04 | 30s
+  step   350 | train 0.1166 | val loss 0.1551 auroc 0.9879 | lr 8.81e-04 | 35s
+  step   400 | train 0.1142 | val loss 0.2624 auroc 0.9932 | lr 8.81e-04 | 40s
+  step   450 | train 0.0984 | val loss 0.0502 auroc 0.9963 * | lr 8.81e-04 | 45s
+  step   500 | train 0.0972 | val loss 0.1013 auroc 0.9898 | lr 8.81e-04 | 50s
+  step   550 | train 0.0975 | val loss 0.0795 auroc 0.9974 | lr 8.81e-04 | 55s
+  step   600 | train 0.0966 | val loss 0.0538 auroc 0.9980 | lr 8.81e-04 | 60s
+  step   650 | train 0.0921 | val loss 0.0642 auroc 0.9972 | lr 8.81e-04 | 65s
+  step   700 | train 0.0907 | val loss 0.0711 auroc 0.9970 | lr 2.64e-04 | 70s
+  step   750 | train 0.0877 | val loss 0.0608 auroc 0.9988 | lr 2.64e-04 | 75s
+  step   800 | train 0.0888 | val loss 0.0625 auroc 0.9988 | lr 2.64e-04 | 80s
+  step   850 | train 0.0864 | val loss 0.0713 auroc 0.9984 | lr 2.64e-04 | 85s
+  early stop at step 850 (best step 450)
+[E2/efficientnet_b0/seed1] A_test:label AUROC 0.895 | B_external:label AUROC 0.904 | B_external:label_any AUROC 0.761
+[E2/efficientnet_b0 seed2] efficientnet_b0 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.7522 | val loss 0.6170 auroc 0.9897 * | lr 8.81e-04 | 6s
+  step   100 | train 0.3396 | val loss 0.0832 auroc 0.9938 * | lr 8.81e-04 | 10s
+  step   150 | train 0.2522 | val loss 0.1836 auroc 0.9927 | lr 8.81e-04 | 16s
+  step   200 | train 0.1881 | val loss 0.1219 auroc 0.9959 | lr 8.81e-04 | 21s
+  step   250 | train 0.1834 | val loss 0.0802 auroc 0.9961 * | lr 8.81e-04 | 26s
+  step   300 | train 0.1566 | val loss 0.0991 auroc 0.9927 | lr 8.81e-04 | 31s
+  step   350 | train 0.1512 | val loss 0.1804 auroc 0.9900 | lr 8.81e-04 | 36s
+  step   400 | train 0.1230 | val loss 0.1349 auroc 0.9837 | lr 8.81e-04 | 41s
+  step   450 | train 0.1169 | val loss 0.0696 auroc 0.9965 * | lr 8.81e-04 | 46s
+  step   500 | train 0.1162 | val loss 0.0922 auroc 0.9944 | lr 8.81e-04 | 51s
+  step   550 | train 0.1236 | val loss 0.0750 auroc 0.9966 | lr 8.81e-04 | 56s
+  step   600 | train 0.1051 | val loss 0.0850 auroc 0.9883 | lr 8.81e-04 | 61s
+  step   650 | train 0.0958 | val loss 0.0821 auroc 0.9935 | lr 8.81e-04 | 66s
+  step   700 | train 0.0922 | val loss 0.0691 auroc 0.9965 * | lr 2.64e-04 | 71s
+  step   750 | train 0.0879 | val loss 0.0743 auroc 0.9952 | lr 2.64e-04 | 76s
+  step   800 | train 0.0870 | val loss 0.0684 auroc 0.9963 * | lr 2.64e-04 | 81s
+  step   850 | train 0.0877 | val loss 0.0742 auroc 0.9946 | lr 2.64e-04 | 86s
+  step   900 | train 0.0878 | val loss 0.0908 auroc 0.9943 | lr 2.64e-04 | 91s
+  step   950 | train 0.0871 | val loss 0.0716 auroc 0.9956 | lr 2.64e-04 | 96s
+  step  1000 | train 0.0859 | val loss 0.0748 auroc 0.9945 | lr 2.64e-04 | 101s
+  step  1050 | train 0.0861 | val loss 0.0736 auroc 0.9950 | lr 7.93e-05 | 106s
+  step  1100 | train 0.0858 | val loss 0.0810 auroc 0.9948 | lr 7.93e-05 | 111s
+  step  1150 | train 0.0861 | val loss 0.0791 auroc 0.9947 | lr 7.93e-05 | 116s
+  step  1200 | train 0.0857 | val loss 0.0798 auroc 0.9941 | lr 7.93e-05 | 121s
+  early stop at step 1200 (best step 800)
+[E2/efficientnet_b0/seed2] A_test:label AUROC 0.949 | B_external:label AUROC 0.921 | B_external:label_any AUROC 0.785
+=== Sat Oct 10 03:29:22 +05 2026 HPO densenet121
+[I 2026-10-10 03:29:25,359] A new study created in RDB with name: hpo_densenet121
+[hpo densenet121] 0 finished trials, running 25 more
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[I 2026-10-10 03:30:45,962] Trial 0 finished with value: 0.07430190593004227 and parameters: {'lr': 0.00012520653814999459, 'weight_decay': 0.022954167740317895, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07917250380826646, 'drop_rate': 0.26444745987645224}. Best is trial 0 with value: 0.07430190593004227.
+  trial   0 COMPLETE val_loss=0.0743 best=0.0743 (81s)
+[I 2026-10-10 03:32:37,759] Trial 1 finished with value: 0.04956301301717758 and parameters: {'lr': 0.00013680095279726916, 'weight_decay': 0.11361149295503756, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.04614793622529319, 'drop_rate': 0.39026458814322773}. Best is trial 1 with value: 0.04956301301717758.
+  trial   1 COMPLETE val_loss=0.0496 best=0.0496 (193s)
+[I 2026-10-10 03:34:18,932] Trial 2 finished with value: 0.07286340743303299 and parameters: {'lr': 1.7240460099242286e-05, 'weight_decay': 0.012953838738811839, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.0018789800436355142, 'drop_rate': 0.30881774853793853}. Best is trial 1 with value: 0.04956301301717758.
+  trial   2 COMPLETE val_loss=0.0729 best=0.0496 (294s)
+[I 2026-10-10 03:35:29,412] Trial 3 finished with value: 0.04768519103527069 and parameters: {'lr': 0.000167568138614885, 'weight_decay': 0.01087721289885223, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 10.0, 'label_smoothing': 0.021038256107384093, 'drop_rate': 0.06446314882742665}. Best is trial 3 with value: 0.04768519103527069.
+  trial   3 COMPLETE val_loss=0.0477 best=0.0477 (364s)
+[I 2026-10-10 03:37:48,236] Trial 4 finished with value: 0.0824599489569664 and parameters: {'lr': 4.274218324036843e-05, 'weight_decay': 0.0015871580078102075, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.04663107728563063, 'drop_rate': 0.12221279600080137}. Best is trial 3 with value: 0.04768519103527069.
+  trial   4 COMPLETE val_loss=0.0825 best=0.0477 (503s)
+[I 2026-10-10 03:39:00,746] Trial 5 finished with value: 0.10026960074901581 and parameters: {'lr': 2.0794053992139293e-05, 'weight_decay': 0.0002313937645890751, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.09764594650133958, 'drop_rate': 0.2343256008238508}. Best is trial 3 with value: 0.04768519103527069.
+  trial   5 COMPLETE val_loss=0.1003 best=0.0477 (576s)
+[I 2026-10-10 03:39:26,083] Trial 6 pruned. 
+  trial   6 PRUNED   val_loss=0.1095 best=0.0477 (601s)
+[I 2026-10-10 03:41:44,828] Trial 7 finished with value: 0.06596898287534714 and parameters: {'lr': 0.00013589482177682005, 'weight_decay': 0.0007517244398352635, 'batch_size': 64, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.028940609294720112, 'drop_rate': 0.09159568100355842}. Best is trial 3 with value: 0.04768519103527069.
+  trial   7 COMPLETE val_loss=0.0660 best=0.0477 (740s)
+[I 2026-10-10 03:42:10,756] Trial 8 pruned. 
+  trial   8 PRUNED   val_loss=0.1241 best=0.0477 (766s)
+[I 2026-10-10 03:43:54,528] Trial 9 finished with value: 0.04796753451228142 and parameters: {'lr': 0.0005142254360811425, 'weight_decay': 0.0394504864038167, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.024774281964928157, 'drop_rate': 0.02501677081346111}. Best is trial 3 with value: 0.04768519103527069.
+  trial   9 COMPLETE val_loss=0.0480 best=0.0477 (869s)
+[I 2026-10-10 03:44:20,421] Trial 10 pruned. 
+  trial  10 PRUNED   val_loss=0.1014 best=0.0477 (895s)
+[I 2026-10-10 03:45:56,076] Trial 11 finished with value: 0.03776175156235695 and parameters: {'lr': 0.0005996758946013501, 'weight_decay': 0.02308169809532194, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.011076323819186303, 'drop_rate': 0.08568028622444912}. Best is trial 11 with value: 0.03776175156235695.
+  trial  11 COMPLETE val_loss=0.0378 best=0.0378 (991s)
+[I 2026-10-10 03:47:06,118] Trial 12 finished with value: 0.053691960871219635 and parameters: {'lr': 0.00030714319337122486, 'weight_decay': 0.012059150317199762, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.036595377580931704, 'drop_rate': 0.08093542327997878}. Best is trial 11 with value: 0.03776175156235695.
+  trial  12 COMPLETE val_loss=0.0537 best=0.0378 (1061s)
+[I 2026-10-10 03:48:29,588] Trial 13 finished with value: 0.04569322243332863 and parameters: {'lr': 0.00011680759410592283, 'weight_decay': 0.1371354429239462, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.024893155719230148, 'drop_rate': 0.1401716463647817}. Best is trial 11 with value: 0.03776175156235695.
+  trial  13 COMPLETE val_loss=0.0457 best=0.0378 (1144s)
+[I 2026-10-10 03:49:48,645] Trial 14 finished with value: 0.04452567175030708 and parameters: {'lr': 0.00010640152310837312, 'weight_decay': 0.030953547865577934, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.014291569556053922, 'drop_rate': 0.11069079290643127}. Best is trial 11 with value: 0.03776175156235695.
+  trial  14 COMPLETE val_loss=0.0445 best=0.0378 (1223s)
+[I 2026-10-10 03:50:41,630] Trial 15 finished with value: 0.06479964405298233 and parameters: {'lr': 0.0007434110224040155, 'weight_decay': 0.009141661480758392, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.0022054698440262793, 'drop_rate': 0.1820363136278269}. Best is trial 11 with value: 0.03776175156235695.
+  trial  15 COMPLETE val_loss=0.0648 best=0.0378 (1276s)
+[I 2026-10-10 03:51:55,424] Trial 16 pruned. 
+  trial  16 PRUNED   val_loss=0.0672 best=0.0378 (1350s)
+[I 2026-10-10 03:53:48,356] Trial 17 finished with value: 0.04035387560725212 and parameters: {'lr': 9.916583425690742e-05, 'weight_decay': 0.007639588437910625, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.006377998622702321, 'drop_rate': 0.18673524171544675}. Best is trial 11 with value: 0.03776175156235695.
+  trial  17 COMPLETE val_loss=0.0404 best=0.0378 (1463s)
+[I 2026-10-10 03:55:07,585] Trial 18 finished with value: 0.04102497920393944 and parameters: {'lr': 0.00024897601414268294, 'weight_decay': 0.009780154911327815, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.018207820504783527, 'drop_rate': 0.2823918944444288}. Best is trial 11 with value: 0.03776175156235695.
+  trial  18 COMPLETE val_loss=0.0410 best=0.0378 (1542s)
+[I 2026-10-10 03:55:33,289] Trial 19 pruned. 
+  trial  19 PRUNED   val_loss=0.1182 best=0.0378 (1568s)
+[I 2026-10-10 03:56:55,257] Trial 20 finished with value: 0.04055482894182205 and parameters: {'lr': 7.850144303640005e-05, 'weight_decay': 0.0024484321509691347, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.017968844202994855, 'drop_rate': 0.1962229014321004}. Best is trial 11 with value: 0.03776175156235695.
+  trial  20 COMPLETE val_loss=0.0406 best=0.0378 (1650s)
+[I 2026-10-10 03:58:07,342] Trial 21 finished with value: 0.04848606511950493 and parameters: {'lr': 9.599739902713525e-05, 'weight_decay': 0.005899056530735136, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.034270444602973106, 'drop_rate': 0.16835444691480195}. Best is trial 11 with value: 0.03776175156235695.
+  trial  21 COMPLETE val_loss=0.0485 best=0.0378 (1722s)
+[I 2026-10-10 03:58:52,516] Trial 22 pruned. 
+  trial  22 PRUNED   val_loss=0.0688 best=0.0378 (1767s)
+[I 2026-10-10 04:00:07,972] Trial 23 finished with value: 0.046096231788396835 and parameters: {'lr': 9.809890940621054e-05, 'weight_decay': 0.0037174566256392956, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.021873096719808, 'drop_rate': 0.3415353485269087}. Best is trial 11 with value: 0.03776175156235695.
+  trial  23 COMPLETE val_loss=0.0461 best=0.0378 (1843s)
+[I 2026-10-10 04:01:17,507] Trial 24 finished with value: 0.03900602459907532 and parameters: {'lr': 8.036131684202663e-05, 'weight_decay': 0.009731495795092129, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.004909945263574444, 'drop_rate': 0.22505182078448774}. Best is trial 11 with value: 0.03776175156235695.
+  trial  24 COMPLETE val_loss=0.0390 best=0.0378 (1912s)
+{
+  "arch": "densenet121",
+  "params": {
+    "lr": 0.0005996758946013501,
+    "weight_decay": 0.02308169809532194,
+    "batch_size": 16,
+    "schedule": "plateau",
+    "warmup_steps": 150,
+    "head_lr_mult": 10.0,
+    "label_smoothing": 0.011076323819186303,
+    "drop_rate": 0.08568028622444912
+  },
+  "best_val_loss": 0.03776175156235695,
+  "best_val_auroc": 0.9990622715280206,
+  "trial": 11,
+  "n_complete": 19,
+  "n_pruned": 6
+}
+=== Sat Oct 10 04:01:18 +05 2026 E1/E2 densenet121
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[E1/densenet121 seed0] densenet121 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=16 aug=none
+  step    50 | train 0.3878 | val loss 0.1157 auroc 0.9930 * | lr 2.00e-04 | 6s
+  step   100 | train 0.1869 | val loss 0.0849 auroc 0.9945 * | lr 4.00e-04 | 10s
+  step   150 | train 0.2011 | val loss 0.0809 auroc 0.9963 * | lr 6.00e-04 | 14s
+  step   200 | train 0.2173 | val loss 0.2181 auroc 0.9978 | lr 6.00e-04 | 19s
+  step   250 | train 0.1673 | val loss 0.1110 auroc 0.9923 | lr 6.00e-04 | 23s
+  step   300 | train 0.1225 | val loss 0.1011 auroc 0.9945 | lr 6.00e-04 | 27s
+  step   350 | train 0.1254 | val loss 0.0673 auroc 0.9980 * | lr 6.00e-04 | 31s
+  step   400 | train 0.1219 | val loss 0.0833 auroc 0.9955 | lr 6.00e-04 | 36s
+  step   450 | train 0.0785 | val loss 0.0607 auroc 0.9976 * | lr 6.00e-04 | 40s
+  step   500 | train 0.0670 | val loss 0.0469 auroc 0.9988 * | lr 6.00e-04 | 44s
+  step   550 | train 0.0455 | val loss 0.2215 auroc 0.9974 | lr 6.00e-04 | 49s
+  step   600 | train 0.0584 | val loss 0.1852 auroc 0.9952 | lr 6.00e-04 | 53s
+  step   650 | train 0.0635 | val loss 0.0629 auroc 0.9976 | lr 6.00e-04 | 57s
+  step   700 | train 0.0639 | val loss 0.1052 auroc 0.9982 | lr 6.00e-04 | 62s
+  step   750 | train 0.0517 | val loss 0.0378 auroc 0.9991 * | lr 1.80e-04 | 66s
+  step   800 | train 0.0421 | val loss 0.0520 auroc 0.9987 | lr 1.80e-04 | 71s
+  step   850 | train 0.0386 | val loss 0.0437 auroc 0.9988 | lr 1.80e-04 | 75s
+  step   900 | train 0.0368 | val loss 0.0403 auroc 0.9990 | lr 1.80e-04 | 79s
+  step   950 | train 0.0414 | val loss 0.0422 auroc 0.9990 | lr 1.80e-04 | 83s
+  step  1000 | train 0.0365 | val loss 0.0420 auroc 0.9990 | lr 5.40e-05 | 88s
+  step  1050 | train 0.0361 | val loss 0.0418 auroc 0.9989 | lr 5.40e-05 | 92s
+  step  1100 | train 0.0359 | val loss 0.0416 auroc 0.9989 | lr 5.40e-05 | 96s
+  step  1150 | train 0.0360 | val loss 0.0414 auroc 0.9990 | lr 5.40e-05 | 101s
+  early stop at step 1150 (best step 750)
+[E1/densenet121/seed0] A_test:label AUROC 0.917 | B_external:label AUROC 0.871 | B_external:label_any AUROC 0.747
+[E1/densenet121 seed1] densenet121 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=16 aug=none
+  step    50 | train 0.3415 | val loss 0.2629 auroc 0.9867 * | lr 2.00e-04 | 5s
+  step   100 | train 0.1645 | val loss 0.1165 auroc 0.9904 * | lr 4.00e-04 | 8s
+  step   150 | train 0.1875 | val loss 0.2017 auroc 0.9826 | lr 6.00e-04 | 13s
+  step   200 | train 0.1608 | val loss 0.2908 auroc 0.9724 | lr 6.00e-04 | 17s
+  step   250 | train 0.1698 | val loss 0.1473 auroc 0.9909 | lr 6.00e-04 | 21s
+  step   300 | train 0.1455 | val loss 0.1829 auroc 0.9943 | lr 6.00e-04 | 26s
+  step   350 | train 0.1075 | val loss 0.0707 auroc 0.9961 * | lr 6.00e-04 | 30s
+  step   400 | train 0.0974 | val loss 0.0727 auroc 0.9981 | lr 6.00e-04 | 34s
+  step   450 | train 0.1011 | val loss 0.0604 auroc 0.9975 * | lr 6.00e-04 | 38s
+  step   500 | train 0.1015 | val loss 0.1019 auroc 0.9943 | lr 6.00e-04 | 43s
+  step   550 | train 0.0639 | val loss 0.0889 auroc 0.9971 | lr 6.00e-04 | 47s
+  step   600 | train 0.0580 | val loss 0.0623 auroc 0.9981 | lr 6.00e-04 | 51s
+  step   650 | train 0.0446 | val loss 0.0587 auroc 0.9980 * | lr 6.00e-04 | 55s
+  step   700 | train 0.0642 | val loss 0.0967 auroc 0.9982 | lr 6.00e-04 | 60s
+  step   750 | train 0.0648 | val loss 0.1136 auroc 0.9965 | lr 6.00e-04 | 64s
+  step   800 | train 0.0490 | val loss 0.0676 auroc 0.9972 | lr 6.00e-04 | 68s
+  step   850 | train 0.0453 | val loss 0.0458 auroc 0.9990 * | lr 6.00e-04 | 73s
+  step   900 | train 0.0426 | val loss 0.0857 auroc 0.9972 | lr 6.00e-04 | 77s
+  step   950 | train 0.0431 | val loss 0.0477 auroc 0.9986 | lr 6.00e-04 | 81s
+  step  1000 | train 0.0429 | val loss 0.1531 auroc 0.9965 | lr 6.00e-04 | 86s
+  step  1050 | train 0.0416 | val loss 0.1314 auroc 0.9858 | lr 6.00e-04 | 90s
+  step  1100 | train 0.0370 | val loss 0.0618 auroc 0.9976 | lr 1.80e-04 | 94s
+  step  1150 | train 0.0365 | val loss 0.0591 auroc 0.9983 | lr 1.80e-04 | 98s
+  step  1200 | train 0.0358 | val loss 0.0556 auroc 0.9983 | lr 1.80e-04 | 103s
+  step  1250 | train 0.0355 | val loss 0.0561 auroc 0.9982 | lr 1.80e-04 | 107s
+  early stop at step 1250 (best step 850)
+[E1/densenet121/seed1] A_test:label AUROC 0.925 | B_external:label AUROC 0.876 | B_external:label_any AUROC 0.745
+[E1/densenet121 seed2] densenet121 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=16 aug=none
+  step    50 | train 0.3378 | val loss 0.1401 auroc 0.9962 * | lr 2.00e-04 | 4s
+  step   100 | train 0.1788 | val loss 0.3661 auroc 0.9928 | lr 4.00e-04 | 8s
+  step   150 | train 0.2199 | val loss 0.7725 auroc 0.9925 | lr 6.00e-04 | 12s
+  step   200 | train 0.2067 | val loss 0.2166 auroc 0.9939 | lr 6.00e-04 | 17s
+  step   250 | train 0.1723 | val loss 1.1517 auroc 0.9866 | lr 6.00e-04 | 21s
+  step   300 | train 0.1192 | val loss 0.0919 auroc 0.9945 * | lr 6.00e-04 | 25s
+  step   350 | train 0.1242 | val loss 0.0979 auroc 0.9955 | lr 6.00e-04 | 29s
+  step   400 | train 0.1318 | val loss 0.0987 auroc 0.9959 | lr 6.00e-04 | 34s
+  step   450 | train 0.1090 | val loss 0.0699 auroc 0.9964 * | lr 6.00e-04 | 38s
+  step   500 | train 0.1078 | val loss 0.0647 auroc 0.9972 * | lr 6.00e-04 | 42s
+  step   550 | train 0.0707 | val loss 0.0609 auroc 0.9970 * | lr 6.00e-04 | 47s
+  step   600 | train 0.0722 | val loss 0.0573 auroc 0.9985 * | lr 6.00e-04 | 51s
+  step   650 | train 0.0640 | val loss 0.0645 auroc 0.9969 | lr 6.00e-04 | 56s
+  step   700 | train 0.0622 | val loss 0.0714 auroc 0.9965 | lr 6.00e-04 | 60s
+  step   750 | train 0.0603 | val loss 0.0688 auroc 0.9950 | lr 6.00e-04 | 64s
+  step   800 | train 0.0420 | val loss 0.0689 auroc 0.9971 | lr 6.00e-04 | 68s
+  step   850 | train 0.0387 | val loss 0.0578 auroc 0.9979 | lr 1.80e-04 | 73s
+  step   900 | train 0.0378 | val loss 0.0489 auroc 0.9985 * | lr 1.80e-04 | 77s
+  step   950 | train 0.0367 | val loss 0.0492 auroc 0.9986 | lr 1.80e-04 | 81s
+  step  1000 | train 0.0362 | val loss 0.0514 auroc 0.9985 | lr 1.80e-04 | 86s
+  step  1050 | train 0.0358 | val loss 0.0523 auroc 0.9985 | lr 1.80e-04 | 90s
+  step  1100 | train 0.0358 | val loss 0.0523 auroc 0.9985 | lr 1.80e-04 | 94s
+  step  1150 | train 0.0353 | val loss 0.0534 auroc 0.9985 | lr 5.40e-05 | 98s
+  step  1200 | train 0.0359 | val loss 0.0521 auroc 0.9984 | lr 5.40e-05 | 103s
+  step  1250 | train 0.0355 | val loss 0.0521 auroc 0.9985 | lr 5.40e-05 | 107s
+  step  1300 | train 0.0360 | val loss 0.0519 auroc 0.9985 | lr 5.40e-05 | 111s
+  early stop at step 1300 (best step 900)
+[E1/densenet121/seed2] A_test:label AUROC 0.954 | B_external:label AUROC 0.902 | B_external:label_any AUROC 0.774
+[E2/densenet121 seed0] densenet121 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=16 aug=conventional
+  step    50 | train 0.4132 | val loss 0.1589 auroc 0.9904 * | lr 2.00e-04 | 5s
+  step   100 | train 0.2242 | val loss 1.0163 auroc 0.9910 | lr 4.00e-04 | 8s
+  step   150 | train 0.2303 | val loss 0.2310 auroc 0.9819 | lr 6.00e-04 | 12s
+  step   200 | train 0.2228 | val loss 0.2553 auroc 0.9952 | lr 6.00e-04 | 16s
+  step   250 | train 0.2804 | val loss 0.2324 auroc 0.9725 | lr 6.00e-04 | 20s
+  step   300 | train 0.2357 | val loss 0.1785 auroc 0.9945 | lr 6.00e-04 | 24s
+  step   350 | train 0.2105 | val loss 0.1480 auroc 0.9845 * | lr 6.00e-04 | 28s
+  step   400 | train 0.2283 | val loss 0.2836 auroc 0.9940 | lr 6.00e-04 | 33s
+  step   450 | train 0.1562 | val loss 0.1513 auroc 0.9922 | lr 6.00e-04 | 37s
+  step   500 | train 0.1388 | val loss 0.2340 auroc 0.9909 | lr 6.00e-04 | 41s
+  step   550 | train 0.1192 | val loss 0.1840 auroc 0.9880 | lr 6.00e-04 | 45s
+  step   600 | train 0.1063 | val loss 0.0830 auroc 0.9958 * | lr 1.80e-04 | 49s
+  step   650 | train 0.0638 | val loss 0.0600 auroc 0.9982 * | lr 1.80e-04 | 53s
+  step   700 | train 0.0541 | val loss 0.0688 auroc 0.9973 | lr 1.80e-04 | 58s
+  step   750 | train 0.0677 | val loss 0.0842 auroc 0.9976 | lr 1.80e-04 | 62s
+  step   800 | train 0.0529 | val loss 0.0877 auroc 0.9976 | lr 1.80e-04 | 66s
+  step   850 | train 0.0482 | val loss 0.0857 auroc 0.9982 | lr 1.80e-04 | 70s
+  step   900 | train 0.0469 | val loss 0.0492 auroc 0.9987 * | lr 5.40e-05 | 74s
+  step   950 | train 0.0564 | val loss 0.0587 auroc 0.9983 | lr 5.40e-05 | 79s
+  step  1000 | train 0.0443 | val loss 0.0707 auroc 0.9980 | lr 5.40e-05 | 83s
+  step  1050 | train 0.0410 | val loss 0.0518 auroc 0.9984 | lr 5.40e-05 | 87s
+  step  1100 | train 0.0398 | val loss 0.0490 auroc 0.9985 * | lr 5.40e-05 | 91s
+  step  1150 | train 0.0381 | val loss 0.0581 auroc 0.9983 | lr 5.40e-05 | 95s
+  step  1200 | train 0.0405 | val loss 0.0648 auroc 0.9979 | lr 5.40e-05 | 100s
+  step  1250 | train 0.0395 | val loss 0.0632 auroc 0.9979 | lr 5.40e-05 | 104s
+  step  1300 | train 0.0382 | val loss 0.0626 auroc 0.9980 | lr 5.40e-05 | 108s
+  step  1350 | train 0.0367 | val loss 0.0675 auroc 0.9979 | lr 1.62e-05 | 112s
+  step  1400 | train 0.0370 | val loss 0.0706 auroc 0.9979 | lr 1.62e-05 | 116s
+  step  1450 | train 0.0393 | val loss 0.0665 auroc 0.9980 | lr 1.62e-05 | 121s
+  step  1500 | train 0.0382 | val loss 0.0594 auroc 0.9980 | lr 1.62e-05 | 125s
+  early stop at step 1500 (best step 1100)
+[E2/densenet121/seed0] A_test:label AUROC 0.960 | B_external:label AUROC 0.928 | B_external:label_any AUROC 0.793
+[E2/densenet121 seed1] densenet121 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=16 aug=conventional
+  step    50 | train 0.3747 | val loss 0.1380 auroc 0.9895 * | lr 2.00e-04 | 5s
+  step   100 | train 0.2074 | val loss 0.0903 auroc 0.9936 * | lr 4.00e-04 | 9s
+  step   150 | train 0.2328 | val loss 0.2137 auroc 0.9933 | lr 6.00e-04 | 14s
+  step   200 | train 0.2044 | val loss 0.7606 auroc 0.9315 | lr 6.00e-04 | 18s
+  step   250 | train 0.2586 | val loss 0.1013 auroc 0.9923 | lr 6.00e-04 | 23s
+  step   300 | train 0.2472 | val loss 0.0874 auroc 0.9967 * | lr 6.00e-04 | 28s
+  step   350 | train 0.2002 | val loss 0.1744 auroc 0.9970 | lr 6.00e-04 | 32s
+  step   400 | train 0.1369 | val loss 0.2522 auroc 0.9882 | lr 6.00e-04 | 37s
+  step   450 | train 0.1998 | val loss 1.6853 auroc 0.9893 | lr 6.00e-04 | 41s
+  step   500 | train 0.1851 | val loss 0.1319 auroc 0.9955 | lr 6.00e-04 | 45s
+  step   550 | train 0.0983 | val loss 0.0743 auroc 0.9967 * | lr 1.80e-04 | 50s
+  step   600 | train 0.0746 | val loss 0.0605 auroc 0.9977 * | lr 1.80e-04 | 54s
+  step   650 | train 0.0632 | val loss 0.0726 auroc 0.9975 | lr 1.80e-04 | 59s
+  step   700 | train 0.0731 | val loss 0.0670 auroc 0.9978 | lr 1.80e-04 | 63s
+  step   750 | train 0.0512 | val loss 0.0637 auroc 0.9974 | lr 1.80e-04 | 68s
+  step   800 | train 0.0479 | val loss 0.0564 auroc 0.9978 * | lr 1.80e-04 | 72s
+  step   850 | train 0.0455 | val loss 0.0590 auroc 0.9984 | lr 1.80e-04 | 77s
+  step   900 | train 0.0440 | val loss 0.0780 auroc 0.9976 | lr 1.80e-04 | 81s
+  step   950 | train 0.0427 | val loss 0.0673 auroc 0.9982 | lr 1.80e-04 | 85s
+  step  1000 | train 0.0477 | val loss 0.0791 auroc 0.9977 | lr 1.80e-04 | 89s
+  step  1050 | train 0.0474 | val loss 0.0677 auroc 0.9982 | lr 5.40e-05 | 94s
+  step  1100 | train 0.0403 | val loss 0.0535 auroc 0.9984 * | lr 5.40e-05 | 98s
+  step  1150 | train 0.0434 | val loss 0.0670 auroc 0.9982 | lr 5.40e-05 | 103s
+  step  1200 | train 0.0409 | val loss 0.0729 auroc 0.9980 | lr 5.40e-05 | 108s
+  step  1250 | train 0.0411 | val loss 0.0641 auroc 0.9980 | lr 5.40e-05 | 112s
+  step  1300 | train 0.0394 | val loss 0.0715 auroc 0.9976 | lr 5.40e-05 | 117s
+  step  1350 | train 0.0379 | val loss 0.0668 auroc 0.9978 | lr 1.62e-05 | 121s
+  step  1400 | train 0.0390 | val loss 0.0731 auroc 0.9979 | lr 1.62e-05 | 126s
+  step  1450 | train 0.0371 | val loss 0.0681 auroc 0.9979 | lr 1.62e-05 | 130s
+  step  1500 | train 0.0426 | val loss 0.0640 auroc 0.9979 | lr 1.62e-05 | 134s
+  early stop at step 1500 (best step 1100)
+[E2/densenet121/seed1] A_test:label AUROC 0.953 | B_external:label AUROC 0.910 | B_external:label_any AUROC 0.772
+[E2/densenet121 seed2] densenet121 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=16 aug=conventional
+  step    50 | train 0.3588 | val loss 0.2246 auroc 0.9954 * | lr 2.00e-04 | 5s
+  step   100 | train 0.1975 | val loss 1.4325 auroc 0.9857 | lr 4.00e-04 | 8s
+  step   150 | train 0.2820 | val loss 0.3733 auroc 0.9862 | lr 6.00e-04 | 12s
+  step   200 | train 0.2549 | val loss 1.4099 auroc 0.9858 | lr 6.00e-04 | 17s
+  step   250 | train 0.2341 | val loss 0.4058 auroc 0.9897 | lr 6.00e-04 | 21s
+  step   300 | train 0.1809 | val loss 0.7312 auroc 0.9415 | lr 6.00e-04 | 25s
+  step   350 | train 0.1696 | val loss 1.7967 auroc 0.9937 | lr 6.00e-04 | 29s
+  step   400 | train 0.1081 | val loss 0.0683 auroc 0.9969 * | lr 1.80e-04 | 34s
+  step   450 | train 0.0898 | val loss 0.0716 auroc 0.9969 | lr 1.80e-04 | 38s
+  step   500 | train 0.0862 | val loss 0.0583 auroc 0.9988 * | lr 1.80e-04 | 42s
+  step   550 | train 0.0682 | val loss 0.0787 auroc 0.9977 | lr 1.80e-04 | 46s
+  step   600 | train 0.0763 | val loss 0.0626 auroc 0.9984 | lr 1.80e-04 | 50s
+  step   650 | train 0.0614 | val loss 0.0590 auroc 0.9981 | lr 1.80e-04 | 54s
+  step   700 | train 0.0511 | val loss 0.0568 auroc 0.9983 * | lr 1.80e-04 | 58s
+  step   750 | train 0.0511 | val loss 0.0864 auroc 0.9978 | lr 1.80e-04 | 63s
+  step   800 | train 0.0450 | val loss 0.0830 auroc 0.9974 | lr 1.80e-04 | 67s
+  step   850 | train 0.0417 | val loss 0.0759 auroc 0.9969 | lr 1.80e-04 | 71s
+  step   900 | train 0.0426 | val loss 0.0526 auroc 0.9983 * | lr 1.80e-04 | 75s
+  step   950 | train 0.0464 | val loss 0.0659 auroc 0.9973 | lr 1.80e-04 | 79s
+  step  1000 | train 0.0408 | val loss 0.0648 auroc 0.9968 | lr 1.80e-04 | 83s
+  step  1050 | train 0.0381 | val loss 0.0640 auroc 0.9982 | lr 1.80e-04 | 87s
+  step  1100 | train 0.0383 | val loss 0.0794 auroc 0.9970 | lr 1.80e-04 | 92s
+  step  1150 | train 0.0371 | val loss 0.0702 auroc 0.9970 | lr 5.40e-05 | 96s
+  step  1200 | train 0.0366 | val loss 0.0724 auroc 0.9972 | lr 5.40e-05 | 100s
+  step  1250 | train 0.0361 | val loss 0.0653 auroc 0.9976 | lr 5.40e-05 | 104s
+  step  1300 | train 0.0362 | val loss 0.0661 auroc 0.9977 | lr 5.40e-05 | 108s
+  early stop at step 1300 (best step 900)
+[E2/densenet121/seed2] A_test:label AUROC 0.927 | B_external:label AUROC 0.907 | B_external:label_any AUROC 0.769
+=== Sat Oct 10 04:18:29 +05 2026 HPO resnet50
+[I 2026-10-10 04:18:32,355] A new study created in RDB with name: hpo_resnet50
+[hpo resnet50] 0 finished trials, running 25 more
+[I 2026-10-10 04:20:17,059] Trial 0 finished with value: 0.11839386075735092 and parameters: {'lr': 0.00012520653814999459, 'weight_decay': 0.022954167740317895, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07917250380826646, 'drop_rate': 0.26444745987645224, 'drop_path_rate': 0.1704133683281797}. Best is trial 0 with value: 0.11839386075735092.
+  trial   0 COMPLETE val_loss=0.1184 best=0.1184 (105s)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[I 2026-10-10 04:22:10,916] Trial 1 finished with value: 0.09754202514886856 and parameters: {'lr': 0.0007098936257405903, 'weight_decay': 0.00017159007295374412, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07805291762864555, 'drop_rate': 0.05913721293446661, 'drop_path_rate': 0.19197630639825713}. Best is trial 1 with value: 0.09754202514886856.
+  trial   1 COMPLETE val_loss=0.0975 best=0.0975 (219s)
+[I 2026-10-10 04:23:45,112] Trial 2 finished with value: 0.20145219564437866 and parameters: {'lr': 1.9351140885595265e-05, 'weight_decay': 0.13133498570503438, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.06120957227224214, 'drop_rate': 0.30846699843737846, 'drop_path_rate': 0.2831244235543872}. Best is trial 1 with value: 0.09754202514886856.
+  trial   2 COMPLETE val_loss=0.2015 best=0.0975 (313s)
+[I 2026-10-10 04:24:58,712] Trial 3 finished with value: 0.0867215022444725 and parameters: {'lr': 0.00023101522250182374, 'weight_decay': 0.0015372565899752293, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.03637107709426226, 'drop_rate': 0.2850983852089398, 'drop_path_rate': 0.1315804540386961}. Best is trial 3 with value: 0.0867215022444725.
+  trial   3 COMPLETE val_loss=0.0867 best=0.0867 (387s)
+[I 2026-10-10 04:27:00,718] Trial 4 finished with value: 0.09895059466362 and parameters: {'lr': 0.0009478675948634674, 'weight_decay': 0.00021719657932817298, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.06563295894652735, 'drop_rate': 0.0690914756743069, 'drop_path_rate': 0.058974708504016045}. Best is trial 3 with value: 0.0867215022444725.
+  trial   4 COMPLETE val_loss=0.0990 best=0.0867 (509s)
+[I 2026-10-10 04:29:00,793] Trial 5 finished with value: 0.10614598542451859 and parameters: {'lr': 5.463240777949552e-05, 'weight_decay': 0.05130069844644666, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.003918779225432068, 'drop_rate': 0.1414034812882048, 'drop_path_rate': 0.03605896836395067}. Best is trial 3 with value: 0.0867215022444725.
+  trial   5 COMPLETE val_loss=0.1061 best=0.0867 (629s)
+[I 2026-10-10 04:29:31,914] Trial 6 pruned. 
+  trial   6 PRUNED   val_loss=0.3716 best=0.0867 (660s)
+[I 2026-10-10 04:29:53,135] Trial 7 pruned. 
+  trial   7 PRUNED   val_loss=0.1363 best=0.0867 (681s)
+[I 2026-10-10 04:32:16,030] Trial 8 finished with value: 0.07918743044137955 and parameters: {'lr': 7.889827040678446e-05, 'weight_decay': 0.0007473730247809312, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 10.0, 'label_smoothing': 0.0012199277858424215, 'drop_rate': 0.23269682117939577, 'drop_path_rate': 0.25465909160797917}. Best is trial 8 with value: 0.07918743044137955.
+  trial   8 COMPLETE val_loss=0.0792 best=0.0792 (824s)
+[I 2026-10-10 04:33:48,355] Trial 9 finished with value: 0.08652376383543015 and parameters: {'lr': 0.00020570082908456626, 'weight_decay': 0.0031463554718608056, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.024059417111375887, 'drop_rate': 0.2863869854196339, 'drop_path_rate': 0.28593624441299237}. Best is trial 8 with value: 0.07918743044137955.
+  trial   9 COMPLETE val_loss=0.0865 best=0.0792 (916s)
+[I 2026-10-10 04:35:11,292] Trial 10 finished with value: 0.0646195262670517 and parameters: {'lr': 0.00044051531111958376, 'weight_decay': 0.04828664533419908, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.009183025878240172, 'drop_rate': 0.07582950061577887, 'drop_path_rate': 0.275519113729989}. Best is trial 10 with value: 0.0646195262670517.
+  trial  10 COMPLETE val_loss=0.0646 best=0.0646 (999s)
+[I 2026-10-10 04:36:52,704] Trial 11 finished with value: 0.06440137326717377 and parameters: {'lr': 0.0003310521349626023, 'weight_decay': 0.0027000256704848894, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.013372110619314814, 'drop_rate': 0.14317731863608085, 'drop_path_rate': 0.29171772164874815}. Best is trial 11 with value: 0.06440137326717377.
+  trial  11 COMPLETE val_loss=0.0644 best=0.0644 (1101s)
+[I 2026-10-10 04:38:24,931] Trial 12 finished with value: 0.07785362005233765 and parameters: {'lr': 0.00020415399156487615, 'weight_decay': 0.13443308586079591, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.01804852538106369, 'drop_rate': 0.14922706153393178, 'drop_path_rate': 0.22794829951344633}. Best is trial 11 with value: 0.06440137326717377.
+  trial  12 COMPLETE val_loss=0.0779 best=0.0644 (1193s)
+[I 2026-10-10 04:40:15,528] Trial 13 finished with value: 0.07332746684551239 and parameters: {'lr': 0.00034063712190078815, 'weight_decay': 0.00497444630965627, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.03510847505755149, 'drop_rate': 0.12603127075556164, 'drop_path_rate': 0.18160053743854787}. Best is trial 11 with value: 0.06440137326717377.
+  trial  13 COMPLETE val_loss=0.0733 best=0.0644 (1303s)
+[I 2026-10-10 04:41:29,263] Trial 14 finished with value: 0.07111169397830963 and parameters: {'lr': 0.0004050528677224434, 'weight_decay': 0.017482586246748665, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.027210922013919406, 'drop_rate': 0.020417662348434992, 'drop_path_rate': 0.27946422185914416}. Best is trial 11 with value: 0.06440137326717377.
+  trial  14 COMPLETE val_loss=0.0711 best=0.0644 (1377s)
+[I 2026-10-10 04:42:05,059] Trial 15 pruned. 
+  trial  15 PRUNED   val_loss=0.1198 best=0.0644 (1413s)
+[I 2026-10-10 04:42:40,723] Trial 16 pruned. 
+  trial  16 PRUNED   val_loss=0.1545 best=0.0644 (1449s)
+[I 2026-10-10 04:44:17,432] Trial 17 finished with value: 0.04642442613840103 and parameters: {'lr': 0.0008405843482413933, 'weight_decay': 0.004706094466659138, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.004724769365486517, 'drop_rate': 0.07887185638370457, 'drop_path_rate': 0.18384515817845282}. Best is trial 17 with value: 0.04642442613840103.
+  trial  17 COMPLETE val_loss=0.0464 best=0.0464 (1545s)
+[I 2026-10-10 04:45:54,008] Trial 18 finished with value: 0.05820232257246971 and parameters: {'lr': 0.0009620544240065668, 'weight_decay': 0.0036920584060687223, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.01902452483874302, 'drop_rate': 0.23588515205581712, 'drop_path_rate': 0.20669210554004996}. Best is trial 17 with value: 0.04642442613840103.
+  trial  18 COMPLETE val_loss=0.0582 best=0.0464 (1642s)
+[I 2026-10-10 04:47:40,149] Trial 19 finished with value: 0.05740177631378174 and parameters: {'lr': 0.0005096807331507239, 'weight_decay': 0.02478537917572143, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.016813409658141, 'drop_rate': 0.06025926772626941, 'drop_path_rate': 0.09698169258620662}. Best is trial 17 with value: 0.04642442613840103.
+  trial  19 COMPLETE val_loss=0.0574 best=0.0464 (1748s)
+[I 2026-10-10 04:48:04,887] Trial 20 pruned. 
+  trial  20 PRUNED   val_loss=0.1015 best=0.0464 (1773s)
+[I 2026-10-10 04:49:27,573] Trial 21 finished with value: 0.0518721304833889 and parameters: {'lr': 0.0008893970092614485, 'weight_decay': 0.001651527729258147, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 10.0, 'label_smoothing': 0.008122787184410243, 'drop_rate': 0.231696734398244, 'drop_path_rate': 0.26709405937938874}. Best is trial 17 with value: 0.04642442613840103.
+  trial  21 COMPLETE val_loss=0.0519 best=0.0464 (1855s)
+[I 2026-10-10 04:51:13,630] Trial 22 finished with value: 0.06954903155565262 and parameters: {'lr': 0.0003008299072037666, 'weight_decay': 0.014056787517877093, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.03127368945995643, 'drop_rate': 0.10337465644528593, 'drop_path_rate': 0.06145930725910195}. Best is trial 17 with value: 0.04642442613840103.
+  trial  22 COMPLETE val_loss=0.0695 best=0.0464 (1961s)
+[I 2026-10-10 04:52:41,158] Trial 23 finished with value: 0.06482601165771484 and parameters: {'lr': 0.0006189042568029267, 'weight_decay': 0.0012878918099036734, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 10.0, 'label_smoothing': 0.007755660651964038, 'drop_rate': 0.005486316459627882, 'drop_path_rate': 0.20881626489783806}. Best is trial 17 with value: 0.04642442613840103.
+  trial  23 COMPLETE val_loss=0.0648 best=0.0464 (2049s)
+[I 2026-10-10 04:55:03,930] Trial 24 finished with value: 0.04970409721136093 and parameters: {'lr': 0.0004718402602745869, 'weight_decay': 0.0025270686180243313, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 10.0, 'label_smoothing': 0.00583646456671235, 'drop_rate': 0.1067316933217679, 'drop_path_rate': 0.11809946264305442}. Best is trial 17 with value: 0.04642442613840103.
+  trial  24 COMPLETE val_loss=0.0497 best=0.0464 (2192s)
+{
+  "arch": "resnet50",
+  "params": {
+    "lr": 0.0008405843482413933,
+    "weight_decay": 0.004706094466659138,
+    "batch_size": 32,
+    "schedule": "plateau",
+    "warmup_steps": 50,
+    "head_lr_mult": 10.0,
+    "label_smoothing": 0.004724769365486517,
+    "drop_rate": 0.07887185638370457,
+    "drop_path_rate": 0.18384515817845282
+  },
+  "best_val_loss": 0.04642442613840103,
+  "best_val_auroc": 0.9985006940250273,
+  "trial": 17,
+  "n_complete": 20,
+  "n_pruned": 5
+}
+=== Sat Oct 10 04:55:05 +05 2026 E1/E2 resnet50
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[E1/resnet50 seed0] resnet50 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=none
+  step    50 | train 0.4539 | val loss 0.2085 auroc 0.9836 * | lr 8.41e-04 | 7s
+  step   100 | train 0.1334 | val loss 0.0913 auroc 0.9961 * | lr 8.41e-04 | 12s
+  step   150 | train 0.1455 | val loss 0.0993 auroc 0.9944 | lr 8.41e-04 | 19s
+  step   200 | train 0.1063 | val loss 0.2262 auroc 0.9981 | lr 8.41e-04 | 26s
+  step   250 | train 0.0642 | val loss 0.0723 auroc 0.9976 * | lr 8.41e-04 | 32s
+  step   300 | train 0.0493 | val loss 0.5754 auroc 0.9950 | lr 8.41e-04 | 39s
+  step   350 | train 0.0493 | val loss 0.1705 auroc 0.9972 | lr 8.41e-04 | 45s
+  step   400 | train 0.0481 | val loss 0.0618 auroc 0.9981 * | lr 8.41e-04 | 52s
+  step   450 | train 0.0358 | val loss 0.0651 auroc 0.9978 | lr 8.41e-04 | 59s
+  step   500 | train 0.0371 | val loss 0.1067 auroc 0.9933 | lr 8.41e-04 | 65s
+  step   550 | train 0.0313 | val loss 0.0810 auroc 0.9951 | lr 8.41e-04 | 72s
+  step   600 | train 0.0335 | val loss 0.0464 auroc 0.9985 * | lr 8.41e-04 | 78s
+  step   650 | train 0.0281 | val loss 0.0562 auroc 0.9981 | lr 8.41e-04 | 85s
+  step   700 | train 0.0238 | val loss 0.0583 auroc 0.9976 | lr 8.41e-04 | 91s
+  step   750 | train 0.0207 | val loss 0.0603 auroc 0.9981 | lr 8.41e-04 | 98s
+  step   800 | train 0.0217 | val loss 0.0783 auroc 0.9978 | lr 8.41e-04 | 104s
+  step   850 | train 0.0209 | val loss 0.0668 auroc 0.9977 | lr 2.52e-04 | 110s
+  step   900 | train 0.0197 | val loss 0.0717 auroc 0.9979 | lr 2.52e-04 | 117s
+  step   950 | train 0.0194 | val loss 0.0676 auroc 0.9977 | lr 2.52e-04 | 123s
+  step  1000 | train 0.0184 | val loss 0.0656 auroc 0.9977 | lr 2.52e-04 | 130s
+  early stop at step 1000 (best step 600)
+[E1/resnet50/seed0] A_test:label AUROC 0.952 | B_external:label AUROC 0.874 | B_external:label_any AUROC 0.753
+[E1/resnet50 seed1] resnet50 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=none
+  step    50 | train 0.4209 | val loss 0.1601 auroc 0.9809 * | lr 8.41e-04 | 5s
+  step   100 | train 0.1321 | val loss 0.2116 auroc 0.9737 | lr 8.41e-04 | 10s
+  step   150 | train 0.1185 | val loss 0.1249 auroc 0.9954 * | lr 8.41e-04 | 17s
+  step   200 | train 0.0959 | val loss 0.3143 auroc 0.9966 | lr 8.41e-04 | 24s
+  step   250 | train 0.0814 | val loss 0.1161 auroc 0.9949 * | lr 8.41e-04 | 31s
+  step   300 | train 0.0620 | val loss 0.4461 auroc 0.9978 | lr 8.41e-04 | 38s
+  step   350 | train 0.0452 | val loss 0.0832 auroc 0.9962 * | lr 8.41e-04 | 45s
+  step   400 | train 0.0404 | val loss 0.0688 auroc 0.9984 * | lr 8.41e-04 | 52s
+  step   450 | train 0.0302 | val loss 0.0612 auroc 0.9975 * | lr 8.41e-04 | 60s
+  step   500 | train 0.0331 | val loss 0.1465 auroc 0.9960 | lr 8.41e-04 | 67s
+  step   550 | train 0.0379 | val loss 0.0858 auroc 0.9953 | lr 8.41e-04 | 74s
+  step   600 | train 0.0288 | val loss 0.0766 auroc 0.9973 | lr 8.41e-04 | 81s
+  step   650 | train 0.0260 | val loss 0.0653 auroc 0.9974 | lr 8.41e-04 | 88s
+  step   700 | train 0.0223 | val loss 0.0648 auroc 0.9971 | lr 2.52e-04 | 94s
+  step   750 | train 0.0238 | val loss 0.0619 auroc 0.9976 | lr 2.52e-04 | 101s
+  step   800 | train 0.0202 | val loss 0.0632 auroc 0.9975 | lr 2.52e-04 | 107s
+  step   850 | train 0.0196 | val loss 0.0668 auroc 0.9973 | lr 2.52e-04 | 114s
+  early stop at step 850 (best step 450)
+[E1/resnet50/seed1] A_test:label AUROC 0.943 | B_external:label AUROC 0.841 | B_external:label_any AUROC 0.728
+[E1/resnet50 seed2] resnet50 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=none
+  step    50 | train 0.4360 | val loss 0.2094 auroc 0.9597 * | lr 8.41e-04 | 5s
+  step   100 | train 0.1711 | val loss 0.3084 auroc 0.9865 | lr 8.41e-04 | 10s
+  step   150 | train 0.1002 | val loss 0.5299 auroc 0.9929 | lr 8.41e-04 | 16s
+  step   200 | train 0.1315 | val loss 1.1903 auroc 0.9916 | lr 8.41e-04 | 23s
+  step   250 | train 0.0851 | val loss 0.1255 auroc 0.9945 * | lr 8.41e-04 | 29s
+  step   300 | train 0.0499 | val loss 0.0989 auroc 0.9958 * | lr 8.41e-04 | 36s
+  step   350 | train 0.0333 | val loss 0.0831 auroc 0.9974 * | lr 8.41e-04 | 43s
+  step   400 | train 0.0401 | val loss 0.0985 auroc 0.9967 | lr 8.41e-04 | 50s
+  step   450 | train 0.0433 | val loss 0.0805 auroc 0.9973 * | lr 8.41e-04 | 57s
+  step   500 | train 0.0410 | val loss 0.1048 auroc 0.9972 | lr 8.41e-04 | 64s
+  step   550 | train 0.0447 | val loss 0.0762 auroc 0.9964 * | lr 8.41e-04 | 70s
+  step   600 | train 0.0325 | val loss 0.0826 auroc 0.9963 | lr 8.41e-04 | 77s
+  step   650 | train 0.0284 | val loss 0.1175 auroc 0.9966 | lr 8.41e-04 | 84s
+  step   700 | train 0.0250 | val loss 0.0948 auroc 0.9965 | lr 8.41e-04 | 90s
+  step   750 | train 0.0248 | val loss 0.0769 auroc 0.9970 | lr 8.41e-04 | 97s
+  step   800 | train 0.0221 | val loss 0.0688 auroc 0.9971 * | lr 2.52e-04 | 103s
+  step   850 | train 0.0215 | val loss 0.0672 auroc 0.9978 * | lr 2.52e-04 | 110s
+  step   900 | train 0.0200 | val loss 0.0710 auroc 0.9975 | lr 2.52e-04 | 117s
+  step   950 | train 0.0204 | val loss 0.0672 auroc 0.9976 | lr 2.52e-04 | 123s
+  step  1000 | train 0.0237 | val loss 0.0724 auroc 0.9976 | lr 2.52e-04 | 130s
+  step  1050 | train 0.0207 | val loss 0.0620 auroc 0.9977 * | lr 2.52e-04 | 136s
+  step  1100 | train 0.0188 | val loss 0.0639 auroc 0.9975 | lr 2.52e-04 | 143s
+  step  1150 | train 0.0190 | val loss 0.0689 auroc 0.9975 | lr 2.52e-04 | 150s
+  step  1200 | train 0.0202 | val loss 0.0560 auroc 0.9982 * | lr 2.52e-04 | 156s
+  step  1250 | train 0.0190 | val loss 0.0600 auroc 0.9978 | lr 2.52e-04 | 163s
+  step  1300 | train 0.0185 | val loss 0.0611 auroc 0.9980 | lr 2.52e-04 | 169s
+  step  1350 | train 0.0198 | val loss 0.0614 auroc 0.9977 | lr 2.52e-04 | 176s
+  step  1400 | train 0.0193 | val loss 0.0613 auroc 0.9978 | lr 2.52e-04 | 182s
+  step  1450 | train 0.0191 | val loss 0.0629 auroc 0.9978 | lr 7.57e-05 | 189s
+  step  1500 | train 0.0187 | val loss 0.0616 auroc 0.9978 | lr 7.57e-05 | 195s
+[E1/resnet50/seed2] A_test:label AUROC 0.945 | B_external:label AUROC 0.882 | B_external:label_any AUROC 0.755
+[E2/resnet50 seed0] resnet50 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=conventional
+  step    50 | train 0.4659 | val loss 0.3446 auroc 0.9675 * | lr 8.41e-04 | 6s
+  step   100 | train 0.1689 | val loss 0.1879 auroc 0.9908 * | lr 8.41e-04 | 11s
+  step   150 | train 0.1646 | val loss 0.1798 auroc 0.9883 * | lr 8.41e-04 | 19s
+  step   200 | train 0.1460 | val loss 0.2081 auroc 0.9931 | lr 8.41e-04 | 27s
+  step   250 | train 0.1264 | val loss 0.0856 auroc 0.9971 * | lr 8.41e-04 | 34s
+  step   300 | train 0.1089 | val loss 0.1052 auroc 0.9974 | lr 8.41e-04 | 42s
+  step   350 | train 0.0988 | val loss 0.3006 auroc 0.9957 | lr 8.41e-04 | 49s
+  step   400 | train 0.0977 | val loss 0.2478 auroc 0.9965 | lr 8.41e-04 | 56s
+  step   450 | train 0.0735 | val loss 0.1844 auroc 0.9983 | lr 8.41e-04 | 62s
+  step   500 | train 0.0596 | val loss 0.0587 auroc 0.9979 * | lr 2.52e-04 | 70s
+  step   550 | train 0.0433 | val loss 0.0587 auroc 0.9982 | lr 2.52e-04 | 77s
+  step   600 | train 0.0397 | val loss 0.0743 auroc 0.9974 | lr 2.52e-04 | 84s
+  step   650 | train 0.0308 | val loss 0.0816 auroc 0.9963 | lr 2.52e-04 | 91s
+  step   700 | train 0.0322 | val loss 0.0964 auroc 0.9982 | lr 2.52e-04 | 98s
+  step   750 | train 0.0323 | val loss 0.0616 auroc 0.9981 | lr 7.57e-05 | 104s
+  step   800 | train 0.0284 | val loss 0.0741 auroc 0.9979 | lr 7.57e-05 | 111s
+  step   850 | train 0.0338 | val loss 0.0676 auroc 0.9978 | lr 7.57e-05 | 118s
+  step   900 | train 0.0337 | val loss 0.0635 auroc 0.9977 | lr 7.57e-05 | 125s
+  early stop at step 900 (best step 500)
+[E2/resnet50/seed0] A_test:label AUROC 0.968 | B_external:label AUROC 0.890 | B_external:label_any AUROC 0.764
+[E2/resnet50 seed1] resnet50 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=conventional
+  step    50 | train 0.4624 | val loss 0.1940 auroc 0.9737 * | lr 8.41e-04 | 6s
+  step   100 | train 0.1562 | val loss 0.1337 auroc 0.9908 * | lr 8.41e-04 | 10s
+  step   150 | train 0.1603 | val loss 0.4628 auroc 0.9969 | lr 8.41e-04 | 18s
+  step   200 | train 0.1301 | val loss 0.0800 auroc 0.9944 * | lr 8.41e-04 | 24s
+  step   250 | train 0.1249 | val loss 0.1712 auroc 0.9970 | lr 8.41e-04 | 32s
+  step   300 | train 0.0907 | val loss 0.2775 auroc 0.9973 | lr 8.41e-04 | 38s
+  step   350 | train 0.0819 | val loss 0.0682 auroc 0.9966 * | lr 8.41e-04 | 44s
+  step   400 | train 0.0649 | val loss 0.0596 auroc 0.9967 * | lr 8.41e-04 | 52s
+  step   450 | train 0.0479 | val loss 0.0613 auroc 0.9982 | lr 8.41e-04 | 59s
+  step   500 | train 0.0629 | val loss 0.0788 auroc 0.9956 | lr 8.41e-04 | 66s
+  step   550 | train 0.0503 | val loss 0.0470 auroc 0.9987 * | lr 8.41e-04 | 72s
+  step   600 | train 0.0506 | val loss 0.1431 auroc 0.9945 | lr 8.41e-04 | 79s
+  step   650 | train 0.0512 | val loss 0.1284 auroc 0.9981 | lr 8.41e-04 | 86s
+  step   700 | train 0.0429 | val loss 0.0545 auroc 0.9963 | lr 8.41e-04 | 93s
+  step   750 | train 0.0653 | val loss 0.0872 auroc 0.9974 | lr 8.41e-04 | 99s
+  step   800 | train 0.0347 | val loss 0.0532 auroc 0.9973 | lr 2.52e-04 | 106s
+  step   850 | train 0.0297 | val loss 0.0573 auroc 0.9979 | lr 2.52e-04 | 112s
+  step   900 | train 0.0293 | val loss 0.0562 auroc 0.9977 | lr 2.52e-04 | 119s
+  step   950 | train 0.0236 | val loss 0.0489 auroc 0.9976 | lr 2.52e-04 | 125s
+  early stop at step 950 (best step 550)
+[E2/resnet50/seed1] A_test:label AUROC 0.967 | B_external:label AUROC 0.915 | B_external:label_any AUROC 0.786
+[E2/resnet50 seed2] resnet50 on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=conventional
+  step    50 | train 0.4642 | val loss 0.2418 auroc 0.9760 * | lr 8.41e-04 | 6s
+  step   100 | train 0.2121 | val loss 0.1460 auroc 0.9928 * | lr 8.41e-04 | 10s
+  step   150 | train 0.1166 | val loss 0.0809 auroc 0.9958 * | lr 8.41e-04 | 18s
+  step   200 | train 0.1678 | val loss 1.0461 auroc 0.9917 | lr 8.41e-04 | 26s
+  step   250 | train 0.1451 | val loss 0.0809 auroc 0.9951 | lr 8.41e-04 | 32s
+  step   300 | train 0.0760 | val loss 0.7423 auroc 0.9961 | lr 8.41e-04 | 40s
+  step   350 | train 0.0783 | val loss 0.1077 auroc 0.9944 | lr 8.41e-04 | 46s
+  step   400 | train 0.0567 | val loss 0.0682 auroc 0.9974 * | lr 2.52e-04 | 53s
+  step   450 | train 0.0532 | val loss 0.0647 auroc 0.9974 * | lr 2.52e-04 | 60s
+  step   500 | train 0.0447 | val loss 0.0659 auroc 0.9976 | lr 2.52e-04 | 67s
+  step   550 | train 0.0346 | val loss 0.0557 auroc 0.9980 * | lr 2.52e-04 | 74s
+  step   600 | train 0.0392 | val loss 0.0863 auroc 0.9984 | lr 2.52e-04 | 81s
+  step   650 | train 0.0355 | val loss 0.0574 auroc 0.9981 | lr 2.52e-04 | 88s
+  step   700 | train 0.0382 | val loss 0.0596 auroc 0.9981 | lr 2.52e-04 | 94s
+  step   750 | train 0.0364 | val loss 0.0676 auroc 0.9981 | lr 2.52e-04 | 100s
+  step   800 | train 0.0320 | val loss 0.0582 auroc 0.9983 | lr 7.57e-05 | 107s
+  step   850 | train 0.0313 | val loss 0.0588 auroc 0.9984 | lr 7.57e-05 | 113s
+  step   900 | train 0.0270 | val loss 0.0529 auroc 0.9983 * | lr 7.57e-05 | 120s
+  step   950 | train 0.0355 | val loss 0.0593 auroc 0.9982 | lr 7.57e-05 | 127s
+  step  1000 | train 0.0292 | val loss 0.0574 auroc 0.9984 | lr 7.57e-05 | 134s
+  step  1050 | train 0.0350 | val loss 0.0543 auroc 0.9984 | lr 7.57e-05 | 140s
+  step  1100 | train 0.0261 | val loss 0.0509 auroc 0.9984 * | lr 7.57e-05 | 147s
+  step  1150 | train 0.0288 | val loss 0.0551 auroc 0.9986 | lr 7.57e-05 | 154s
+  step  1200 | train 0.0265 | val loss 0.0545 auroc 0.9985 | lr 7.57e-05 | 160s
+  step  1250 | train 0.0298 | val loss 0.0556 auroc 0.9986 | lr 7.57e-05 | 167s
+  step  1300 | train 0.0243 | val loss 0.0667 auroc 0.9985 | lr 7.57e-05 | 173s
+  step  1350 | train 0.0273 | val loss 0.0590 auroc 0.9985 | lr 2.27e-05 | 180s
+  step  1400 | train 0.0259 | val loss 0.0601 auroc 0.9985 | lr 2.27e-05 | 186s
+  step  1450 | train 0.0256 | val loss 0.0626 auroc 0.9985 | lr 2.27e-05 | 192s
+  step  1500 | train 0.0282 | val loss 0.0545 auroc 0.9984 | lr 2.27e-05 | 199s
+  early stop at step 1500 (best step 1100)
+[E2/resnet50/seed2] A_test:label AUROC 0.967 | B_external:label AUROC 0.916 | B_external:label_any AUROC 0.783
+=== Sat Oct 10 05:15:29 +05 2026 HPO vit_small
+[I 2026-10-10 05:15:31,887] A new study created in RDB with name: hpo_vit_small
+[hpo vit_small] 0 finished trials, running 25 more
+[I 2026-10-10 05:16:26,154] Trial 0 finished with value: 0.09627978503704071 and parameters: {'lr': 0.00012520653814999459, 'weight_decay': 0.022954167740317895, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07917250380826646, 'drop_rate': 0.26444745987645224, 'drop_path_rate': 0.1704133683281797}. Best is trial 0 with value: 0.09627978503704071.
+  trial   0 COMPLETE val_loss=0.0963 best=0.0963 (54s)
+[I 2026-10-10 05:17:50,530] Trial 1 finished with value: 0.12592443823814392 and parameters: {'lr': 0.0007098936257405903, 'weight_decay': 0.00017159007295374412, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07805291762864555, 'drop_rate': 0.05913721293446661, 'drop_path_rate': 0.19197630639825713}. Best is trial 0 with value: 0.09627978503704071.
+  trial   1 COMPLETE val_loss=0.1259 best=0.0963 (139s)
+[I 2026-10-10 05:18:44,881] Trial 2 finished with value: 0.12190259993076324 and parameters: {'lr': 1.9351140885595265e-05, 'weight_decay': 0.13133498570503438, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.06120957227224214, 'drop_rate': 0.30846699843737846, 'drop_path_rate': 0.2831244235543872}. Best is trial 0 with value: 0.09627978503704071.
+  trial   2 COMPLETE val_loss=0.1219 best=0.0963 (193s)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[I 2026-10-10 05:19:24,618] Trial 3 finished with value: 0.089796282351017 and parameters: {'lr': 0.00023101522250182374, 'weight_decay': 0.0015372565899752293, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.03637107709426226, 'drop_rate': 0.2850983852089398, 'drop_path_rate': 0.1315804540386961}. Best is trial 3 with value: 0.089796282351017.
+  trial   3 COMPLETE val_loss=0.0898 best=0.0898 (233s)
+[I 2026-10-10 05:21:16,059] Trial 4 finished with value: 0.1732025146484375 and parameters: {'lr': 0.0009478675948634674, 'weight_decay': 0.00021719657932817298, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.06563295894652735, 'drop_rate': 0.0690914756743069, 'drop_path_rate': 0.058974708504016045}. Best is trial 3 with value: 0.089796282351017.
+  trial   4 COMPLETE val_loss=0.1732 best=0.0898 (344s)
+[I 2026-10-10 05:22:11,699] Trial 5 finished with value: 0.09287712723016739 and parameters: {'lr': 5.463240777949552e-05, 'weight_decay': 0.05130069844644666, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.003918779225432068, 'drop_rate': 0.1414034812882048, 'drop_path_rate': 0.03605896836395067}. Best is trial 3 with value: 0.089796282351017.
+  trial   5 COMPLETE val_loss=0.0929 best=0.0898 (400s)
+[I 2026-10-10 05:23:10,974] Trial 6 finished with value: 0.08146655559539795 and parameters: {'lr': 3.9109331722510566e-05, 'weight_decay': 0.00024656064732722107, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.05759464955561793, 'drop_rate': 0.46464809878810703, 'drop_path_rate': 0.09557068573539709}. Best is trial 6 with value: 0.08146655559539795.
+  trial   6 COMPLETE val_loss=0.0815 best=0.0815 (459s)
+[I 2026-10-10 05:23:36,811] Trial 7 pruned. 
+  trial   7 PRUNED   val_loss=0.2308 best=0.0815 (485s)
+[I 2026-10-10 05:24:11,827] Trial 8 pruned. 
+  trial   8 PRUNED   val_loss=0.1477 best=0.0815 (520s)
+[I 2026-10-10 05:25:11,393] Trial 9 finished with value: 0.10851539671421051 and parameters: {'lr': 1.1580388776039534e-05, 'weight_decay': 0.00014757800731097915, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 1.0, 'label_smoothing': 0.09006753982831753, 'drop_rate': 0.4584021104135293, 'drop_path_rate': 0.10322305533652082}. Best is trial 6 with value: 0.08146655559539795.
+  trial   9 COMPLETE val_loss=0.1085 best=0.0815 (580s)
+[I 2026-10-10 05:26:22,906] Trial 10 finished with value: 0.06633301079273224 and parameters: {'lr': 2.7968507685899248e-05, 'weight_decay': 0.0012089684348285047, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 1.0, 'label_smoothing': 0.037486924442076054, 'drop_rate': 0.3280070601425043, 'drop_path_rate': 0.04567918130542383}. Best is trial 10 with value: 0.06633301079273224.
+  trial  10 COMPLETE val_loss=0.0663 best=0.0663 (651s)
+[I 2026-10-10 05:27:14,668] Trial 11 finished with value: 0.08067727088928223 and parameters: {'lr': 2.8978066592192704e-05, 'weight_decay': 0.004171580337401261, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 1.0, 'label_smoothing': 0.02854456572182719, 'drop_rate': 0.44176605383081136, 'drop_path_rate': 0.03209610321645683}. Best is trial 10 with value: 0.06633301079273224.
+  trial  11 COMPLETE val_loss=0.0807 best=0.0663 (703s)
+[I 2026-10-10 05:27:58,504] Trial 12 finished with value: 0.09258642792701721 and parameters: {'lr': 3.805371026726695e-05, 'weight_decay': 0.005548777873416363, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 1.0, 'label_smoothing': 0.009496065479424276, 'drop_rate': 0.40206433634655625, 'drop_path_rate': 0.014415670599949148}. Best is trial 10 with value: 0.06633301079273224.
+  trial  12 COMPLETE val_loss=0.0926 best=0.0663 (747s)
+[I 2026-10-10 05:29:02,146] Trial 13 finished with value: 0.08934589475393295 and parameters: {'lr': 3.682123559057431e-05, 'weight_decay': 0.0010151610982612033, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.05229039457562386, 'drop_rate': 0.3951265903619384, 'drop_path_rate': 0.05697440738228632}. Best is trial 10 with value: 0.06633301079273224.
+  trial  13 COMPLETE val_loss=0.0893 best=0.0663 (810s)
+[I 2026-10-10 05:30:01,904] Trial 14 finished with value: 0.09760884195566177 and parameters: {'lr': 1.430431544467898e-05, 'weight_decay': 0.01061169526834952, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 1.0, 'label_smoothing': 0.047755064661812535, 'drop_rate': 0.4388865548178453, 'drop_path_rate': 0.07681563888209376}. Best is trial 10 with value: 0.06633301079273224.
+  trial  14 COMPLETE val_loss=0.0976 best=0.0663 (870s)
+[I 2026-10-10 05:30:57,751] Trial 15 finished with value: 0.11350743472576141 and parameters: {'lr': 2.400653590472368e-05, 'weight_decay': 0.004177179783741385, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 1.0, 'label_smoothing': 0.042657904794955355, 'drop_rate': 0.22740494794017463, 'drop_path_rate': 0.1362349098450721}. Best is trial 10 with value: 0.06633301079273224.
+  trial  15 COMPLETE val_loss=0.1135 best=0.0663 (926s)
+[I 2026-10-10 05:31:57,310] Trial 16 finished with value: 0.07992672920227051 and parameters: {'lr': 2.2414498499146028e-05, 'weight_decay': 0.00015014668851423538, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 1.0, 'label_smoothing': 0.03407284691673383, 'drop_rate': 0.3695437481208637, 'drop_path_rate': 0.04903048126069608}. Best is trial 10 with value: 0.06633301079273224.
+  trial  16 COMPLETE val_loss=0.0799 best=0.0663 (986s)
+[I 2026-10-10 05:32:45,381] Trial 17 finished with value: 0.10234268009662628 and parameters: {'lr': 1.2484978117114614e-05, 'weight_decay': 0.00022293323273644156, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 1.0, 'label_smoothing': 0.04958741240752063, 'drop_rate': 0.30204235340308083, 'drop_path_rate': 0.0428716444769019}. Best is trial 10 with value: 0.06633301079273224.
+  trial  17 COMPLETE val_loss=0.1023 best=0.0663 (1034s)
+[I 2026-10-10 05:33:41,111] Trial 18 finished with value: 0.10212961584329605 and parameters: {'lr': 1.307741001287788e-05, 'weight_decay': 0.0003530091557113151, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 1.0, 'label_smoothing': 0.010017638023318391, 'drop_rate': 0.2415523319087378, 'drop_path_rate': 0.042877801389806555}. Best is trial 10 with value: 0.06633301079273224.
+  trial  18 COMPLETE val_loss=0.1021 best=0.0663 (1089s)
+[I 2026-10-10 05:34:45,111] Trial 19 finished with value: 0.08696319162845612 and parameters: {'lr': 2.7133232362911728e-05, 'weight_decay': 0.0018347626652403413, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.0176697767626851, 'drop_rate': 0.3574247337098678, 'drop_path_rate': 0.021412533939277566}. Best is trial 10 with value: 0.06633301079273224.
+  trial  19 COMPLETE val_loss=0.0870 best=0.0663 (1153s)
+[I 2026-10-10 05:35:45,102] Trial 20 finished with value: 0.06845328956842422 and parameters: {'lr': 3.591450290816781e-05, 'weight_decay': 0.00022966127139230014, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.03357188574493648, 'drop_rate': 0.38229586243135893, 'drop_path_rate': 0.10563007020353457}. Best is trial 10 with value: 0.06633301079273224.
+  trial  20 COMPLETE val_loss=0.0685 best=0.0663 (1213s)
+[I 2026-10-10 05:36:12,373] Trial 21 pruned. 
+  trial  21 PRUNED   val_loss=0.1259 best=0.0663 (1241s)
+[I 2026-10-10 05:37:11,967] Trial 22 finished with value: 0.08485645055770874 and parameters: {'lr': 4.463058362960405e-05, 'weight_decay': 0.00012093139580697466, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 1.0, 'label_smoothing': 0.03415584469283815, 'drop_rate': 0.3582938632808706, 'drop_path_rate': 0.057688453492054065}. Best is trial 10 with value: 0.06633301079273224.
+  trial  22 COMPLETE val_loss=0.0849 best=0.0663 (1300s)
+[I 2026-10-10 05:38:22,597] Trial 23 pruned. 
+  trial  23 PRUNED   val_loss=0.0997 best=0.0663 (1371s)
+[I 2026-10-10 05:39:18,422] Trial 24 finished with value: 0.08862370252609253 and parameters: {'lr': 3.469717738949343e-05, 'weight_decay': 0.00012478246181175457, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 0, 'head_lr_mult': 1.0, 'label_smoothing': 0.013622764315558634, 'drop_rate': 0.3706952115991991, 'drop_path_rate': 0.06984201881352814}. Best is trial 10 with value: 0.06633301079273224.
+  trial  24 COMPLETE val_loss=0.0886 best=0.0663 (1427s)
+{
+  "arch": "vit_small",
+  "params": {
+    "lr": 2.7968507685899248e-05,
+    "weight_decay": 0.0012089684348285047,
+    "batch_size": 32,
+    "schedule": "cosine",
+    "warmup_steps": 150,
+    "head_lr_mult": 1.0,
+    "label_smoothing": 0.037486924442076054,
+    "drop_rate": 0.3280070601425043,
+    "drop_path_rate": 0.04567918130542383
+  },
+  "best_val_loss": 0.06633301079273224,
+  "best_val_auroc": 0.9936425188340379,
+  "trial": 10,
+  "n_complete": 21,
+  "n_pruned": 4
+}
+=== Sat Oct 10 05:39:19 +05 2026 E1/E2 vit_small
+[E1/vit_small seed0] vit_small on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=none
+  step    50 | train 0.5856 | val loss 0.2245 auroc 0.9785 * | lr 9.32e-06 | 6s
+  step   100 | train 0.2305 | val loss 0.1125 auroc 0.9918 * | lr 1.86e-05 | 10s
+  step   150 | train 0.1578 | val loss 0.0998 auroc 0.9946 * | lr 2.80e-05 | 17s
+  step   200 | train 0.1492 | val loss 0.0908 auroc 0.9968 * | lr 2.79e-05 | 24s
+  step   250 | train 0.1128 | val loss 0.0887 auroc 0.9925 * | lr 2.76e-05 | 31s
+  step   300 | train 0.1120 | val loss 0.1052 auroc 0.9910 | lr 2.71e-05 | 37s
+  step   350 | train 0.1156 | val loss 0.0865 auroc 0.9936 * | lr 2.65e-05 | 44s
+  step   400 | train 0.1021 | val loss 0.0997 auroc 0.9924 | lr 2.57e-05 | 50s
+  step   450 | train 0.1106 | val loss 0.0663 auroc 0.9936 * | lr 2.48e-05 | 56s
+  step   500 | train 0.1086 | val loss 0.1251 auroc 0.9933 | lr 2.36e-05 | 62s
+  step   550 | train 0.1123 | val loss 0.0972 auroc 0.9888 | lr 2.24e-05 | 69s
+  step   600 | train 0.0998 | val loss 0.1025 auroc 0.9906 | lr 2.11e-05 | 75s
+  step   650 | train 0.0974 | val loss 0.0810 auroc 0.9941 | lr 1.96e-05 | 81s
+  step   700 | train 0.1042 | val loss 0.1817 auroc 0.9918 | lr 1.81e-05 | 87s
+  step   750 | train 0.0981 | val loss 0.1694 auroc 0.9908 | lr 1.66e-05 | 93s
+  step   800 | train 0.1001 | val loss 0.0975 auroc 0.9923 | lr 1.50e-05 | 99s
+  step   850 | train 0.0984 | val loss 0.0739 auroc 0.9951 | lr 1.34e-05 | 105s
+  early stop at step 850 (best step 450)
+[E1/vit_small/seed0] A_test:label AUROC 0.800 | B_external:label AUROC 0.809 | B_external:label_any AUROC 0.698
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[E1/vit_small seed1] vit_small on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=none
+  step    50 | train 0.6096 | val loss 0.2618 auroc 0.9809 * | lr 9.32e-06 | 5s
+  step   100 | train 0.2395 | val loss 0.0927 auroc 0.9943 * | lr 1.86e-05 | 9s
+  step   150 | train 0.1548 | val loss 0.0887 auroc 0.9954 * | lr 2.80e-05 | 15s
+  step   200 | train 0.1313 | val loss 0.1654 auroc 0.9907 | lr 2.79e-05 | 22s
+  step   250 | train 0.1085 | val loss 0.1268 auroc 0.9948 | lr 2.76e-05 | 28s
+  step   300 | train 0.1275 | val loss 0.1103 auroc 0.9886 | lr 2.71e-05 | 34s
+  step   350 | train 0.1120 | val loss 0.1735 auroc 0.9838 | lr 2.65e-05 | 39s
+  step   400 | train 0.1175 | val loss 0.1264 auroc 0.9942 | lr 2.57e-05 | 45s
+  step   450 | train 0.1018 | val loss 0.1075 auroc 0.9875 | lr 2.48e-05 | 50s
+  step   500 | train 0.1022 | val loss 0.1763 auroc 0.9855 | lr 2.36e-05 | 56s
+  step   550 | train 0.0986 | val loss 0.1507 auroc 0.9873 | lr 2.24e-05 | 62s
+  early stop at step 550 (best step 150)
+[E1/vit_small/seed1] A_test:label AUROC 0.947 | B_external:label AUROC 0.840 | B_external:label_any AUROC 0.729
+[E1/vit_small seed2] vit_small on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=none
+  step    50 | train 0.6495 | val loss 0.2834 auroc 0.9745 * | lr 9.32e-06 | 5s
+  step   100 | train 0.2526 | val loss 0.1211 auroc 0.9937 * | lr 1.86e-05 | 9s
+  step   150 | train 0.1722 | val loss 0.1137 auroc 0.9955 * | lr 2.80e-05 | 15s
+  step   200 | train 0.1278 | val loss 0.1473 auroc 0.9904 | lr 2.79e-05 | 22s
+  step   250 | train 0.1277 | val loss 0.0940 auroc 0.9894 * | lr 2.76e-05 | 28s
+  step   300 | train 0.1098 | val loss 0.2075 auroc 0.9849 | lr 2.71e-05 | 35s
+  step   350 | train 0.1112 | val loss 0.1527 auroc 0.9888 | lr 2.65e-05 | 41s
+  step   400 | train 0.1027 | val loss 0.1183 auroc 0.9948 | lr 2.57e-05 | 47s
+  step   450 | train 0.1071 | val loss 0.0834 auroc 0.9974 * | lr 2.48e-05 | 53s
+  step   500 | train 0.0977 | val loss 0.0826 auroc 0.9957 * | lr 2.36e-05 | 59s
+  step   550 | train 0.0987 | val loss 0.1779 auroc 0.9905 | lr 2.24e-05 | 66s
+  step   600 | train 0.1047 | val loss 0.1022 auroc 0.9972 | lr 2.11e-05 | 72s
+  step   650 | train 0.0965 | val loss 0.1572 auroc 0.9887 | lr 1.96e-05 | 78s
+  step   700 | train 0.0953 | val loss 0.1278 auroc 0.9911 | lr 1.81e-05 | 85s
+  step   750 | train 0.0983 | val loss 0.1343 auroc 0.9932 | lr 1.66e-05 | 90s
+  step   800 | train 0.0973 | val loss 0.1189 auroc 0.9915 | lr 1.50e-05 | 97s
+  step   850 | train 0.1001 | val loss 0.1048 auroc 0.9969 | lr 1.34e-05 | 103s
+  step   900 | train 0.0957 | val loss 0.0875 auroc 0.9972 | lr 1.18e-05 | 108s
+  early stop at step 900 (best step 500)
+[E1/vit_small/seed2] A_test:label AUROC 0.852 | B_external:label AUROC 0.822 | B_external:label_any AUROC 0.706
+[E2/vit_small seed0] vit_small on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=conventional
+  step    50 | train 0.5988 | val loss 0.3557 auroc 0.9758 * | lr 9.32e-06 | 5s
+  step   100 | train 0.2766 | val loss 0.1595 auroc 0.9900 * | lr 1.86e-05 | 9s
+  step   150 | train 0.2053 | val loss 0.1428 auroc 0.9942 * | lr 2.80e-05 | 15s
+  step   200 | train 0.1724 | val loss 0.1393 auroc 0.9957 * | lr 2.79e-05 | 23s
+  step   250 | train 0.1861 | val loss 0.1047 auroc 0.9970 * | lr 2.76e-05 | 29s
+  step   300 | train 0.1441 | val loss 0.0818 auroc 0.9973 * | lr 2.71e-05 | 36s
+  step   350 | train 0.1589 | val loss 0.1085 auroc 0.9960 | lr 2.65e-05 | 43s
+  step   400 | train 0.1318 | val loss 0.0799 auroc 0.9973 * | lr 2.57e-05 | 49s
+  step   450 | train 0.1339 | val loss 0.0865 auroc 0.9934 | lr 2.48e-05 | 55s
+  step   500 | train 0.1220 | val loss 0.0802 auroc 0.9980 | lr 2.36e-05 | 61s
+  step   550 | train 0.1133 | val loss 0.1009 auroc 0.9956 | lr 2.24e-05 | 67s
+  step   600 | train 0.1212 | val loss 0.2117 auroc 0.9866 | lr 2.11e-05 | 73s
+  step   650 | train 0.1321 | val loss 0.0916 auroc 0.9977 | lr 1.96e-05 | 79s
+  step   700 | train 0.1208 | val loss 0.1003 auroc 0.9937 | lr 1.81e-05 | 85s
+  step   750 | train 0.1062 | val loss 0.0778 auroc 0.9965 * | lr 1.66e-05 | 90s
+  step   800 | train 0.1117 | val loss 0.0845 auroc 0.9941 | lr 1.50e-05 | 98s
+  step   850 | train 0.1057 | val loss 0.0999 auroc 0.9970 | lr 1.34e-05 | 104s
+  step   900 | train 0.1068 | val loss 0.1532 auroc 0.9893 | lr 1.18e-05 | 110s
+  step   950 | train 0.0979 | val loss 0.1139 auroc 0.9920 | lr 1.02e-05 | 116s
+  step  1000 | train 0.1028 | val loss 0.0948 auroc 0.9935 | lr 8.67e-06 | 123s
+  step  1050 | train 0.1004 | val loss 0.1160 auroc 0.9919 | lr 7.23e-06 | 128s
+  step  1100 | train 0.1018 | val loss 0.1050 auroc 0.9934 | lr 5.88e-06 | 134s
+  step  1150 | train 0.0967 | val loss 0.1333 auroc 0.9886 | lr 4.65e-06 | 140s
+  early stop at step 1150 (best step 750)
+[E2/vit_small/seed0] A_test:label AUROC 0.896 | B_external:label AUROC 0.904 | B_external:label_any AUROC 0.772
+[E2/vit_small seed1] vit_small on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=conventional
+  step    50 | train 0.6080 | val loss 0.3252 auroc 0.9765 * | lr 9.32e-06 | 5s
+  step   100 | train 0.2717 | val loss 0.1064 auroc 0.9931 * | lr 1.86e-05 | 9s
+  step   150 | train 0.1930 | val loss 0.1277 auroc 0.9955 | lr 2.80e-05 | 15s
+  step   200 | train 0.1821 | val loss 0.1920 auroc 0.9919 | lr 2.79e-05 | 22s
+  step   250 | train 0.1431 | val loss 0.1193 auroc 0.9967 | lr 2.76e-05 | 27s
+  step   300 | train 0.1600 | val loss 0.1360 auroc 0.9951 | lr 2.71e-05 | 34s
+  step   350 | train 0.1398 | val loss 0.1105 auroc 0.9949 | lr 2.65e-05 | 40s
+  step   400 | train 0.1272 | val loss 0.1679 auroc 0.9916 | lr 2.57e-05 | 46s
+  step   450 | train 0.1268 | val loss 0.1083 auroc 0.9925 | lr 2.48e-05 | 52s
+  step   500 | train 0.1218 | val loss 0.1121 auroc 0.9934 | lr 2.36e-05 | 58s
+  early stop at step 500 (best step 100)
+[E2/vit_small/seed1] A_test:label AUROC 0.971 | B_external:label AUROC 0.796 | B_external:label_any AUROC 0.699
+[E2/vit_small seed2] vit_small on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=conventional
+  step    50 | train 0.6474 | val loss 0.3856 auroc 0.9635 * | lr 9.32e-06 | 5s
+  step   100 | train 0.2937 | val loss 0.1558 auroc 0.9865 * | lr 1.86e-05 | 9s
+  step   150 | train 0.2176 | val loss 0.1996 auroc 0.9951 | lr 2.80e-05 | 15s
+  step   200 | train 0.1971 | val loss 0.1380 auroc 0.9949 * | lr 2.79e-05 | 22s
+  step   250 | train 0.1690 | val loss 0.0974 auroc 0.9961 * | lr 2.76e-05 | 28s
+  step   300 | train 0.1511 | val loss 0.1003 auroc 0.9952 | lr 2.71e-05 | 35s
+  step   350 | train 0.1482 | val loss 0.1516 auroc 0.9968 | lr 2.65e-05 | 41s
+  step   400 | train 0.1431 | val loss 0.0905 auroc 0.9961 * | lr 2.57e-05 | 47s
+  step   450 | train 0.1413 | val loss 0.1079 auroc 0.9953 | lr 2.48e-05 | 54s
+  step   500 | train 0.1227 | val loss 0.1022 auroc 0.9968 | lr 2.36e-05 | 61s
+  step   550 | train 0.1187 | val loss 0.1174 auroc 0.9942 | lr 2.24e-05 | 66s
+  step   600 | train 0.1099 | val loss 0.1064 auroc 0.9936 | lr 2.11e-05 | 72s
+  step   650 | train 0.1187 | val loss 0.1984 auroc 0.9976 | lr 1.96e-05 | 78s
+  step   700 | train 0.1200 | val loss 0.0873 auroc 0.9974 * | lr 1.81e-05 | 84s
+  step   750 | train 0.1162 | val loss 0.0822 auroc 0.9969 * | lr 1.66e-05 | 91s
+  step   800 | train 0.1159 | val loss 0.0806 auroc 0.9970 * | lr 1.50e-05 | 98s
+  step   850 | train 0.1149 | val loss 0.0816 auroc 0.9965 | lr 1.34e-05 | 104s
+  step   900 | train 0.1019 | val loss 0.0840 auroc 0.9958 | lr 1.18e-05 | 111s
+  step   950 | train 0.1022 | val loss 0.1161 auroc 0.9946 | lr 1.02e-05 | 117s
+  step  1000 | train 0.0988 | val loss 0.0783 auroc 0.9919 * | lr 8.67e-06 | 123s
+  step  1050 | train 0.1043 | val loss 0.1443 auroc 0.9899 | lr 7.23e-06 | 130s
+  step  1100 | train 0.0975 | val loss 0.1160 auroc 0.9947 | lr 5.88e-06 | 135s
+  step  1150 | train 0.1023 | val loss 0.1680 auroc 0.9884 | lr 4.65e-06 | 141s
+  step  1200 | train 0.1012 | val loss 0.1102 auroc 0.9946 | lr 3.54e-06 | 147s
+  step  1250 | train 0.1032 | val loss 0.1416 auroc 0.9904 | lr 2.57e-06 | 153s
+  step  1300 | train 0.0990 | val loss 0.1223 auroc 0.9936 | lr 1.77e-06 | 160s
+  step  1350 | train 0.0984 | val loss 0.1100 auroc 0.9952 | lr 1.13e-06 | 166s
+  step  1400 | train 0.0983 | val loss 0.1169 auroc 0.9944 | lr 6.60e-07 | 172s
+  early stop at step 1400 (best step 1000)
+[E2/vit_small/seed2] A_test:label AUROC 0.909 | B_external:label AUROC 0.901 | B_external:label_any AUROC 0.763
+=== Sat Oct 10 05:55:16 +05 2026 HPO convnext_tiny
+[I 2026-10-10 05:55:19,560] A new study created in RDB with name: hpo_convnext_tiny
+[hpo convnext_tiny] 0 finished trials, running 25 more
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[I 2026-10-10 05:56:56,743] Trial 0 finished with value: 0.0756373256444931 and parameters: {'lr': 0.00012520653814999459, 'weight_decay': 0.022954167740317895, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07917250380826646, 'drop_rate': 0.26444745987645224, 'drop_path_rate': 0.1704133683281797}. Best is trial 0 with value: 0.0756373256444931.
+  trial   0 COMPLETE val_loss=0.0756 best=0.0756 (97s)
+[I 2026-10-10 05:58:42,715] Trial 1 finished with value: 0.07747911661863327 and parameters: {'lr': 0.0007098936257405903, 'weight_decay': 0.00017159007295374412, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07805291762864555, 'drop_rate': 0.05913721293446661, 'drop_path_rate': 0.19197630639825713}. Best is trial 0 with value: 0.0756373256444931.
+  trial   1 COMPLETE val_loss=0.0775 best=0.0756 (203s)
+[I 2026-10-10 06:00:35,521] Trial 2 finished with value: 0.09662371873855591 and parameters: {'lr': 1.9351140885595265e-05, 'weight_decay': 0.13133498570503438, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.06120957227224214, 'drop_rate': 0.30846699843737846, 'drop_path_rate': 0.2831244235543872}. Best is trial 0 with value: 0.0756373256444931.
+  trial   2 COMPLETE val_loss=0.0966 best=0.0756 (316s)
+[I 2026-10-10 06:02:21,590] Trial 3 finished with value: 0.07882432639598846 and parameters: {'lr': 0.00023101522250182374, 'weight_decay': 0.0015372565899752293, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.03637107709426226, 'drop_rate': 0.2850983852089398, 'drop_path_rate': 0.1315804540386961}. Best is trial 0 with value: 0.0756373256444931.
+  trial   3 COMPLETE val_loss=0.0788 best=0.0756 (422s)
+[I 2026-10-10 06:04:00,243] Trial 4 finished with value: 0.08548248559236526 and parameters: {'lr': 0.0009478675948634674, 'weight_decay': 0.00021719657932817298, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.06563295894652735, 'drop_rate': 0.0690914756743069, 'drop_path_rate': 0.058974708504016045}. Best is trial 0 with value: 0.0756373256444931.
+  trial   4 COMPLETE val_loss=0.0855 best=0.0756 (521s)
+[I 2026-10-10 06:05:00,238] Trial 5 finished with value: 0.09256409108638763 and parameters: {'lr': 5.463240777949552e-05, 'weight_decay': 0.05130069844644666, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.003918779225432068, 'drop_rate': 0.1414034812882048, 'drop_path_rate': 0.03605896836395067}. Best is trial 0 with value: 0.0756373256444931.
+  trial   5 COMPLETE val_loss=0.0926 best=0.0756 (581s)
+[I 2026-10-10 06:06:33,407] Trial 6 finished with value: 0.07693381607532501 and parameters: {'lr': 3.9109331722510566e-05, 'weight_decay': 0.00024656064732722107, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.05759464955561793, 'drop_rate': 0.46464809878810703, 'drop_path_rate': 0.09557068573539709}. Best is trial 0 with value: 0.0756373256444931.
+  trial   6 COMPLETE val_loss=0.0769 best=0.0756 (674s)
+[I 2026-10-10 06:08:04,468] Trial 7 finished with value: 0.06253227591514587 and parameters: {'lr': 0.00021618261203953774, 'weight_decay': 0.0002723132021920079, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.027000797319216487, 'drop_rate': 0.36759701106129744, 'drop_path_rate': 0.28865656353523145}. Best is trial 7 with value: 0.06253227591514587.
+  trial   7 COMPLETE val_loss=0.0625 best=0.0625 (765s)
+[I 2026-10-10 06:08:29,735] Trial 8 pruned. 
+  trial   8 PRUNED   val_loss=0.1458 best=0.0625 (790s)
+[I 2026-10-10 06:08:54,732] Trial 9 pruned. 
+  trial   9 PRUNED   val_loss=0.1531 best=0.0625 (815s)
+[I 2026-10-10 06:10:14,781] Trial 10 finished with value: 0.07631361484527588 and parameters: {'lr': 0.00016879554537824193, 'weight_decay': 0.04272553711133308, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.06419653288982977, 'drop_rate': 0.043692166558746415, 'drop_path_rate': 0.2761954405314142}. Best is trial 7 with value: 0.06253227591514587.
+  trial  10 COMPLETE val_loss=0.0763 best=0.0625 (895s)
+[I 2026-10-10 06:11:28,042] Trial 11 finished with value: 0.07157512754201889 and parameters: {'lr': 0.0002660883816474127, 'weight_decay': 0.0006129375125256606, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.027473207832121496, 'drop_rate': 0.3492939464428962, 'drop_path_rate': 0.2893446376456591}. Best is trial 7 with value: 0.06253227591514587.
+  trial  11 COMPLETE val_loss=0.0716 best=0.0625 (969s)
+[I 2026-10-10 06:11:53,346] Trial 12 pruned. 
+  trial  12 PRUNED   val_loss=0.1951 best=0.0625 (994s)
+[I 2026-10-10 06:12:18,619] Trial 13 pruned. 
+  trial  13 PRUNED   val_loss=0.2203 best=0.0625 (1019s)
+[I 2026-10-10 06:13:21,405] Trial 14 finished with value: 0.07320510596036911 and parameters: {'lr': 0.0001316721388401107, 'weight_decay': 0.00012952890093157534, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 1.0, 'label_smoothing': 0.04074546154403924, 'drop_rate': 0.3937496426013484, 'drop_path_rate': 0.29156858484060344}. Best is trial 7 with value: 0.06253227591514587.
+  trial  14 COMPLETE val_loss=0.0732 best=0.0625 (1082s)
+[I 2026-10-10 06:13:46,691] Trial 15 pruned. 
+  trial  15 PRUNED   val_loss=0.3593 best=0.0625 (1107s)
+[I 2026-10-10 06:14:11,863] Trial 16 pruned. 
+  trial  16 PRUNED   val_loss=0.1081 best=0.0625 (1132s)
+[I 2026-10-10 06:15:11,577] Trial 17 pruned. 
+  trial  17 PRUNED   val_loss=0.0953 best=0.0625 (1192s)
+[I 2026-10-10 06:15:36,923] Trial 18 pruned. 
+  trial  18 PRUNED   val_loss=0.4465 best=0.0625 (1218s)
+[I 2026-10-10 06:18:40,272] Trial 19 finished with value: 0.06450389325618744 and parameters: {'lr': 0.00011825324364204824, 'weight_decay': 0.0003162754141573053, 'batch_size': 64, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.01930085626891575, 'drop_rate': 0.29566439334973027, 'drop_path_rate': 0.23648046722773736}. Best is trial 7 with value: 0.06253227591514587.
+  trial  19 COMPLETE val_loss=0.0645 best=0.0625 (1401s)
+[I 2026-10-10 06:20:56,823] Trial 20 finished with value: 0.06239187344908714 and parameters: {'lr': 0.00026866298816284275, 'weight_decay': 0.0002452257541436329, 'batch_size': 64, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.030325845988471115, 'drop_rate': 0.2892973369427068, 'drop_path_rate': 0.18127319336095396}. Best is trial 20 with value: 0.06239187344908714.
+  trial  20 COMPLETE val_loss=0.0624 best=0.0624 (1537s)
+[I 2026-10-10 06:21:22,341] Trial 21 pruned. 
+  trial  21 PRUNED   val_loss=0.1523 best=0.0624 (1563s)
+[I 2026-10-10 06:24:16,030] Trial 22 finished with value: 0.05550703406333923 and parameters: {'lr': 0.00024629353126236767, 'weight_decay': 0.00015644728679955087, 'batch_size': 64, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.033490147559272425, 'drop_rate': 0.3130855849156866, 'drop_path_rate': 0.18654211533332027}. Best is trial 22 with value: 0.05550703406333923.
+  trial  22 COMPLETE val_loss=0.0555 best=0.0555 (1737s)
+[I 2026-10-10 06:25:15,807] Trial 23 pruned. 
+  trial  23 PRUNED   val_loss=0.1114 best=0.0555 (1796s)
+[I 2026-10-10 06:26:11,127] Trial 24 finished with value: 0.07551583647727966 and parameters: {'lr': 0.0002333124706396022, 'weight_decay': 0.0006227863861666015, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.01957473997447707, 'drop_rate': 0.41019916916180216, 'drop_path_rate': 0.18553248934885636}. Best is trial 22 with value: 0.05550703406333923.
+  trial  24 COMPLETE val_loss=0.0755 best=0.0555 (1852s)
+{
+  "arch": "convnext_tiny",
+  "params": {
+    "lr": 0.00024629353126236767,
+    "weight_decay": 0.00015644728679955087,
+    "batch_size": 64,
+    "schedule": "cosine",
+    "warmup_steps": 200,
+    "head_lr_mult": 10.0,
+    "label_smoothing": 0.033490147559272425,
+    "drop_rate": 0.3130855849156866,
+    "drop_path_rate": 0.18654211533332027
+  },
+  "best_val_loss": 0.05550703406333923,
+  "best_val_auroc": 0.9949087171662587,
+  "trial": 22,
+  "n_complete": 15,
+  "n_pruned": 10
+}
+=== Sat Oct 10 06:26:12 +05 2026 E1/E2 convnext_tiny
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[E1/convnext_tiny seed0] convnext_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=none
+  step    50 | train 0.5329 | val loss 0.1841 auroc 0.9839 * | lr 6.16e-05 | 26s
+  step   100 | train 0.2425 | val loss 0.1109 auroc 0.9956 * | lr 1.23e-04 | 36s
+  step   150 | train 0.1694 | val loss 0.0850 auroc 0.9970 * | lr 1.85e-04 | 48s
+  step   200 | train 0.1543 | val loss 0.0740 auroc 0.9972 * | lr 2.46e-04 | 62s
+  step   250 | train 0.1488 | val loss 0.2407 auroc 0.9929 | lr 2.45e-04 | 75s
+  step   300 | train 0.1251 | val loss 0.0912 auroc 0.9974 | lr 2.43e-04 | 88s
+  step   350 | train 0.1169 | val loss 0.0944 auroc 0.9950 | lr 2.38e-04 | 99s
+  step   400 | train 0.1045 | val loss 0.0848 auroc 0.9972 | lr 2.32e-04 | 110s
+  step   450 | train 0.0980 | val loss 0.1117 auroc 0.9912 | lr 2.25e-04 | 122s
+  step   500 | train 0.1120 | val loss 0.0555 auroc 0.9949 * | lr 2.16e-04 | 133s
+  step   550 | train 0.1009 | val loss 0.0802 auroc 0.9966 | lr 2.05e-04 | 146s
+  step   600 | train 0.0992 | val loss 0.0889 auroc 0.9910 | lr 1.94e-04 | 158s
+  step   650 | train 0.0962 | val loss 0.1259 auroc 0.9944 | lr 1.81e-04 | 169s
+  step   700 | train 0.0956 | val loss 0.0703 auroc 0.9973 | lr 1.68e-04 | 181s
+  step   750 | train 0.0896 | val loss 0.1065 auroc 0.9945 | lr 1.54e-04 | 193s
+  step   800 | train 0.0954 | val loss 0.1820 auroc 0.9887 | lr 1.39e-04 | 205s
+  step   850 | train 0.0910 | val loss 0.0855 auroc 0.9943 | lr 1.25e-04 | 216s
+  step   900 | train 0.0903 | val loss 0.0610 auroc 0.9928 | lr 1.10e-04 | 229s
+  early stop at step 900 (best step 500)
+[E1/convnext_tiny/seed0] A_test:label AUROC 0.766 | B_external:label AUROC 0.797 | B_external:label_any AUROC 0.685
+[E1/convnext_tiny seed1] convnext_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=none
+  step    50 | train 0.5083 | val loss 0.1402 auroc 0.9883 * | lr 6.16e-05 | 10s
+  step   100 | train 0.2301 | val loss 0.1120 auroc 0.9940 * | lr 1.23e-04 | 20s
+  step   150 | train 0.2154 | val loss 0.0891 auroc 0.9956 * | lr 1.85e-04 | 33s
+  step   200 | train 0.1399 | val loss 0.0827 auroc 0.9969 * | lr 2.46e-04 | 46s
+  step   250 | train 0.1504 | val loss 0.1516 auroc 0.9975 | lr 2.45e-04 | 58s
+  step   300 | train 0.1149 | val loss 0.0908 auroc 0.9910 | lr 2.43e-04 | 70s
+  step   350 | train 0.1069 | val loss 0.0974 auroc 0.9909 | lr 2.38e-04 | 81s
+  step   400 | train 0.1096 | val loss 0.0601 auroc 0.9968 * | lr 2.32e-04 | 93s
+  step   450 | train 0.1022 | val loss 0.0738 auroc 0.9950 | lr 2.25e-04 | 106s
+  step   500 | train 0.0965 | val loss 0.0958 auroc 0.9929 | lr 2.16e-04 | 117s
+  step   550 | train 0.0961 | val loss 0.1277 auroc 0.9875 | lr 2.05e-04 | 129s
+  step   600 | train 0.0920 | val loss 0.1404 auroc 0.9823 | lr 1.94e-04 | 141s
+  step   650 | train 0.0913 | val loss 0.0872 auroc 0.9910 | lr 1.81e-04 | 152s
+  step   700 | train 0.0899 | val loss 0.1649 auroc 0.9832 | lr 1.68e-04 | 164s
+  step   750 | train 0.0904 | val loss 0.1251 auroc 0.9846 | lr 1.54e-04 | 176s
+  step   800 | train 0.0881 | val loss 0.1264 auroc 0.9782 | lr 1.39e-04 | 187s
+  early stop at step 800 (best step 400)
+[E1/convnext_tiny/seed1] A_test:label AUROC 0.874 | B_external:label AUROC 0.866 | B_external:label_any AUROC 0.747
+[E1/convnext_tiny seed2] convnext_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=none
+  step    50 | train 0.5512 | val loss 0.2516 auroc 0.9843 * | lr 6.16e-05 | 10s
+  step   100 | train 0.2576 | val loss 0.0699 auroc 0.9978 * | lr 1.23e-04 | 20s
+  step   150 | train 0.1804 | val loss 0.0898 auroc 0.9973 | lr 1.85e-04 | 32s
+  step   200 | train 0.1406 | val loss 0.2092 auroc 0.9960 | lr 2.46e-04 | 43s
+  step   250 | train 0.1338 | val loss 0.1192 auroc 0.9941 | lr 2.45e-04 | 55s
+  step   300 | train 0.1204 | val loss 0.0807 auroc 0.9956 | lr 2.43e-04 | 66s
+  step   350 | train 0.1221 | val loss 0.0628 auroc 0.9983 * | lr 2.38e-04 | 78s
+  step   400 | train 0.1175 | val loss 0.0891 auroc 0.9925 | lr 2.32e-04 | 91s
+  step   450 | train 0.1080 | val loss 0.0698 auroc 0.9989 | lr 2.25e-04 | 103s
+  step   500 | train 0.0997 | val loss 0.0971 auroc 0.9961 | lr 2.16e-04 | 116s
+  step   550 | train 0.0926 | val loss 0.0900 auroc 0.9959 | lr 2.05e-04 | 128s
+  step   600 | train 0.0973 | val loss 0.1506 auroc 0.9983 | lr 1.94e-04 | 140s
+  step   650 | train 0.0935 | val loss 0.0798 auroc 0.9977 | lr 1.81e-04 | 151s
+  step   700 | train 0.0916 | val loss 0.1818 auroc 0.9958 | lr 1.68e-04 | 164s
+  step   750 | train 0.0928 | val loss 0.0714 auroc 0.9985 | lr 1.54e-04 | 176s
+  early stop at step 750 (best step 350)
+[E1/convnext_tiny/seed2] A_test:label AUROC 0.962 | B_external:label AUROC 0.854 | B_external:label_any AUROC 0.736
+[E2/convnext_tiny seed0] convnext_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.5664 | val loss 0.1738 auroc 0.9850 * | lr 6.16e-05 | 11s
+  step   100 | train 0.2784 | val loss 0.0854 auroc 0.9962 * | lr 1.23e-04 | 20s
+  step   150 | train 0.2287 | val loss 0.0775 auroc 0.9966 * | lr 1.85e-04 | 33s
+  step   200 | train 0.2310 | val loss 0.1000 auroc 0.9952 | lr 2.46e-04 | 46s
+  step   250 | train 0.1704 | val loss 0.0899 auroc 0.9978 | lr 2.45e-04 | 58s
+  step   300 | train 0.1489 | val loss 0.0840 auroc 0.9944 | lr 2.43e-04 | 71s
+  step   350 | train 0.1319 | val loss 0.0977 auroc 0.9986 | lr 2.38e-04 | 82s
+  step   400 | train 0.1270 | val loss 0.1211 auroc 0.9968 | lr 2.32e-04 | 95s
+  step   450 | train 0.1084 | val loss 0.2629 auroc 0.9865 | lr 2.25e-04 | 106s
+  step   500 | train 0.1073 | val loss 0.1319 auroc 0.9945 | lr 2.16e-04 | 118s
+  step   550 | train 0.0964 | val loss 0.1013 auroc 0.9946 | lr 2.05e-04 | 130s
+  early stop at step 550 (best step 150)
+[E2/convnext_tiny/seed0] A_test:label AUROC 0.956 | B_external:label AUROC 0.897 | B_external:label_any AUROC 0.780
+[E2/convnext_tiny seed1] convnext_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.5513 | val loss 0.1522 auroc 0.9879 * | lr 6.16e-05 | 10s
+  step   100 | train 0.2589 | val loss 0.1343 auroc 0.9898 * | lr 1.23e-04 | 20s
+  step   150 | train 0.2163 | val loss 0.0864 auroc 0.9968 * | lr 1.85e-04 | 33s
+  step   200 | train 0.1802 | val loss 0.2177 auroc 0.9963 | lr 2.46e-04 | 46s
+  step   250 | train 0.1859 | val loss 0.1000 auroc 0.9973 | lr 2.45e-04 | 57s
+  step   300 | train 0.1514 | val loss 0.0986 auroc 0.9974 | lr 2.43e-04 | 69s
+  step   350 | train 0.1466 | val loss 0.1891 auroc 0.9944 | lr 2.38e-04 | 81s
+  step   400 | train 0.1388 | val loss 0.1035 auroc 0.9971 | lr 2.32e-04 | 92s
+  step   450 | train 0.1167 | val loss 0.0978 auroc 0.9976 | lr 2.25e-04 | 104s
+  step   500 | train 0.1039 | val loss 0.0880 auroc 0.9975 | lr 2.16e-04 | 116s
+  step   550 | train 0.1043 | val loss 0.0769 auroc 0.9981 * | lr 2.05e-04 | 128s
+  step   600 | train 0.0990 | val loss 0.1667 auroc 0.9886 | lr 1.94e-04 | 141s
+  step   650 | train 0.0980 | val loss 0.1096 auroc 0.9935 | lr 1.81e-04 | 153s
+  step   700 | train 0.0981 | val loss 0.1358 auroc 0.9925 | lr 1.68e-04 | 164s
+  step   750 | train 0.0986 | val loss 0.1172 auroc 0.9920 | lr 1.54e-04 | 176s
+  step   800 | train 0.0944 | val loss 0.0801 auroc 0.9977 | lr 1.39e-04 | 188s
+  step   850 | train 0.0995 | val loss 0.1204 auroc 0.9976 | lr 1.25e-04 | 199s
+  step   900 | train 0.0958 | val loss 0.1330 auroc 0.9932 | lr 1.10e-04 | 211s
+  step   950 | train 0.0915 | val loss 0.0789 auroc 0.9980 | lr 9.55e-05 | 222s
+  early stop at step 950 (best step 550)
+[E2/convnext_tiny/seed1] A_test:label AUROC 0.931 | B_external:label AUROC 0.896 | B_external:label_any AUROC 0.773
+[E2/convnext_tiny seed2] convnext_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=64 aug=conventional
+  step    50 | train 0.5737 | val loss 0.3501 auroc 0.9890 * | lr 6.16e-05 | 10s
+  step   100 | train 0.2919 | val loss 0.1339 auroc 0.9950 * | lr 1.23e-04 | 20s
+  step   150 | train 0.2343 | val loss 0.0996 auroc 0.9938 * | lr 1.85e-04 | 33s
+  step   200 | train 0.1937 | val loss 0.1347 auroc 0.9975 | lr 2.46e-04 | 47s
+  step   250 | train 0.1643 | val loss 0.0953 auroc 0.9962 * | lr 2.45e-04 | 59s
+  step   300 | train 0.1571 | val loss 0.0918 auroc 0.9959 * | lr 2.43e-04 | 72s
+  step   350 | train 0.1372 | val loss 0.0719 auroc 0.9984 * | lr 2.38e-04 | 85s
+  step   400 | train 0.1190 | val loss 0.1102 auroc 0.9964 | lr 2.32e-04 | 98s
+  step   450 | train 0.1172 | val loss 0.1225 auroc 0.9978 | lr 2.25e-04 | 109s
+  step   500 | train 0.1094 | val loss 0.0976 auroc 0.9980 | lr 2.16e-04 | 122s
+  step   550 | train 0.1172 | val loss 0.1487 auroc 0.9980 | lr 2.05e-04 | 134s
+  step   600 | train 0.1149 | val loss 0.1227 auroc 0.9974 | lr 1.94e-04 | 146s
+  step   650 | train 0.0994 | val loss 0.0941 auroc 0.9951 | lr 1.81e-04 | 158s
+  step   700 | train 0.0995 | val loss 0.1066 auroc 0.9969 | lr 1.68e-04 | 170s
+  step   750 | train 0.1000 | val loss 0.1126 auroc 0.9964 | lr 1.54e-04 | 183s
+  early stop at step 750 (best step 350)
+[E2/convnext_tiny/seed2] A_test:label AUROC 0.975 | B_external:label AUROC 0.906 | B_external:label_any AUROC 0.778
+=== Sat Oct 10 06:51:26 +05 2026 HPO swin_tiny
+[I 2026-10-10 06:51:28,986] A new study created in RDB with name: hpo_swin_tiny
+[hpo swin_tiny] 0 finished trials, running 25 more
+[I 2026-10-10 06:53:10,198] Trial 0 finished with value: 0.0885370671749115 and parameters: {'lr': 0.00012520653814999459, 'weight_decay': 0.022954167740317895, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07917250380826646, 'drop_rate': 0.26444745987645224, 'drop_path_rate': 0.1704133683281797}. Best is trial 0 with value: 0.0885370671749115.
+  trial   0 COMPLETE val_loss=0.0885 best=0.0885 (101s)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[I 2026-10-10 06:56:32,694] Trial 1 finished with value: 0.08067724853754044 and parameters: {'lr': 0.0007098936257405903, 'weight_decay': 0.00017159007295374412, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 200, 'head_lr_mult': 1.0, 'label_smoothing': 0.07805291762864555, 'drop_rate': 0.05913721293446661, 'drop_path_rate': 0.19197630639825713}. Best is trial 1 with value: 0.08067724853754044.
+  trial   1 COMPLETE val_loss=0.0807 best=0.0807 (304s)
+[I 2026-10-10 06:58:37,070] Trial 2 finished with value: 0.11673542112112045 and parameters: {'lr': 1.9351140885595265e-05, 'weight_decay': 0.13133498570503438, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.06120957227224214, 'drop_rate': 0.30846699843737846, 'drop_path_rate': 0.2831244235543872}. Best is trial 1 with value: 0.08067724853754044.
+  trial   2 COMPLETE val_loss=0.1167 best=0.0807 (428s)
+[I 2026-10-10 07:01:04,204] Trial 3 finished with value: 0.07561423629522324 and parameters: {'lr': 0.00023101522250182374, 'weight_decay': 0.0015372565899752293, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.03637107709426226, 'drop_rate': 0.2850983852089398, 'drop_path_rate': 0.1315804540386961}. Best is trial 3 with value: 0.07561423629522324.
+  trial   3 COMPLETE val_loss=0.0756 best=0.0756 (575s)
+[I 2026-10-10 07:03:37,755] Trial 4 finished with value: 0.09843221306800842 and parameters: {'lr': 0.0009478675948634674, 'weight_decay': 0.00021719657932817298, 'batch_size': 64, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.06563295894652735, 'drop_rate': 0.0690914756743069, 'drop_path_rate': 0.058974708504016045}. Best is trial 3 with value: 0.07561423629522324.
+  trial   4 COMPLETE val_loss=0.0984 best=0.0756 (729s)
+[I 2026-10-10 07:06:19,912] Trial 5 finished with value: 0.08464939892292023 and parameters: {'lr': 5.463240777949552e-05, 'weight_decay': 0.05130069844644666, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.003918779225432068, 'drop_rate': 0.1414034812882048, 'drop_path_rate': 0.03605896836395067}. Best is trial 3 with value: 0.07561423629522324.
+  trial   5 COMPLETE val_loss=0.0846 best=0.0756 (891s)
+[I 2026-10-10 07:08:04,638] Trial 6 finished with value: 0.08101601153612137 and parameters: {'lr': 3.9109331722510566e-05, 'weight_decay': 0.00024656064732722107, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 50, 'head_lr_mult': 1.0, 'label_smoothing': 0.05759464955561793, 'drop_rate': 0.46464809878810703, 'drop_path_rate': 0.09557068573539709}. Best is trial 3 with value: 0.07561423629522324.
+  trial   6 COMPLETE val_loss=0.0810 best=0.0756 (996s)
+[I 2026-10-10 07:09:50,394] Trial 7 finished with value: 0.08129894733428955 and parameters: {'lr': 0.00021618261203953774, 'weight_decay': 0.0002723132021920079, 'batch_size': 16, 'schedule': 'cosine', 'warmup_steps': 200, 'head_lr_mult': 10.0, 'label_smoothing': 0.027000797319216487, 'drop_rate': 0.36759701106129744, 'drop_path_rate': 0.28865656353523145}. Best is trial 3 with value: 0.07561423629522324.
+  trial   7 COMPLETE val_loss=0.0813 best=0.0756 (1102s)
+[I 2026-10-10 07:11:35,061] Trial 8 finished with value: 0.1042986661195755 and parameters: {'lr': 7.889827040678446e-05, 'weight_decay': 0.0007473730247809312, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 10.0, 'label_smoothing': 0.0012199277858424215, 'drop_rate': 0.23269682117939577, 'drop_path_rate': 0.25465909160797917}. Best is trial 3 with value: 0.07561423629522324.
+  trial   8 COMPLETE val_loss=0.1043 best=0.0756 (1206s)
+[I 2026-10-10 07:13:05,852] Trial 9 finished with value: 0.0793987363576889 and parameters: {'lr': 0.0003914741998448059, 'weight_decay': 0.013980120900658722, 'batch_size': 32, 'schedule': 'cosine', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.08308559171807643, 'drop_rate': 0.42395461294451425, 'drop_path_rate': 0.08477862629307217}. Best is trial 3 with value: 0.07561423629522324.
+  trial   9 COMPLETE val_loss=0.0794 best=0.0756 (1297s)
+[I 2026-10-10 07:14:50,786] Trial 10 finished with value: 0.07292681932449341 and parameters: {'lr': 6.399061916397788e-05, 'weight_decay': 0.0014852329272113086, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.06784520327671188, 'drop_rate': 0.3162225054355408, 'drop_path_rate': 0.11485988290973882}. Best is trial 10 with value: 0.07292681932449341.
+  trial  10 COMPLETE val_loss=0.0729 best=0.0729 (1402s)
+[I 2026-10-10 07:17:18,642] Trial 11 finished with value: 0.08038373291492462 and parameters: {'lr': 0.00010321368198016147, 'weight_decay': 0.0007628409971226484, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.05012144059563542, 'drop_rate': 0.3105557343999358, 'drop_path_rate': 0.22572140414412667}. Best is trial 10 with value: 0.07292681932449341.
+  trial  11 COMPLETE val_loss=0.0804 best=0.0729 (1550s)
+[I 2026-10-10 07:18:05,014] Trial 12 pruned. 
+  trial  12 PRUNED   val_loss=0.1394 best=0.0729 (1596s)
+[I 2026-10-10 07:21:15,328] Trial 13 finished with value: 0.08156533539295197 and parameters: {'lr': 0.00021305481985552064, 'weight_decay': 0.0007298609400536743, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.06062006468967306, 'drop_rate': 0.2883769911515761, 'drop_path_rate': 0.06802973832916545}. Best is trial 10 with value: 0.07292681932449341.
+  trial  13 COMPLETE val_loss=0.0816 best=0.0729 (1787s)
+[I 2026-10-10 07:22:23,119] Trial 14 pruned. 
+  trial  14 PRUNED   val_loss=0.1064 best=0.0729 (1854s)
+[I 2026-10-10 07:23:09,624] Trial 15 pruned. 
+  trial  15 PRUNED   val_loss=0.1630 best=0.0729 (1901s)
+[I 2026-10-10 07:24:54,193] Trial 16 finished with value: 0.07320196181535721 and parameters: {'lr': 3.3718125419377525e-05, 'weight_decay': 0.002093046803967785, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.03556070249525623, 'drop_rate': 0.1426768104781867, 'drop_path_rate': 0.09364721090890861}. Best is trial 10 with value: 0.07292681932449341.
+  trial  16 COMPLETE val_loss=0.0732 best=0.0729 (2005s)
+[I 2026-10-10 07:27:28,802] Trial 17 finished with value: 0.09220366179943085 and parameters: {'lr': 1.3728739955115201e-05, 'weight_decay': 0.0007822361529002841, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.055674944683926836, 'drop_rate': 0.13073040560149976, 'drop_path_rate': 0.066471637499966}. Best is trial 10 with value: 0.07292681932449341.
+  trial  17 COMPLETE val_loss=0.0922 best=0.0729 (2160s)
+[I 2026-10-10 07:28:43,551] Trial 18 pruned. 
+  trial  18 PRUNED   val_loss=0.1126 best=0.0729 (2235s)
+[I 2026-10-10 07:30:28,478] Trial 19 finished with value: 0.09247555583715439 and parameters: {'lr': 4.340401732967319e-05, 'weight_decay': 0.0001933424646096681, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.0748220735253328, 'drop_rate': 0.2958356087622162, 'drop_path_rate': 0.14662083231939632}. Best is trial 10 with value: 0.07292681932449341.
+  trial  19 COMPLETE val_loss=0.0925 best=0.0729 (2340s)
+[I 2026-10-10 07:31:28,757] Trial 20 finished with value: 0.09676521271467209 and parameters: {'lr': 3.360240269063086e-05, 'weight_decay': 0.003213808759653203, 'batch_size': 16, 'schedule': 'plateau', 'warmup_steps': 150, 'head_lr_mult': 10.0, 'label_smoothing': 0.014897226442817914, 'drop_rate': 0.04884200407257312, 'drop_path_rate': 0.10397471895735926}. Best is trial 10 with value: 0.07292681932449341.
+  trial  20 COMPLETE val_loss=0.0968 best=0.0729 (2400s)
+[I 2026-10-10 07:33:20,762] Trial 21 finished with value: 0.0688670352101326 and parameters: {'lr': 0.00010187001424851543, 'weight_decay': 0.0015849407736408625, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.04001710084574834, 'drop_rate': 0.4481075875324293, 'drop_path_rate': 0.07747507109713253}. Best is trial 21 with value: 0.0688670352101326.
+  trial  21 COMPLETE val_loss=0.0689 best=0.0689 (2512s)
+[I 2026-10-10 07:34:51,332] Trial 22 finished with value: 0.0860729068517685 and parameters: {'lr': 4.3130786947694857e-05, 'weight_decay': 0.00279516496578757, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 100, 'head_lr_mult': 10.0, 'label_smoothing': 0.037585097384312136, 'drop_rate': 0.18902771868425589, 'drop_path_rate': 0.0840287020190406}. Best is trial 21 with value: 0.0688670352101326.
+  trial  22 COMPLETE val_loss=0.0861 best=0.0689 (2603s)
+[I 2026-10-10 07:37:11,946] Trial 23 finished with value: 0.07438992708921432 and parameters: {'lr': 0.0001424232071986364, 'weight_decay': 0.0007399443752332763, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 50, 'head_lr_mult': 10.0, 'label_smoothing': 0.05019057314359497, 'drop_rate': 0.4094411269295454, 'drop_path_rate': 0.10076253174522773}. Best is trial 21 with value: 0.0688670352101326.
+  trial  23 COMPLETE val_loss=0.0744 best=0.0689 (2743s)
+[I 2026-10-10 07:38:35,776] Trial 24 finished with value: 0.07232143729925156 and parameters: {'lr': 0.00013311286877383004, 'weight_decay': 0.0033733574947066324, 'batch_size': 32, 'schedule': 'plateau', 'warmup_steps': 0, 'head_lr_mult': 10.0, 'label_smoothing': 0.034803506634924514, 'drop_rate': 0.3784913800646247, 'drop_path_rate': 0.047977841310892666}. Best is trial 21 with value: 0.0688670352101326.
+  trial  24 COMPLETE val_loss=0.0723 best=0.0689 (2827s)
+{
+  "arch": "swin_tiny",
+  "params": {
+    "lr": 0.00010187001424851543,
+    "weight_decay": 0.0015849407736408625,
+    "batch_size": 32,
+    "schedule": "plateau",
+    "warmup_steps": 50,
+    "head_lr_mult": 10.0,
+    "label_smoothing": 0.04001710084574834,
+    "drop_rate": 0.4481075875324293,
+    "drop_path_rate": 0.07747507109713253
+  },
+  "best_val_loss": 0.0688670352101326,
+  "best_val_auroc": 0.9981775220657575,
+  "trial": 21,
+  "n_complete": 21,
+  "n_pruned": 4
+}
+=== Sat Oct 10 07:38:36 +05 2026 E1/E2 swin_tiny
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[E1/swin_tiny seed0] swin_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=none
+  step    50 | train 0.4469 | val loss 0.3731 auroc 0.9900 * | lr 1.02e-04 | 10s
+  step   100 | train 0.1824 | val loss 0.1514 auroc 0.9930 * | lr 1.02e-04 | 17s
+  step   150 | train 0.1478 | val loss 0.0826 auroc 0.9957 * | lr 1.02e-04 | 29s
+  step   200 | train 0.1123 | val loss 0.1079 auroc 0.9882 | lr 1.02e-04 | 39s
+  step   250 | train 0.1067 | val loss 0.1734 auroc 0.9739 | lr 1.02e-04 | 49s
+  step   300 | train 0.1021 | val loss 0.1512 auroc 0.9913 | lr 1.02e-04 | 58s
+  step   350 | train 0.1082 | val loss 0.0689 auroc 0.9982 * | lr 1.02e-04 | 68s
+  step   400 | train 0.1002 | val loss 0.1635 auroc 0.9870 | lr 1.02e-04 | 79s
+  step   450 | train 0.1018 | val loss 0.0979 auroc 0.9953 | lr 1.02e-04 | 88s
+  step   500 | train 0.1108 | val loss 0.0753 auroc 0.9969 | lr 1.02e-04 | 98s
+  step   550 | train 0.1016 | val loss 0.0950 auroc 0.9924 | lr 1.02e-04 | 108s
+  step   600 | train 0.1010 | val loss 0.0962 auroc 0.9938 | lr 3.06e-05 | 117s
+  step   650 | train 0.0988 | val loss 0.0922 auroc 0.9958 | lr 3.06e-05 | 127s
+  step   700 | train 0.0987 | val loss 0.1220 auroc 0.9925 | lr 3.06e-05 | 136s
+  step   750 | train 0.0987 | val loss 0.0952 auroc 0.9966 | lr 3.06e-05 | 146s
+  early stop at step 750 (best step 350)
+[E1/swin_tiny/seed0] A_test:label AUROC 0.884 | B_external:label AUROC 0.840 | B_external:label_any AUROC 0.721
+[E1/swin_tiny seed1] swin_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=none
+  step    50 | train 0.4107 | val loss 0.1883 auroc 0.9899 * | lr 1.02e-04 | 8s
+  step   100 | train 0.1721 | val loss 0.1204 auroc 0.9872 * | lr 1.02e-04 | 15s
+  step   150 | train 0.1524 | val loss 0.0952 auroc 0.9900 * | lr 1.02e-04 | 26s
+  step   200 | train 0.1359 | val loss 0.1101 auroc 0.9919 | lr 1.02e-04 | 37s
+  step   250 | train 0.1123 | val loss 0.1257 auroc 0.9959 | lr 1.02e-04 | 47s
+  step   300 | train 0.1043 | val loss 0.1293 auroc 0.9869 | lr 1.02e-04 | 56s
+  step   350 | train 0.1094 | val loss 0.1523 auroc 0.9913 | lr 1.02e-04 | 66s
+  step   400 | train 0.1011 | val loss 0.1071 auroc 0.9959 | lr 3.06e-05 | 76s
+  step   450 | train 0.1012 | val loss 0.1292 auroc 0.9936 | lr 3.06e-05 | 86s
+  step   500 | train 0.0988 | val loss 0.1074 auroc 0.9962 | lr 3.06e-05 | 96s
+  step   550 | train 0.0991 | val loss 0.1034 auroc 0.9973 | lr 3.06e-05 | 106s
+  early stop at step 550 (best step 150)
+[E1/swin_tiny/seed1] A_test:label AUROC 0.835 | B_external:label AUROC 0.825 | B_external:label_any AUROC 0.694
+[E1/swin_tiny seed2] swin_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=none
+  step    50 | train 0.3853 | val loss 0.3066 auroc 0.9900 * | lr 1.02e-04 | 8s
+  step   100 | train 0.2211 | val loss 0.3365 auroc 0.9852 | lr 1.02e-04 | 15s
+  step   150 | train 0.1604 | val loss 0.1086 auroc 0.9944 * | lr 1.02e-04 | 26s
+  step   200 | train 0.1231 | val loss 0.0837 auroc 0.9935 * | lr 1.02e-04 | 36s
+  step   250 | train 0.1028 | val loss 0.1053 auroc 0.9705 | lr 1.02e-04 | 46s
+  step   300 | train 0.1148 | val loss 0.1132 auroc 0.9960 | lr 1.02e-04 | 55s
+  step   350 | train 0.1062 | val loss 0.1359 auroc 0.9831 | lr 1.02e-04 | 65s
+  step   400 | train 0.1020 | val loss 0.1786 auroc 0.9706 | lr 1.02e-04 | 74s
+  step   450 | train 0.0993 | val loss 0.1182 auroc 0.9793 | lr 3.06e-05 | 85s
+  step   500 | train 0.1010 | val loss 0.1354 auroc 0.9944 | lr 3.06e-05 | 95s
+  step   550 | train 0.0995 | val loss 0.0790 auroc 0.9957 * | lr 3.06e-05 | 104s
+  step   600 | train 0.0987 | val loss 0.0876 auroc 0.9943 | lr 3.06e-05 | 115s
+  step   650 | train 0.0987 | val loss 0.1059 auroc 0.9938 | lr 3.06e-05 | 125s
+  step   700 | train 0.0987 | val loss 0.1064 auroc 0.9931 | lr 3.06e-05 | 135s
+  step   750 | train 0.0986 | val loss 0.0990 auroc 0.9936 | lr 3.06e-05 | 145s
+  step   800 | train 0.1007 | val loss 0.1098 auroc 0.9938 | lr 9.17e-06 | 155s
+  step   850 | train 0.0986 | val loss 0.1012 auroc 0.9942 | lr 9.17e-06 | 165s
+  step   900 | train 0.0986 | val loss 0.1035 auroc 0.9939 | lr 9.17e-06 | 175s
+  step   950 | train 0.0986 | val loss 0.1032 auroc 0.9938 | lr 9.17e-06 | 185s
+  early stop at step 950 (best step 550)
+[E1/swin_tiny/seed2] A_test:label AUROC 0.915 | B_external:label AUROC 0.849 | B_external:label_any AUROC 0.721
+[E2/swin_tiny seed0] swin_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=conventional
+  step    50 | train 0.4693 | val loss 0.2013 auroc 0.9891 * | lr 1.02e-04 | 11s
+  step   100 | train 0.2132 | val loss 0.2444 auroc 0.9947 | lr 1.02e-04 | 18s
+  step   150 | train 0.1980 | val loss 0.2405 auroc 0.9959 | lr 1.02e-04 | 28s
+  step   200 | train 0.1608 | val loss 0.1090 auroc 0.9955 * | lr 1.02e-04 | 38s
+  step   250 | train 0.1679 | val loss 0.1581 auroc 0.9980 | lr 1.02e-04 | 49s
+  step   300 | train 0.1559 | val loss 0.0985 auroc 0.9973 * | lr 1.02e-04 | 59s
+  step   350 | train 0.1430 | val loss 0.0948 auroc 0.9957 * | lr 1.02e-04 | 71s
+  step   400 | train 0.1281 | val loss 0.1227 auroc 0.9974 | lr 1.02e-04 | 82s
+  step   450 | train 0.1448 | val loss 0.0790 auroc 0.9983 * | lr 1.02e-04 | 92s
+  step   500 | train 0.1336 | val loss 0.0712 auroc 0.9941 * | lr 1.02e-04 | 104s
+  step   550 | train 0.1140 | val loss 0.1082 auroc 0.9966 | lr 1.02e-04 | 115s
+  step   600 | train 0.1131 | val loss 0.0753 auroc 0.9969 | lr 1.02e-04 | 125s
+  step   650 | train 0.1071 | val loss 0.0897 auroc 0.9974 | lr 1.02e-04 | 135s
+  step   700 | train 0.1278 | val loss 0.0941 auroc 0.9880 | lr 1.02e-04 | 145s
+  step   750 | train 0.1005 | val loss 0.0904 auroc 0.9972 | lr 3.06e-05 | 155s
+  step   800 | train 0.1024 | val loss 0.0900 auroc 0.9974 | lr 3.06e-05 | 166s
+  step   850 | train 0.1030 | val loss 0.0884 auroc 0.9969 | lr 3.06e-05 | 176s
+  step   900 | train 0.1011 | val loss 0.0917 auroc 0.9978 | lr 3.06e-05 | 186s
+  early stop at step 900 (best step 500)
+[E2/swin_tiny/seed0] A_test:label AUROC 0.893 | B_external:label AUROC 0.849 | B_external:label_any AUROC 0.727
+[E2/swin_tiny seed1] swin_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=conventional
+  step    50 | train 0.4292 | val loss 0.1479 auroc 0.9865 * | lr 1.02e-04 | 9s
+  step   100 | train 0.2100 | val loss 0.1607 auroc 0.9838 | lr 1.02e-04 | 17s
+  step   150 | train 0.2024 | val loss 0.0855 auroc 0.9974 * | lr 1.02e-04 | 26s
+  step   200 | train 0.1667 | val loss 0.1610 auroc 0.9867 | lr 1.02e-04 | 37s
+  step   250 | train 0.1564 | val loss 0.0940 auroc 0.9942 | lr 1.02e-04 | 46s
+  step   300 | train 0.1738 | val loss 0.1235 auroc 0.9967 | lr 1.02e-04 | 56s
+  step   350 | train 0.1207 | val loss 0.1025 auroc 0.9943 | lr 1.02e-04 | 66s
+  step   400 | train 0.1181 | val loss 0.1316 auroc 0.9898 | lr 3.06e-05 | 76s
+  step   450 | train 0.1137 | val loss 0.1008 auroc 0.9745 | lr 3.06e-05 | 85s
+  step   500 | train 0.1211 | val loss 0.0828 auroc 0.9908 * | lr 3.06e-05 | 95s
+  step   550 | train 0.1024 | val loss 0.0936 auroc 0.9914 | lr 3.06e-05 | 107s
+  step   600 | train 0.1061 | val loss 0.0937 auroc 0.9861 | lr 3.06e-05 | 117s
+  step   650 | train 0.1102 | val loss 0.0817 auroc 0.9883 * | lr 3.06e-05 | 127s
+  step   700 | train 0.1057 | val loss 0.1214 auroc 0.9917 | lr 3.06e-05 | 139s
+  step   750 | train 0.1068 | val loss 0.1063 auroc 0.9937 | lr 3.06e-05 | 149s
+  step   800 | train 0.1012 | val loss 0.1130 auroc 0.9935 | lr 3.06e-05 | 159s
+  step   850 | train 0.0999 | val loss 0.1130 auroc 0.9928 | lr 3.06e-05 | 169s
+  step   900 | train 0.1015 | val loss 0.1086 auroc 0.9943 | lr 9.17e-06 | 179s
+  step   950 | train 0.0990 | val loss 0.1090 auroc 0.9908 | lr 9.17e-06 | 189s
+  step  1000 | train 0.1020 | val loss 0.1189 auroc 0.9943 | lr 9.17e-06 | 199s
+  step  1050 | train 0.0999 | val loss 0.1198 auroc 0.9931 | lr 9.17e-06 | 209s
+  early stop at step 1050 (best step 650)
+[E2/swin_tiny/seed1] A_test:label AUROC 0.882 | B_external:label AUROC 0.902 | B_external:label_any AUROC 0.764
+[E2/swin_tiny seed2] swin_tiny on cuda: train=1000 (pos 500) val=682 max_steps=1500 bs=32 aug=conventional
+  step    50 | train 0.4378 | val loss 0.3241 auroc 0.9899 * | lr 1.02e-04 | 8s
+  step   100 | train 0.2279 | val loss 0.1243 auroc 0.9949 * | lr 1.02e-04 | 15s
+  step   150 | train 0.1704 | val loss 0.0791 auroc 0.9973 * | lr 1.02e-04 | 26s
+  step   200 | train 0.1838 | val loss 0.1021 auroc 0.9953 | lr 1.02e-04 | 38s
+  step   250 | train 0.1683 | val loss 0.0761 auroc 0.9978 * | lr 1.02e-04 | 48s
+  step   300 | train 0.1398 | val loss 0.1164 auroc 0.9969 | lr 1.02e-04 | 59s
+  step   350 | train 0.1326 | val loss 0.0893 auroc 0.9922 | lr 1.02e-04 | 69s
+  step   400 | train 0.1371 | val loss 0.0897 auroc 0.9973 | lr 1.02e-04 | 79s
+  step   450 | train 0.1274 | val loss 0.1045 auroc 0.9969 | lr 1.02e-04 | 89s
+  step   500 | train 0.1153 | val loss 0.0820 auroc 0.9982 | lr 3.06e-05 | 99s
+  step   550 | train 0.1039 | val loss 0.0733 auroc 0.9964 * | lr 3.06e-05 | 109s
+  step   600 | train 0.1052 | val loss 0.1240 auroc 0.9945 | lr 3.06e-05 | 120s
+  step   650 | train 0.1008 | val loss 0.1157 auroc 0.9959 | lr 3.06e-05 | 130s
+  step   700 | train 0.1045 | val loss 0.1379 auroc 0.9927 | lr 3.06e-05 | 140s
+  step   750 | train 0.1067 | val loss 0.0809 auroc 0.9961 | lr 3.06e-05 | 150s
+  step   800 | train 0.1009 | val loss 0.0997 auroc 0.9966 | lr 9.17e-06 | 160s
+  step   850 | train 0.1010 | val loss 0.0916 auroc 0.9979 | lr 9.17e-06 | 170s
+  step   900 | train 0.0990 | val loss 0.0933 auroc 0.9981 | lr 9.17e-06 | 180s
+  step   950 | train 0.0990 | val loss 0.1049 auroc 0.9970 | lr 9.17e-06 | 191s
+  early stop at step 950 (best step 550)
+[E2/swin_tiny/seed2] A_test:label AUROC 0.878 | B_external:label AUROC 0.858 | B_external:label_any AUROC 0.716
+=== Sat Oct 10 08:03:16 +05 2026 pipeline stage 1 done

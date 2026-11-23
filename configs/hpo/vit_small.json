@@ -1,0 +1,19 @@
+{
+  "arch": "vit_small",
+  "params": {
+    "lr": 2.7968507685899248e-05,
+    "weight_decay": 0.0012089684348285047,
+    "batch_size": 32,
+    "schedule": "cosine",
+    "warmup_steps": 150,
+    "head_lr_mult": 1.0,
+    "label_smoothing": 0.037486924442076054,
+    "drop_rate": 0.3280070601425043,
+    "drop_path_rate": 0.04567918130542383
+  },
+  "best_val_loss": 0.06633301079273224,
+  "best_val_auroc": 0.9936425188340379,
+  "trial": 10,
+  "n_complete": 21,
+  "n_pruned": 4
+}

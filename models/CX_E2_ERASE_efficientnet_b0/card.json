@@ -1,0 +1,58 @@
+{
+  "name": "CX_E2_ERASE_efficientnet_b0",
+  "experiment": "CX_E2_ERASE",
+  "source": "chexpert",
+  "experiment_doc": "CheXpert source: E2 + random erasing and border masking",
+  "arch": "efficientnet_b0",
+  "seed": 2,
+  "threshold": 0.5655386447906494,
+  "image_size": 224,
+  "resize_mode": "squash",
+  "n_train": 1000,
+  "best_val_loss": 0.6190534830093384,
+  "best_val_auroc": 0.806368,
+  "metrics": {
+    "A_test:label": {
+      "auroc": 0.7761834319526627,
+      "sensitivity": 0.8025641025641026,
+      "specificity": 0.5769230769230769,
+      "f1": 0.7805486284289277,
+      "n": 624,
+      "prevalence": 0.625
+    },
+    "B_external:label": {
+      "auroc": 0.8669684109329987,
+      "sensitivity": 0.7870813397129187,
+      "specificity": 0.7925434116445352,
+      "f1": 0.7594025797691786,
+      "n": 16896,
+      "prevalence": 0.4205729166666667
+    },
+    "B_external:label_any": {
+      "auroc": 0.7116135901343056,
+      "sensitivity": 0.7870813397129187,
+      "specificity": 0.536185667463903,
+      "f1": 0.4827586206896552,
+      "n": 29684,
+      "prevalence": 0.23938822261150788
+    },
+    "C_test:label": {
+      "auroc": 0.8429004444444443,
+      "sensitivity": 0.74,
+      "specificity": 0.8066666666666666,
+      "f1": 0.7655172413793103,
+      "n": 1500,
+      "prevalence": 0.5
+    }
+  },
+  "env": {
+    "host": "desktop",
+    "python": "3.12.13",
+    "torch": "2.8.0+cu128",
+    "timm": "1.0.30",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "git_commit": "8d5a29c",
+    "gpu": "NVIDIA GeForce RTX 3060 Ti"
+  }
+}
